@@ -1,0 +1,8 @@
+{
+  "label": "Docusaurus Setup",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "This post is about how I set up my Docusaurus blog and my local repository."
+  }
+}
