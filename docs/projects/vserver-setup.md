@@ -102,7 +102,8 @@ After installing and testing the webserver, we want ton configure it to render a
    * `ip-vm:8081`
 
 ## Define Shell Allias
-Trotz mehrere ssh Key keine Übersicht verlieren. Ziel ist es mit kürzere Befehle auf den Cloud trotz zu verbinden
+Don't lose track of things even with multiple SSH keys. 
+The goal is to connect to the cloud using shorter commands.
 
 ### Alias unter linux
 `alias dal_connect="ssh -i path\.ssh\demo-ed25519 user@hostIp"`
