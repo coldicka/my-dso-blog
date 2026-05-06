@@ -107,6 +107,42 @@ The goal is to connect to the cloud using shorter commands.
 ### Alias unter windows
 `function dal_connect {ssh -i path\.ssh\demo-ed25519 user@hostIp}`
 
+## V-Server connection with  github
+To push the changes from GitHub directly to the server, we will establish a connection.
+
+1. Create a SSH key pair on your local machine. `ssh-keygen -t ed25519 -C "my_email@myEmail.com"`
+
+2. Copy the bew generated ssh key .pub
+
+3. Add the SSH key to GitHub: 
+    * Navigation menu => Settings => SSH and GPG keys
+    * Click the `new SSH key` button on the right
+    * Paste the copied SSH public key in the field
+
+4. The connection has been tested: `ssh -T git@github.com`.
+    * Once the fingerprint was verified, everything was fine.
+
 ##  SSH configuration for multiple identities 
 
-[unter windows](https://linsnotes.com/posts/manage-multiple-ssh-keys-in-windows/)
+[unter windows](https://linsnotes.com/posts/manage-multiple-ssh-keys-in-windows/) (05.05.2026)
+
+### Open or Create the SSH Config File
+Open your preferred text editor (such as Notepad, Notepad++, or VSCode) and locate the SSH config file:
+1. Navigate to `C:\Users\<your_username>\.ssh\.`
+2. If the `config` file doesn’t exist, create it.
+
+### Configure SSH Settings
+Add or update configurations in the SSH config file to specify which SSH key to use for each host. Here’s an example configuration for two different hosts, each using a different SSH key:
+```
+Host host1
+    HostName host1.example.com
+    User user1
+    IdentityFile C:/Users/<my_username>/.ssh/key1
+
+Host host2
+    HostName host1.example.com
+    User user1
+    IdentityFile C:/Users/<my_username>/.ssh/key2
+```
+### Test SSH Connections
+After that, the connection can be tested :`ssh host1`
