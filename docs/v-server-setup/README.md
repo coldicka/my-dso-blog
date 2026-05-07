@@ -2,6 +2,24 @@
 
 This page documents how I configured my first cloud server instance in the Developer Akademie DevSecOps Course.
 
+## Table of Contents
+
+- [V-Server Setup](#v-server-setup)
+  - [Table of Contents](#table-of-contents)
+  - [Create an SSH account and integrate into the V-Server](#create-an-ssh-account-and-integrate-into-the-v-server)
+  - [Configure and start a Webserver](#configure-and-start-a-webserver)
+  - [Adjusting the server configuration](#adjusting-the-server-configuration)
+    - [Step to reconfigure the nginx on the cloud](#step-to-reconfigure-the-nginx-on-the-cloud)
+  - [Define Shell Allias](#define-shell-allias)
+    - [Alias unter linux](#alias-unter-linux)
+    - [Alias unter linux](#alias-unter-windows)
+  - [V-Server connection with github](#v-server-connection-with--github)
+  - [SSH configuration for multiple identities](#ssh-configuration-for-multiple-identities)
+    - [Create the SSH Config File](#create-the-ssh-config-file)
+    - [Configure SSH Settings](#configure-ssh-settings)
+    - [Test SSH Connections](#test-ssh-connections)
+
+
 ## Create an SSH account and integrate into the V-Server
 
 1. Create a SSH key pair on your local machine
@@ -97,7 +115,7 @@ The goal is to connect to the cloud using shorter commands.
 ### Alias unter windows
 `function dal_connect {ssh -i path\.ssh\demo-ed25519 user@hostIp}`
 
-## V-Server connection with  github
+## V-Server connection with github
 To push the changes from GitHub directly to the server, we will establish a connection.
 
 1. Create a SSH key pair on your local machine. `ssh-keygen -t ed25519 -C "my_email@myEmail.com"`
@@ -112,12 +130,12 @@ To push the changes from GitHub directly to the server, we will establish a conn
 4. The connection has been tested: `ssh -T git@github.com`.
     * Once the fingerprint was verified, everything was fine.
 
-##  SSH configuration for multiple identities 
+## SSH configuration for multiple identities 
 
 [unter windows](https://linsnotes.com/posts/manage-multiple-ssh-keys-in-windows/) (05.05.2026)
 
-### Open or Create the SSH Config File
-Open your preferred text editor (such as Notepad, Notepad++, or VSCode) and locate the SSH config file:
+### Create the SSH Config File
+locate the SSH config file:
 1. Navigate to `C:\Users\<your_username>\.ssh\.`
 2. If the `config` file doesn’t exist, create it.
 
