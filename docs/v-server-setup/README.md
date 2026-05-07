@@ -1,16 +1,6 @@
 # V-Server Setup
 
-This page documents how I configured my very first cloud server instance in the Developer Akademie DevSecOps Course.
-
-## Github
-
-import GithubLinkAdmonition from '@site/src/components/GithubLinkAdmonition';
-
-<GithubLinkAdmonition 
-    link="https://github.com/coldicka/my-dso-blog"
-    title="Github" 
-    type="tip"
-/>
+This page documents how I configured my first cloud server instance in the Developer Akademie DevSecOps Course.
 
 ## Create an SSH account and integrate into the V-Server
 
