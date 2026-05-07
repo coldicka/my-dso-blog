@@ -1,6 +1,6 @@
 # V-Server Setup
 
-This page documents how I configured my first cloud server instance in the Developer Akademie DevSecOps Course.
+This page documents shows to configure cloud server instance. The server runs the Nginx web server and Git. However, to enhance security, only SSH logins are permitted. 
 
 ## Table of Contents
 
