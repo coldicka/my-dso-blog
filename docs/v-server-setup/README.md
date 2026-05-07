@@ -32,7 +32,7 @@ This document explains how to configure a v-server instance, including setting u
    ```cmd
       type $HOME\.ssh\your-public-key.pub | ssh your-username@host "cat >> .ssh/authorized_keys"
    ```
-* Check whether you can connect to the server using the key, or whether the public key is stored on the server with an identity. Logout from Server, try logging in with the KEY information only. You should not be prompted for a password if it works correctly
+* Check whether you can connect to the server using the key, or whether the public key is stored on the server with an identity. Logout from Server, try logg in with the KEY information only.
 
    ```bash
       ssh -i $HOME/.ssh/your-public-key.pub your-username@host
@@ -52,8 +52,8 @@ This document explains how to configure a v-server instance, including setting u
       sudo nano /etc/ssh/sshd_config
       ```
    * Find and edit the line `#PasswordAuthentication yes` To that `#PasswordAuthentication no`
-   * Save the File and exit (STRG + o) (Enter) (STRG + X)
-   * Restart the `sshd` service to reload the config changes #
+   * Save the File and exit `(STRG + o)` + `Enter` + `STRG + X`
+   * Restart the `sshd` service to reload the config changes
    ```bash
       sudo systemctl restart ssh.service
    ```
@@ -202,17 +202,17 @@ To push the changes from GitHub directly to the server, we will establish a conn
 * If the `config` file doesn’t exist, create it.
 
 * Configure SSH Settings. Add or update configurations in the SSH config file to specify which SSH key to use for each host. Here’s an example configuration for two different hosts, each using a different SSH key:
-```bash
-Host host1
-    HostName host1.example.com
-    User user1
-    IdentityFile $HOME/.ssh/key1
+   ```bash
+   Host host1
+      HostName host1.example.com
+      User user1
+      IdentityFile $HOME/.ssh/key1
 
-Host host2
-    HostName host1.example.com
-    User user1
-    IdentityFile $HOME/.ssh/key2
-```
+   Host host2
+      HostName host1.example.com
+      User user1
+      IdentityFile $HOME/.ssh/key2
+   ```
 * Check the SSH Connections
    ```bash
       ssh host1
