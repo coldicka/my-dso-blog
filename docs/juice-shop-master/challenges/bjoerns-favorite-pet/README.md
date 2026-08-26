@@ -28,12 +28,12 @@ A critical vulnerability classified as **Broken Authentication** was identified 
 1. **Identification:** The "Forgot Password" feature was triggered for the target address `bjoern@owasp.org`, which revealed the security question *"Name of your favorite pet?"*.
 2. **Intercepting the Request:** The HTTP `POST` request to `/rest/user/reset-password` was intercepted using a local intercepting proxy (Burp Suite).
 3. **Automation (Brute Force):** The request was passed to the *Burp Intruder* module. The value in the JSON parameter `"answer"` was defined as the attack target.
-![Automation (Brute Force)](./images/bjoern_pet/intrude.png)
+![Automation (Brute Force)](./images/intrude.png)
 4. **Execution 1:** The attack was launched using a wordlist of common pet names. At least 6,300 pet names were collected from two different websites: 
 * [petplace - top-1200-pet-names](https://www.petplace.com/article/dogs/pet-care/top-1200-pet-names)
 * [https://www.edogs.de/magazin/hundenamen-mit-{letter}/](https://www.edogs.de/magazin/hundenamen-mit-a/)
 * [https://www.rover.com/blog/cat-names-that-start-with-{letter}/](https://www.rover.com/blog/cat-names-that-start-with-b/)
-![intrude - attack](./images/bjoern_pet/intrude_attack.png)
+![intrude - attack](./images/intrude_attack.png)
 5. **Result:** For the payload entry **`Kaya`**, the server returned a successful HTTP response (`200 OK`). The password was successfully changed to the value defined in the payload body.
 
 ---
