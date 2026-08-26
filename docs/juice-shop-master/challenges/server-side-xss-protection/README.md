@@ -1,4 +1,4 @@
-# Server-Side XSS Protection Bypass (⭐⭐⭐⭐)
+# Server-Side XSS Protection (⭐⭐⭐⭐)
 
 ## 1. Executive Summary
 
