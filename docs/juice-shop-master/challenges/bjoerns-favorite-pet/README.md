@@ -1,4 +1,4 @@
-# Pentest-Bericht: Schwachstellen-Dokumentation
+# Bjoern's favorite pet
 
 ## 1. Zusammenfassung (Executive Summary)
 
