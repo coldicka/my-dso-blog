@@ -18,6 +18,7 @@ A critical vulnerability classified as **Broken Authentication** was identified 
 ---
 
 ## 3. Risk Assessment (Risk Analysis)
+
 * **Exploitability:** Easy. Since there are no protective barriers against automated requests, a simple dictionary attack on the answer field is sufficient.
 * **Impact:** High. Attackers can completely take over users' accounts, provided the username is known and the answer to the security question can be guessed or determined automatically.
 
@@ -34,7 +35,7 @@ A critical vulnerability classified as **Broken Authentication** was identified 
 * [https://www.edogs.de/magazin/hundenamen-mit-{letter}/](https://www.edogs.de/magazin/hundenamen-mit-a/)
 * [https://www.rover.com/blog/cat-names-that-start-with-{letter}/](https://www.rover.com/blog/cat-names-that-start-with-b/)
 ![intrude - attack](./images/intrude_attack.png)
-5. **Result:** For the payload entry **`Kaya`**, the server returned a successful HTTP response (`200 OK`). The password was successfully changed to the value defined in the payload body.
+5. **Result:** For the payload entry **`Zaya`**, the server returned a successful HTTP response (`200 OK`). The password was successfully changed to the value defined in the payload body.
 
 ---
 
