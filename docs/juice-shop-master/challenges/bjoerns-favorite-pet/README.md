@@ -1,4 +1,4 @@
-# Bjoern's favorite pet
+# bjoern's favorite pet (⭐⭐⭐)
 
 ## 1. Zusammenfassung (Executive Summary)
 

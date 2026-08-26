@@ -1,4 +1,4 @@
-# Server-Side XSS Protection Bypass (4-Star Challenge)
+# Server-Side XSS Protection Bypass (⭐⭐⭐⭐)
 
 ## 1. Executive Summary
 
