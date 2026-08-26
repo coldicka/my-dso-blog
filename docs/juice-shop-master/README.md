@@ -57,14 +57,15 @@ http://127.0.0.1:3000
 
 ## Challenge Documentation
 
-### 2. Bjoern's Favorite Pet (Broken Authentication)
+### 1. Bjoern's Favorite Pet (Broken Authentication)
 * **Description:** Bypassing authentication mechanisms or resetting passwords by exploiting weak security questions.
 * **Impact:** Complete account takeover of a specific user profile.
 * **Detail:** [See bjoern's favorite pet](./challenges/bjoerns-favorite-pet/README.md)
 
-### 3. Server-side XSS Protection (Cross-Site Scripting via HTTP Header)
+### 2. Server-side XSS Protection (Cross-Site Scripting via HTTP Header)
 * **Description:** Injecting malicious scripts into HTTP request headers that are reflected on the server-side UI without proper sanitization.
 * **Impact:** Execution of arbitrary JavaScript in the context of the user's browser session.
+* **Detail:** [See Server-Side XSS protection](./challenges/server-side-xss-protection/README.md)
 
 ---
 
