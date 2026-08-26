@@ -8,6 +8,7 @@ This project documents the analysis and exploitation of selected security vulner
 ---
 
 ## Table of Contents
+
 1. [Project Overview](#project-overview)
 2. [Quickstart](#quickstart)
 3. [Challenge Documentation](#challenge-documentation)
@@ -19,6 +20,7 @@ This project documents the analysis and exploitation of selected security vulner
 ---
 
 ## Project Overview
+
 This repository contains the documentation of selected OWASP Juice Shop challenges. Each challenge demonstrates a different class of web application vulnerability:
 
 * **Bjoern's Favorite Pet** – Broken Authentication
@@ -29,6 +31,7 @@ The purpose of this project is to understand how these vulnerabilities occur, ho
 ---
 
 ## Quickstart
+
 Navigate to the project directory:
 
 ```bash
@@ -58,11 +61,13 @@ http://127.0.0.1:3000
 ## Challenge Documentation
 
 ### 1. Bjoern's Favorite Pet (Broken Authentication)
+
 * **Description:** Bypassing authentication mechanisms or resetting passwords by exploiting weak security questions.
 * **Impact:** Complete account takeover of a specific user profile.
 * **Detail:** [See bjoern's favorite pet](./challenges/bjoerns-favorite-pet/README.md)
 
 ### 2. Server-side XSS Protection (Cross-Site Scripting via HTTP Header)
+
 * **Description:** Injecting malicious scripts into HTTP request headers that are reflected on the server-side UI without proper sanitization.
 * **Impact:** Execution of arbitrary JavaScript in the context of the user's browser session.
 * **Detail:** [See Server-Side XSS protection](./challenges/server-side-xss-protection/README.md)
@@ -70,10 +75,12 @@ http://127.0.0.1:3000
 ---
 
 ## Security Recommendations
+
 * **Implement Robust Input Sanitization:** Never trust user input, including HTTP headers and metadata. Use context-aware output encoding.
 * **Secure Authentication Mechanisms:** Avoid predictable security questions and implement multi-factor authentication (MFA) where possible.
 
 ---
 
 ## Conclusion
+
 This analysis highlights the critical importance of secure coding practices and thorough input validation. By understanding the mechanics of these common vulnerabilities, developers and security professionals can better protect web applications against modern cyber threats.
