@@ -12,8 +12,8 @@ This project documents the analysis and exploitation of selected security vulner
 1. [Project Overview](#project-overview)
 2. [Quickstart](#quickstart)
 3. [Challenge Documentation](#challenge-documentation)
-   - [1. Bjoern's Favorite Pet (Broken Authentication)](#2-bjoerns-favorite-pet-broken-authentication)
-   - [2. Server-side XSS Protection (Cross-Site Scripting via HTTP Header)](#3-server-side-xss-protection-cross-site-scripting-via-http-header)
+   - [1. Bjoern's Favorite Pet (Broken Authentication)](#1-bjoerns-favorite-pet-broken-authentication)
+   - [2. Server-side XSS Protection (Cross-Site Scripting via HTTP Header)](#2-server-side-xss-protection-cross-site-scripting-via-http-header)
 4. [Security Recommendations](#security-recommendations)
 5. [Conclusion](#conclusion)
 
