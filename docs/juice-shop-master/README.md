@@ -1,15 +1,11 @@
 # Juice Shop Master
 
 :::note
-
 This project is strictly for educational and research purposes. No real personal data, credentials, or sensitive information were used. Perform security testing only with proper authorization.
-
 :::
 
 :::important 
-
 Run only on approved machines.
- 
 :::
 
 This project documents the analysis and exploitation of selected security vulnerabilities within the OWASP Juice Shop application. All findings, demonstrations, and exploit scenarios are conducted strictly for educational and research purposes in an authorized test environment.
@@ -68,7 +64,7 @@ npm install && npm start
 
 - Open Webbrowser and enter the Destination
 ```bash
-127.0.0.1:3000 
+http://<your-ip>:3000 
 ``` 
 
 - Check out the Juice-Shop and try to solve some challenges.

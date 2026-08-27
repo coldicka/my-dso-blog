@@ -1,5 +1,25 @@
 # Server-Side XSS Protection (⭐⭐⭐⭐)
 
+:::note
+This project is strictly for educational and research purposes. No real personal data, credentials, or sensitive information were used. Perform security testing only with proper authorization.
+:::
+
+:::important 
+Run only on approved machines.
+:::
+
+## Table of Contents
+
+1. [Executive Summary](#1-executive-summary)
+2. [Methodology](#2-methodology)
+   * [Attack Flow](#attack-flow)
+3. [Findings](#3-findings)
+   * [Security Impact](#security-impact)
+4. [Remediation](#4-remediation)
+5. [Conclusion](#5-conclusion)
+
+---
+
 ## 1. Executive Summary
 
 During the security assessment of the **OWASP Juice Shop**, the server-side sanitization of the Customer Feedback functionality was tested for XSS bypasses.
