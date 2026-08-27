@@ -1,7 +1,16 @@
 # Juice Shop Master
 
-> ⚠️ **Security Notice**  
-> This project is strictly for educational and research purposes. No real personal data, credentials, or sensitive information were used. Perform security testing only with proper authorization.
+:::note
+
+This project is strictly for educational and research purposes. No real personal data, credentials, or sensitive information were used. Perform security testing only with proper authorization.
+
+:::
+
+:::important 
+
+Run only on approved machines.
+ 
+:::
 
 This project documents the analysis and exploitation of selected security vulnerabilities within the OWASP Juice Shop application. All findings, demonstrations, and exploit scenarios are conducted strictly for educational and research purposes in an authorized test environment.
 
@@ -32,29 +41,37 @@ The purpose of this project is to understand how these vulnerabilities occur, ho
 
 ## Quickstart
 
-Navigate to the project directory:
-
+- Download and install VirtualBox
 ```bash
-cd /path/to/your/OWASP-juice-shop-master
-```
+sudo apt update && sudo apt install -y virtualbox
+``` 
 
-Install the dependencies and build the image:
-
+- Create a virtual machine running Kali Linux and Setup the Juice Shop on this VM.
 ```bash
-npm install
-```
+https://www.kali.org/get-kali/#kali-platforms
+``` 
 
-Start the application:
-
+- Clone the Juice-Shop Repository
 ```bash
-npm start
+git clone https://github.com/juice-shop/juice-shop && cd juice-shop 
 ```
 
-Make sure OWASP Juice Shop is running by opening Firefox and navigating to:
+- Download and install Dependencies
+```bash
+sudo apt update && sudo apt install -y nodejs npm
+```
 
+- Install and start the Juice-Shop 
+```bash
+npm install && npm start
 ```
-http://127.0.0.1:3000
-```
+
+- Open Webbrowser and enter the Destination
+```bash
+127.0.0.1:3000 
+``` 
+
+- Check out the Juice-Shop and try to solve some challenges.
 
 ---
 
