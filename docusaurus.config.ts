@@ -9,20 +9,24 @@ dotenvconfig();
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
 const config: Config = {
-  title: 'DSO Live Demo Docs',
+  title: 'my Site',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
-  // Set the production url of your site here
-  url: process.env.DEPLOYMENT_URL ?? "https://spmse.github.io",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: process.env.BASE_URL ?? "/",
+  url: 
+    process.env.DEPLOYMENT_URL ||
+    "https://coldicka.github.io",
+
+  baseUrl: 
+    process.env.BASE_URL ||
+    "/my-dso-blog/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: process.env.GITHUB_ORG, // Usually your GitHub org/user name.
-  projectName: process.env.GITHUB_PROJECT, // Usually your repo name.
+  organizationName: 
+    process.env.GITHUB_ORG || "coldicka", // Usually your GitHub org/user name.
+  
+  projectName: process.env.GITHUB_PROJECT,
 
   deploymentBranch: process.env.DEPLOYMENT_BRANCH,
 
@@ -31,7 +35,6 @@ const config: Config = {
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -44,11 +47,9 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/spmse/dev-blog-template',
         },
-        blog: blogEnabled ? 
+        blog: false,
+        /* blog: blogEnabled ? 
           {
             showReadingTime: true,
             feedOptions: {
@@ -58,13 +59,13 @@ const config: Config = {
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
             editUrl:
-              'https://github.com/spmse/dev-blog-template',
+              'https://github.com/coldicka/my-dso-blog',
             // Useful options to enforce blogging best practices
             onInlineTags: 'warn',
             onInlineAuthors: 'warn',
             onUntruncatedBlogPosts: 'warn',
           }
-          : false,
+          : false, */
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -80,7 +81,9 @@ const config: Config = {
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
+        href: '/my-dso-blog/',
       },
+
       items: [
         {
           type: 'docSidebar',
@@ -89,7 +92,7 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/spmse/dev-blog-template',
+          href: 'https://github.com/coldicka/my-dso-blog',
           label: 'Github',
           position: 'right',
         },
@@ -107,34 +110,8 @@ const config: Config = {
             },
           ],
         },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            }
-          ],
-        },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sven Patrick Meier (spmse). Built with Docusaurus and 💚.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Collins Dicka. Built with Docusaurus and 💚.`,
     },
     prism: {
       theme: prismThemes.github,
