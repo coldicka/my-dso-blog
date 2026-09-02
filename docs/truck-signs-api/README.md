@@ -1,6 +1,6 @@
 <div align="center">
 
-![Truck Signs](./src/screenshots/Truck_Signs_logo.png)
+![Truck Signs](./images/Truck_Signs_logo.png)
 
 # Signs for Trucks
 
