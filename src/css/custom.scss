@@ -1,3 +1,6 @@
+// src/css/custom.scss
+@use 'variables' as *; // Lädt alle Variablen global für diese Datei
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
@@ -29,8 +32,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-// src/css/custom.scss
-@use 'variables' as *; // Lädt alle Variablen global für diese Datei
+
 
 // Jetzt können Sie die Variable hier nutzen:
 @media (max-width: $breakpoint-mobile) {
