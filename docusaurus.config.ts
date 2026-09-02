@@ -101,38 +101,6 @@ const config: Config = {
         },
       ],
     },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/guides/intro',
-            },
-            {
-              label: 'Projects',
-              to: '/docs/projects/overview',
-            }
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: gitRepoUrl,
-            },
-            {
-              label: 'Template',
-              href: "https://github.com/Developer-Akademie-DevSecOpsKurs/dev-blog-template"
-            }
-          ],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Collins Dicka Ned (CDN). Built with Docusaurus and 💚.`,
-    },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
