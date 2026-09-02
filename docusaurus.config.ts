@@ -69,11 +69,13 @@ const config: Config = {
           }
           : false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/custom.scss',
         },
       } satisfies Preset.Options,
     ],
   ],
+
+  plugins: ['docusaurus-plugin-sass'],
 
   themeConfig: {
     // Replace with your project's social card

@@ -28,3 +28,13 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+// src/css/custom.scss
+@use 'variables' as *; // Lädt alle Variablen global für diese Datei
+
+// Jetzt können Sie die Variable hier nutzen:
+@media (max-width: $breakpoint-mobile) {
+  main, section, header, footer {
+    min-width: 0;
+  }
+}
