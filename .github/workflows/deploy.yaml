@@ -17,13 +17,13 @@ jobs:
           # cache: npm
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: npm install --frozen-lockfile
 
       - name: Create .env config file
         run: cp example.env .env
 
       - name: Build website
-        run: pnpm run build && cp -r build github-pages
+        run: npm run build && cp -r build github-pages
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
