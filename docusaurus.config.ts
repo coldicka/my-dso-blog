@@ -7,26 +7,32 @@ dotenvconfig();
 
 /* TODO: change to read configuration from environment */
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
-const gitRepoUrl = process.env.GIT_REPOSITORY_URL ?? "https://github.com/coldicka/my-dso-blog";
-const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
+const gitRepoUrl = process.env.GIT_REPOSITORY_URL || "https://github.com/coldicka/my-dso-blog";
+const deploymentBranch = process.env.DEPLOYMENT_BRANCH || "main";
 
 const config: Config = {
-  title: 'Collins D\'s DevSecOps Blog',
-  tagline: 'In-depth DevSecOps with a lot of fun on the front end',
+  title: 'Mein Docusaurus Blog',
+  tagline: 'Willkommen auf meinem Blog',
   favicon: 'img/favicon.ico',
 
-  url: process.env.DEPLOYMENT_URL || "https://coldicka.github.io",
+  url:
+    process.env.DEPLOYMENT_URL ||
+    "https://coldicka.github.io",
 
-  baseUrl: process.env.BASE_URL ?? "/",
+  baseUrl:
+    process.env.BASE_URL ||
+   "my-dso-blog/",
 
   // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: 
-    process.env.GITHUB_ORG || "coldicka", // Usually your GitHub org/user name.
+    process.env.GITHUB_USERNAME ||
+    "coldicka", // Usually your GitHub org/user name.
   
-  projectName: process.env.GITHUB_PROJECT,
+  projectName: 
+    process.env.GITHUB_REPOSITORY_NAME ||
+    "my-dso-blog",
 
-  deploymentBranch: process.env.DEPLOYMENT_BRANCH,
+  deploymentBranch: process.env.DEPLOYMENT_BRANCH || "main",
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -73,7 +79,8 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'Collins D\'s DevSecOps Blog',
+      title: 'My Homepage',
+
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
