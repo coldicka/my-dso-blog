@@ -56,10 +56,11 @@
     }
   }
 
-  .flipCardFront {
+    .flipCardFront {
     @include media-breakpoint-up(lg) {
-      background: var(--color-card-gray)!important;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      background: #91C9F31A !important;
+      border-radius: 20px; 
+      box-shadow: none !important; 
       color: var(--color-white) !important;
       filter: none !important;
       gap: 12px;

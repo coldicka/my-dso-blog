@@ -21,7 +21,7 @@ export const AVAILABLE_TAGS: Record<string, Tag> = {
   },
   docker: {
     label: 'Docker',
-    icon: '/img/projects/icon_docker.svg',
+    icon: '/img/projects/icon_container.svg',
   },
   django: {
     label: 'Django',

@@ -3,7 +3,6 @@ import styles from "./button.module.scss";
 
 interface ButtonProps {
   text: string;
-  // Auf dein Design abgestimmte Namen
   style: "btnPrimary" | "btnSecondary" | "btnTertiary"; 
   href?: string;
   onClick?: () => void;

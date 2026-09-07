@@ -65,10 +65,16 @@
     color: var(--color-white);
     display: inline-flex;
     gap: 12px; 
+    text-decoration: none;
 
     .linkIcon {
+      align-items: center;
+      justify-content: center;
+      display: inline-flex;
+      
+      width: 40px; 
       height: 40px;
-      width: 40px;
+      flex-shrink: 0;
 
       @include media-breakpoint-down(sm) {
         height: 32px;
@@ -78,6 +84,7 @@
       svg {
         height: 100%;
         width: 100%; 
+        display: block;
         
         path, rect {
           transition: fill 0.3s ease, stroke 0.3s ease;

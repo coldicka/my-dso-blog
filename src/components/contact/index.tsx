@@ -10,7 +10,7 @@ export default function Contact() {
       iconName: 'mail',
     },
     {
-      href: 'https://linkedin.com',
+      href: 'https://linkedin.com/in/collins-dicka-ned-b05a71405/',
       label: 'Profile Page',
       isExternal: true,
       iconName: 'linkedin',
