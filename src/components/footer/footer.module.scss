@@ -1,0 +1,88 @@
+.portfolioFooter {
+  background: var(--ifm-color-secondary);
+  color: var(--color-white);
+  padding: 0;
+
+  .inner {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+    min-height: 463px;
+    padding: 120px 0;
+    width: 100%;
+
+    @include media-breakpoint-down(sm) {
+      min-height: auto;
+      padding: 80px 0;
+    }
+  }
+
+  .scrollBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  .arrow {
+    display: block;
+    height: 90px;
+    width: 40px; 
+  
+    .arrowRect {
+      fill: none;
+      stroke: var(--color-white);
+      stroke-width: 1px;
+    }
+
+    .arrowPath {
+      fill: none;
+      stroke: var(--color-white);
+      stroke-width: 2px;
+    }
+  }
+
+  .bottom {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .copy {
+    color: var(--color-white);
+    font-family: var(--font-quicksand);
+    font-size: var(--font-size-text-16);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .legal {
+    color: var(--color-white);
+    font-family: var(--font-quicksand);
+    font-size: var(--font-size-text-16);
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.75;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}

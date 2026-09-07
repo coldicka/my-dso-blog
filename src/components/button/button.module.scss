@@ -1,0 +1,50 @@
+.btn {
+  border: 1px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: var(--font-size-text-20);
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 10px 24px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    text-decoration: none;
+    transform: translateY(-1px);
+  }
+
+  // primary
+  &.btnPrimary {
+    background: var(--ifm-color-primary);
+    color: var(--color-white);
+
+    &:hover {
+      background: var(--ifm-color-primary-light);
+      color: var(--color-white);
+    }
+  }
+
+  // Secondary: White bordered
+  &.btnSecondary {
+    background: transparent;
+    border-color: var(--color-white);
+    color: var(--color-white);
+
+    &:hover {
+      background: var(--color-light-black);
+    }
+  }
+  
+  // Tertiary: All-over white
+  &.btnTertiary {
+    background: var(--color-white);
+    color: var(--ifm-color-primary);
+
+    &:hover {
+      color: var(--ifm-color-primary-light);
+      opacity: 0.85;
+    }
+  }
+}

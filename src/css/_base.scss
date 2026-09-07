@@ -1,0 +1,16 @@
+a {
+  color: var(--ifm-color-primary);
+  hyphens: auto;
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+}

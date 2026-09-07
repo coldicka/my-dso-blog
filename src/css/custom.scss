@@ -1,42 +1,126 @@
-// src/css/custom.scss
-@use 'variables' as *; // Lädt alle Variablen global für diese Datei
+@use 'base';
+@import url('https://googleapis.com');
 
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* ==========================================================================
+   GLOBAL LAYOUT & BACKGROUND GRADIENT
+   ========================================================================== */
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+/* 1. Removes the white Docusaurus padding above the header */
+html[data-theme] {
+  padding-top: 0 !important;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+ html, body {
+  font-family: var(--font-quicksand);
+  scroll-behavior: smooth;
+}
+ 
+/* ==========================================================================
+   INFIMA CORE OVERRIDES (LIGHT THEME)
+   ========================================================================== */
+:root {
+  // Container & Spacing
+  --ifm-container-width: 1440px;
+  --ifm-spacing-horizontal: 1.5rem;
+
+  // Global Primary color
+  --ifm-color-primary: #266AD9;     
+  --ifm-color-primary-light: #5696FF;
+
+   // Global Secondary color
+  --ifm-color-secondary: #262E34;
+
+
+  /* Das globale Schriftart */
+  --font-quicksand: 'Quicksand', sans-serif;
+
+  // Typography (Quicksand integration)
+  --ifm-font-family-base: var(--font-quicksand);
+  --ifm-heading-font-family: var(--font-quicksand);
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  // Standard-Textgröße (16px) und die Basis-Zeilenhöhe
+  --ifm-font-size-base: 16px; 
+  --ifm-line-height-base: 1.5;
+
+  --font-size-hero-title: 48px;
+  --font-size-section-heading: 32px;
+  --font-size-nav-and-sub: 24px;
+  --font-size-card-title: 21px;
+  --font-size-text-16: 14px
+  --font-size-text-18: 16px;
+  --font-size-text-20: 16px;
+  --font-size-text-22: 18px;
+  --font-size-text-24: 18px;
+  --font-size-text-40: 18px;
+
+    @include media-breakpoint-up(lg) {
+    --font-size-hero-title: 88px;
+    --font-size-section-heading: 64px;
+    --font-size-nav-and-sub: 32px;
+    --font-size-text-16: 16px;
+    --font-size-text-18: 18px;
+    --font-size-text-20: 20px;
+    --font-size-text-22: 22px;
+    --font-size-text-24: 24px;
+    --font-size-text-40: 40px;
+  }
+
+  // Global Typography Sizing & Line-Heights
+  --ifm-heading-h1-font-size: 4rem;      
+  --ifm-heading-h2-font-size: 2.5rem;    
+  --ifm-heading-h3-font-size: 1.75rem;   
+  --ifm-heading-line-height: 1.2; 
+
+  // Custom Colors (DRY Utilities)
+  --color-black: #262E34;
+  --color-white: #ffffff;
+  --color-gray: #404040;
+  --color-bg-dark-gray: #1e2229; 
+  --color-light-black: #404040
+  --color-card-gray: #40404;    
+  --ifm-font-color-base: #1c1e21; 
+}
+
+/* Global Typography Hierarchy Resets */
+h1 { line-height: 1.1; }
+h2 { line-height: 1.2; }
+h3 { line-height: 1.25; }
+
+/* Global browser resets for form elements (with fixed quotation marks!) */
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+}
+
+/* ==========================================================================
+   INFIMA CORE OVERRIDES (DARK THEME)
+   ========================================================================== */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #266ad9;
+  --ifm-color-primary-light: #5696FF;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+// Utility Classes
+.section-padding {
+  padding: 85px 0;
 
-
-// Jetzt können Sie die Variable hier nutzen:
-@media (max-width: $breakpoint-mobile) {
-  main, section, header, footer {
-    min-width: 0;
+  @include media-breakpoint-up(lg) {
+    padding: 50px 0;
   }
+}
+
+.section-heading {
+  margin: 0 0 28px;
+    color: var(--color-white);
+    font-size: var(--font-size-section-heading);
+    font-weight: 700;
+    line-height: 120%;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 30px;
+    }
 }

@@ -43,7 +43,13 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
+stylesheets: [
+    {
+      href: 'https://googleapis.com',
+      type: 'text/css',
+    },
+  ],
+  
   presets: [
     [
       'classic',
@@ -75,7 +81,17 @@ const config: Config = {
     ],
   ],
 
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: [
+    [
+      'docusaurus-plugin-sass',
+      {
+        additionalData: `
+          @use "sass:map";
+          @use "@site/src/css/_variables.scss" as *;
+        `,
+      },
+    ],
+  ],
 
   themeConfig: {
     // Replace with your project's social card
