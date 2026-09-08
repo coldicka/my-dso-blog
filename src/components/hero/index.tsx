@@ -5,7 +5,7 @@ import { Button } from '../button';
 import styles from './hero.module.scss';
 
 export default function Hero() {
-  const resolvedCdnImage = useBaseUrl('/img/cdn.png');
+  const resolvedCdnImage = useBaseUrl('/img/cdn.jpeg');
 
   return (
     <section className={styles.hero} id="about">

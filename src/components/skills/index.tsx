@@ -89,21 +89,21 @@ const skills: Skill[] = [
   },
   {
     name: 'OXID',
-    icon: '/img/skills/icon_git.svg',
+    icon: '/img/skills/icon_oxid.png',
     description: [
       'Building Custom Themes and Front Ends',
     ],
   },
   {
     name: 'Shopware',
-    icon: '/img/skills/icon_git.svg',
+    icon: '/img/skills/icon_shopware.svg',
     description: [
       'Building Custom Themes and Front Ends',
     ],
   },
   {
     name: 'SCSS/SASS',
-    icon: '/img/skills/icon_git.svg',
+    icon: '/img/skills/icon_sass.svg',
     description: [
       'Building Layouts and Structures',
       'Optimizing Websites for Smartphones (Responsive Design)',
@@ -111,8 +111,8 @@ const skills: Skill[] = [
     ],
   },
   {
-    name: 'SCSS/SASS',
-    icon: '/img/skills/icon_git.svg',
+    name: 'LESS',
+    icon: '/img/skills/icon_lessjs.svg',
     description: [
       'Building Layouts and Structures',
       'Optimizing Websites for Smartphones (Responsive Design)',
@@ -123,8 +123,8 @@ const skills: Skill[] = [
     name: 'Kirby',
     icon: '/img/skills/icon_git.svg',
     description: [
-      'Eigene Content-Strukturen definieren',
-      'Komplett datenbankfreie Seiten (Flat-File) entwickeln',
+      'Developing a completely database-free, flat-file frontend',
+      'Building database-free websites based on a flat-file system',
     ],
   },
   {
@@ -139,8 +139,8 @@ const skills: Skill[] = [
     name: 'React',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     description: [
-      'PLC Programming',
-      'Visualization and Operation',
+      'Component-Based Architecture',
+      'One-Way Data Binding',
     ],
   },
 ];
