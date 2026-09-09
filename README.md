@@ -99,29 +99,16 @@ cp example.env .env
 
 Configure:
 
-| Variable                     | Description          |
-| ---------------------------- | -------------------- |
-| `DOCUSAURUS_GITHUB_USERNAME` | GitHub username      |
-| `DOCUSAURUS_CONTACT_EMAIL`   | Contact email        |
-| `DOCUSAURUS_LINKEDIN_URL`    | LinkedIn URL         |
-| `DOCUSAURUS_SITE_TITLE`      | Your name            |
-| `DOCUSAURUS_SITE_TAGLINE`    | Job title / tagline  |
-| `DOCUSAURUS_GITHUB_URL`      | GitHub profile URL   |
-| `DOCUSAURUS_URL`             | GitHub Pages URL     |
-| `DOCUSAURUS_BASE_URL`        | Repository base path |
-
-Example:
-
-```env
-DOCUSAURUS_GITHUB_USERNAME=YOUR_USERNAME
-DOCUSAURUS_CONTACT_EMAIL=your@email.com
-DOCUSAURUS_LINKEDIN_URL=https://linkedin.com/in/YOUR_USERNAME
-DOCUSAURUS_SITE_TITLE=Your Name
-DOCUSAURUS_SITE_TAGLINE=Your Job Title
-DOCUSAURUS_GITHUB_URL=https://github.com/YOUR_USERNAME
-DOCUSAURUS_URL=https://YOUR_USERNAME.github.io/YOUR_REPO/
-DOCUSAURUS_BASE_URL=/YOUR_REPO/
-```
+| Variable                     | Description          | Example                          |
+| ---------------------------- | -------------------- | -------------------------------- |
+| `BLOG_ENABLED`               | enable blog          | false                            |
+| `DEPLOYMENT_URL`             | GitHub Pages URL     | https://YOUR_USERNAME.github.io  |
+| `DEPLOYMENT_BRANCH`          | Your branch          | main                             |
+| `BASE_URL`                   | Repository base path | /my-dso-blog/                    |
+| `GITHUB_ORG`                 | GitHub organisation  | YOUR_GITHUB_ORGANISATION         |
+| `GITHUB_PROJECT`             | Repository base name | my-dso-blog                      |
+| `GIT_REPOSITORY_URL`         | GitHub URL           | https://github.com/YOUR_USERNAME |
+| `GITHUB_USERNAME`            | GitHub username      | YOUR_GITHUB_NAME                 |
 
 ---
 
