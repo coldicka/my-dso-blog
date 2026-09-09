@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from '@docusaurus/router';
 import Link from '@docusaurus/Link';
 import styles from './header.module.scss';
 
@@ -9,10 +10,11 @@ interface NavLinkProps {
 }
 
 function NavLink({ to, label, onItemClick }: NavLinkProps) {
+  const location = useLocation();
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    // If it is an internal anchor link (starts with #)
-    if (to.startsWith('#')) {
-      e.preventDefault(); // Prevents the browser from jumping around
+    if (to.startsWith('#') && location.pathname === '/') {
+      e.preventDefault();
       
       const targetId = to.replace('#', '');
       const element = document.getElementById(targetId);
@@ -23,13 +25,16 @@ function NavLink({ to, label, onItemClick }: NavLinkProps) {
           block: 'start',
         });
       }
+      onItemClick();
     }
-    
-    onItemClick();
   };
 
+  const targetPath = to.startsWith('#') && location.pathname !== '/' 
+    ? `/${to}` 
+    : to;
+
   return (
-    <Link to={to} onClick={handleScroll}>
+    <Link to={targetPath} onClick={handleScroll}>
       {label}
     </Link>
   );

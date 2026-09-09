@@ -5,12 +5,11 @@
    GLOBAL LAYOUT & BACKGROUND GRADIENT
    ========================================================================== */
 
-/* 1. Removes the white Docusaurus padding above the header */
 html[data-theme] {
   padding-top: 0 !important;
 }
 
- html, body {
+html, body {
   font-family: var(--font-quicksand);
   scroll-behavior: smooth;
 }
@@ -27,35 +26,25 @@ html[data-theme] {
   --ifm-color-primary: #266AD9;     
   --ifm-color-primary-light: #5696FF;
 
-   // Global Secondary color
+  // Global Secondary color
   --ifm-color-secondary: #262E34;
-
 
   /* Das globale Schriftart */
   --font-quicksand: 'Quicksand', sans-serif;
 
-  // Typography (Quicksand integration)
-  --ifm-font-family-base: var(--font-quicksand);
-  --ifm-heading-font-family: var(--font-quicksand);
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-
-  // Standard-Textgröße (16px) und die Basis-Zeilenhöhe
-  --ifm-font-size-base: 16px; 
-  --ifm-line-height-base: 1.5;
-
+  // 1. TYPOGRAPHY SCALING VARIABLES (Zuerst definieren, damit sie unten genutzt werden können)
   --font-size-hero-title: 48px;
   --font-size-section-heading: 32px;
   --font-size-nav-and-sub: 24px;
   --font-size-card-title: 21px;
-  --font-size-text-16: 14px
+  --font-size-text-16: 14px;
   --font-size-text-18: 16px;
   --font-size-text-20: 16px;
   --font-size-text-22: 18px;
   --font-size-text-24: 18px;
   --font-size-text-40: 18px;
 
-    @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(lg) {
     --font-size-hero-title: 88px;
     --font-size-section-heading: 64px;
     --font-size-nav-and-sub: 32px;
@@ -67,19 +56,31 @@ html[data-theme] {
     --font-size-text-40: 40px;
   }
 
-  // Global Typography Sizing & Line-Heights
-  --ifm-heading-h1-font-size: 4rem;      
-  --ifm-heading-h2-font-size: 2.5rem;    
-  --ifm-heading-h3-font-size: 1.75rem;   
+  // 2. INFIMA CORRECTIONS (Nutzen jetzt die oben definierten Variablen)
+  --ifm-font-family-base: var(--font-quicksand);
+  --ifm-heading-font-family: var(--font-quicksand);
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  // Infima nutzt diese beiden Variablen für h1-Größen. Beide zeigen nun auf dein responsives Hero-Title!
+  --ifm-h1-font-size: var(--font-size-hero-title);
+  --ifm-heading-h1-font-size: var(--font-size-hero-title);      
+  
+  --ifm-heading-h2-font-size: var(--font-size-section-heading);    
+  --ifm-heading-h3-font-size: var(--font-size-card-title);   
   --ifm-heading-line-height: 1.2; 
+
+  // Standard-Textgröße (16px) und die Basis-Zeilenhöhe
+  --ifm-font-size-base: 16px; 
+  --ifm-line-height-base: 1.5;
 
   // Custom Colors (DRY Utilities)
   --color-black: #262E34;
   --color-white: #ffffff;
   --color-gray: #404040;
   --color-bg-dark-gray: #1e2229; 
-  --color-light-black: #404040
-  --color-card-gray: #40404;    
+  --color-light-black: #404040;
+  --color-card-gray: #404040;    
   --ifm-font-color-base: #1c1e21; 
 }
 
@@ -115,12 +116,12 @@ h3 { line-height: 1.25; }
 
 .section-heading {
   margin: 0 0 28px;
-    color: var(--color-white);
-    font-size: var(--font-size-section-heading);
-    font-weight: 700;
-    line-height: 120%;
+  color: var(--color-white);
+  font-size: var(--font-size-section-heading);
+  font-weight: 700;
+  line-height: 120%;
 
-    @include media-breakpoint-up(lg) {
-      margin-bottom: 30px;
-    }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 30px;
+  }
 }
