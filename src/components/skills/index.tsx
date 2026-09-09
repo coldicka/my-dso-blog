@@ -120,16 +120,8 @@ const skills: Skill[] = [
     ],
   },
   {
-    name: 'Kirby',
-    icon: '/img/skills/icon_git.svg',
-    description: [
-      'Developing a completely database-free, flat-file frontend',
-      'Building database-free websites based on a flat-file system',
-    ],
-  },
-  {
     name: 'TIA Portal (SPS)',
-    icon: '/img/skills/icon_git.svg',
+    icon: '/img/skills/icon_tia_portal_hmi_logo.svg',
     description: [
       'PLC Programming',
       'Visualization and Operation',

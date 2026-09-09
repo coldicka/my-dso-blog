@@ -85,9 +85,11 @@
         height: 100%;
         width: 100%; 
         display: block;
-        
-        path, rect {
-          transition: fill 0.3s ease, stroke 0.3s ease;
+
+        rect, circle, path {
+          fill: var(--ifm-color-primary);
+          stroke-width: 1px;
+          transition: fill 0.3s ease, opacity 0.3s ease;
         }
       }
     }
@@ -95,8 +97,9 @@
     &:hover {
       .linkIcon {
         svg {
-          rect {
-            fill: var(--color-white);
+          rect, circle, path {
+            fill: var(--ifm-color-primary-light);
+            stroke-width: 2px;
           }
         }
       }
