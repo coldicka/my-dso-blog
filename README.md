@@ -1,98 +1,211 @@
-# My Developer Blog
+# Docusaurus Portfolio
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Personal portfolio and documentation website built with **Docusaurus**, **React**, and **TypeScript**. Deployed to **GitHub Pages** using **GitHub Actions**.
 
-## Repository Description
+Showcases work in:
 
-This repository hosts a developer blog built with Docusaurus. It includes tools and scripts for creating, managing, and deploying static web content. The software supports rapid local development, customizable theming, and seamless deployment to platforms like GitHub Pages or NGINX.
+* 🔐 Cybersecurity
+* 💻 Software Development
+* ⚙️ IT Operations
+* 🛠️ Infrastructure & Automation
+
+---
 
 ## Table of Contents
 
-- [My Developer Blog](#my-developer-blog)
-  - [Repository Description](#repository-description)
-  - [Table of Contents](#table-of-contents)
-  - [Quickstart](#quickstart)
-    - [Prerequisites](#prerequisites)
-  - [Repository Structure](#repository-structure)
-  - [Deployment](#deployment)
-    - [Deploy to Github Pages](#deploy-to-github-pages)
-    - [Deploying using NGINX](#deploying-using-nginx)
+* [Tech Stack](#tech-stack)
+* [Project Structure](#project-structure)
+* [Getting Started](#getting-started)
+* [Environment Configuration](#environment-configuration)
+* [Development](#development)
+* [GitHub Pages](#github-pages)
+* [Deployment](#deployment)
+* [Production Build](#production-build)
+* [Security](#security)
+* [License](#license)
 
-## Quickstart
+---
 
-### Prerequisites
+## Tech Stack
 
-- [Node.js](https://nodejs.org/) (v16 or later recommended)
-- [pnpm](https://pnpm.io/) (package manager for faster and more efficient dependency handling)
-- [Docker](https://www.docker.com/products/docker-desktop) (only required if [deploying using NGINX](#deploying-using-nginx))
+| Technology         | Purpose                     |
+| ------------------ | --------------------------- |
+| Docusaurus         | Documentation & static site |
+| React / TypeScript | Portfolio UI                |
+| CSS Modules        | Styling                     |
+| dotenv             | Environment configuration   |
+| GitHub Actions     | CI/CD                       |
+| GitHub Pages       | Hosting                     |
 
-1. Installation
+---
 
-   ```
-   $ pnpm install
-   ```
+## Project Structure
 
-2. Local Development
+```text
+.
+├── .github/workflows/deploy.yml
+├── docs/
+│   └── project/
+│       ├── README.md
+│       └── _category_.json
+├── src/
+│   ├── components/
+│   └── pages/index.tsx
+├── static/
+├── docusaurus.config.ts
+├── sidebars.ts
+├── example.env
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-   ```
-   $ pnpm start
-   ```
+| File / Directory               | Purpose               |
+| ------------------------------ | --------------------- |
+| `docusaurus.config.ts`         | Site configuration    |
+| `sidebars.ts`                  | Documentation sidebar |
+| `src/pages/index.tsx`          | Portfolio homepage    |
+| `src/components/`              | React components      |
+| `docs/`                        | Projects & write-ups  |
+| `.github/workflows/deploy.yml` | Deployment workflow   |
 
-   This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+---
 
-3. Build
+## Getting Started
 
-   ```
-   $ pnpm build
-   ```
+### Requirements
 
-   This command generates static content into the `build` directory and can be served using any static contents hosting service.
+* Node.js `v24.16.0+`
+* npm `v11.17.0+`
+* Git
 
-4. Deployment
+### Installation
 
-   In order to deploy onto Github Pages, ensure that your `docusaurus.config.ts` conforms with the [documentation guidelines](https://docusaurus.io/docs/deployment#deploying-to-github-pages). After that is ensured run the following command to deploy:
+```bash
+git clone git@github.com:coldicka/my_dso_blog.git
+cd my_dso_blog
+npm install
+```
 
-   ```
-   $ USE_SSH=true pnpm deploy
-   ```
+---
 
-For detailed information about deploying this Docusaurus project, refer to the [Deployment](#deployment) section below.
+## Environment Configuration
 
-## Repository Structure
+Create the environment file:
 
-The repository is organized as follows:
+```bash
+cp example.env .env
+```
 
-- `blog/`: Contains markdown files for blog posts. Blog-related metadata is automatically picked up by the Docusaurus configuration.
-- `docs/`: Contains markdown files for documentation. These files are referenced in `sidebars.ts` to define the sidebar structure.
-- `src/`: Contains custom React components, CSS, and JavaScript for additional functionality or theming.
-- `static/`: Stores static assets (e.g., images, icons) served directly without processing.
-- `sidebars.ts`: Configures the structure of sidebars in the documentation section.
-- `docusaurus.config.ts`: Main configuration file for customizing and managing Docusaurus behavior.
-- `build/`: Generated after running the `pnpm build` command. Contains the static website files ready for deployment.
+Configure:
 
-New content can be added as follows:
+| Variable                     | Description          |
+| ---------------------------- | -------------------- |
+| `DOCUSAURUS_GITHUB_USERNAME` | GitHub username      |
+| `DOCUSAURUS_CONTACT_EMAIL`   | Contact email        |
+| `DOCUSAURUS_LINKEDIN_URL`    | LinkedIn URL         |
+| `DOCUSAURUS_SITE_TITLE`      | Your name            |
+| `DOCUSAURUS_SITE_TAGLINE`    | Job title / tagline  |
+| `DOCUSAURUS_GITHUB_URL`      | GitHub profile URL   |
+| `DOCUSAURUS_URL`             | GitHub Pages URL     |
+| `DOCUSAURUS_BASE_URL`        | Repository base path |
 
-- Add new documentation files to the `docs/` folder.
-- Add new blog posts to the `blog/` folder. No additional configuration is required.
+Example:
+
+```env
+DOCUSAURUS_GITHUB_USERNAME=YOUR_USERNAME
+DOCUSAURUS_CONTACT_EMAIL=your@email.com
+DOCUSAURUS_LINKEDIN_URL=https://linkedin.com/in/YOUR_USERNAME
+DOCUSAURUS_SITE_TITLE=Your Name
+DOCUSAURUS_SITE_TAGLINE=Your Job Title
+DOCUSAURUS_GITHUB_URL=https://github.com/YOUR_USERNAME
+DOCUSAURUS_URL=https://YOUR_USERNAME.github.io/YOUR_REPO/
+DOCUSAURUS_BASE_URL=/YOUR_REPO/
+```
+
+---
+
+## Development
+
+Start the local development server:
+
+```bash
+npm run start
+```
+
+---
+
+## GitHub Pages
+
+Create a GitHub repository and push the project:
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
+git push -u origin main
+```
+
+Enable GitHub Pages:
+
+**Settings → Pages → Source → GitHub Actions**
+
+### GitHub Actions Secrets
+
+Add the environment variables from `.env` as repository secrets under:
+
+**Settings → Secrets and variables → Actions**
+
+The workflow creates the environment configuration, builds the site, and deploys it automatically.
+
+---
 
 ## Deployment
 
-### Deploy to Github Pages
+Every push to `main` triggers a deployment:
 
-To deploy using SSH:
-
-```
-$ USE_SSH=true pnpm deploy
-```
-
-To deploy without using SSH, run:
-
-```
-$ GIT_USER=<Your GitHub username> pnpm deploy
+```bash
+git add .
+git commit -m "Update portfolio"
+git push
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Website:
 
-### Deploying using NGINX
+```text
+https://YOUR_USERNAME.github.io/YOUR_REPO/
+```
 
-To deploy the site using NGINX and Docker, follow this [guide](./docs/guides/deploy-docusaurus-with-docker-and-nginx.md)
+---
+
+## Production Build
+
+Build and serve the production version locally:
+
+```bash
+npm run build
+npm run serve
+```
+
+The generated files are stored in `build/`.
+
+---
+
+## Security
+
+Keep sensitive and generated files out of version control:
+
+```gitignore
+.env
+node_modules/
+build/
+```
+
+---
+
+## License
+
+This project is intended as a personal portfolio and documentation website.
+:::

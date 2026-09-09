@@ -22,7 +22,7 @@ const projects: Project[] = [
       'An automated CI/CD workflow powered by GitHub Actions and the GitHub Container Registry. The pipeline is divided into three sequential stages: building the application, preparing the configuration, and deploying the project remotely through SSH.',
     tags: getTags(['docker', 'django', 'angular', 'nginx']),
     docPath: 'docs/conduit-container',
-    githubLink: 'https://github.com/coldicka/Conduit-Containerm',
+    githubLink: 'https://github.com/coldicka/Conduit-Container',
     image: '/img/projects/conduit-container.png',
   },
   {
@@ -48,7 +48,7 @@ const projects: Project[] = [
     description:
       'A containerized, Java-based Minecraft server deployment built from a custom Dockerfile using an OpenJDK base image. An entrypoint script automates runtime initialization, server provisioning, configuration, and startup.',
     tags: getTags(['docker', 'java', 'shell']),
-    docPath: 'docs/minecraft-gaming-server',
+    docPath: 'docs/minecraft-server',
     githubLink: 'https://github.com/coldicka/minecraft-server',
     image: '/img/projects/minecraft.png',
   },
