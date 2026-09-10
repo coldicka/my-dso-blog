@@ -25,8 +25,9 @@ function NavLink({ to, label, onItemClick }: NavLinkProps) {
           block: 'start',
         });
       }
-      onItemClick();
     }
+    
+    onItemClick();
   };
 
   const targetPath = to.startsWith('#') && location.pathname !== '/' 

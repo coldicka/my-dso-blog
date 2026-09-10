@@ -14,7 +14,7 @@ interface ProjectCardProps {
   description: string;
   tags: Tag[];
   docPath: string;
-  githubLink?: string; // Juice shop hat kein github
+  githubLink?: string; // Juice Shop does not have a GitHub repository
   image: string;
   variant: 'desktop' | 'mobile';
   indexNumber?: number;
@@ -46,7 +46,7 @@ export function ProjectCard({
   };
 
   // ==========================================================================
-  // --- DESKTOP VARIANTE (Grid-Anordnung) ---
+  // --- DESKTOP VERSION (Grid Layout) ---
   // ==========================================================================
   if (variant === 'desktop') {
     return (
@@ -80,7 +80,7 @@ export function ProjectCard({
   }
 
   // ==========================================================================
-  // --- MOBILE VARIANTE (Stapel-Anordnung) ---
+  // --- MOBILE VERSION (stacked arrangement) ---
   // ==========================================================================
   return (
     <article className={styles.mobileCard}>

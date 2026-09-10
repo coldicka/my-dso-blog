@@ -1,4 +1,4 @@
-// Interfaces export
+// Export Interfaces
 export interface Tag {
   label: string;
   icon: string;
@@ -65,10 +65,10 @@ export const AVAILABLE_TAGS: Record<string, Tag> = {
   }
 };
 
-// Typ-Sicherheit für deine Tag-Eingaben (verhindert willkürliche Strings)
+// Type safety for tag inputs (prevents arbitrary strings)
 export type TagKey = keyof typeof AVAILABLE_TAGS;
 
-// Hilfskomponente/Funktion exportieren
+// Export Help Component/Function
 export function getTags(tagKeys: TagKey[]): Tag[] {
   return tagKeys
     .map((key) => AVAILABLE_TAGS[key])

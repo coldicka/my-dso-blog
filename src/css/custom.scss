@@ -29,10 +29,10 @@ html, body {
   // Global Secondary color
   --ifm-color-secondary: #262E34;
 
-  /* Das globale Schriftart */
+  /* global font */
   --font-quicksand: 'Quicksand', sans-serif;
 
-  // 1. TYPOGRAPHY SCALING VARIABLES (Zuerst definieren, damit sie unten genutzt werden können)
+  // 1. TYPOGRAPHY SCALING VARIABLES
   --font-size-hero-title: 48px;
   --font-size-section-heading: 32px;
   --font-size-nav-and-sub: 24px;
@@ -56,13 +56,12 @@ html, body {
     --font-size-text-40: 40px;
   }
 
-  // 2. INFIMA CORRECTIONS (Nutzen jetzt die oben definierten Variablen)
+  // Overwriting Some Values
   --ifm-font-family-base: var(--font-quicksand);
   --ifm-heading-font-family: var(--font-quicksand);
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   
-  // Infima nutzt diese beiden Variablen für h1-Größen. Beide zeigen nun auf dein responsives Hero-Title!
   --ifm-h1-font-size: var(--font-size-hero-title);
   --ifm-heading-h1-font-size: var(--font-size-hero-title);      
   
@@ -70,11 +69,11 @@ html, body {
   --ifm-heading-h3-font-size: var(--font-size-card-title);   
   --ifm-heading-line-height: 1.2; 
 
-  // Standard-Textgröße (16px) und die Basis-Zeilenhöhe
+  // Standard text size (16px) and the base line height
   --ifm-font-size-base: 16px; 
   --ifm-line-height-base: 1.5;
 
-  // Custom Colors (DRY Utilities)
+  // Custom Colors
   --color-black: #262E34;
   --color-white: #ffffff;
   --color-gray: #404040;
@@ -89,7 +88,7 @@ h1 { line-height: 1.1; }
 h2 { line-height: 1.2; }
 h3 { line-height: 1.25; }
 
-/* Global browser resets for form elements (with fixed quotation marks!) */
+/* Global browser resets for form elements */
 [type="button"],
 [type="reset"],
 [type="submit"] {
@@ -97,7 +96,7 @@ h3 { line-height: 1.25; }
 }
 
 /* ==========================================================================
-   INFIMA CORE OVERRIDES (DARK THEME)
+   CORE OVERRIDES (DARK THEME)
    ========================================================================== */
 [data-theme='dark'] {
   --ifm-color-primary: #266ad9;

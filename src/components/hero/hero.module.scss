@@ -63,28 +63,13 @@
     grid-area: photo; 
     justify-self: center; 
     margin-bottom: 1.5rem;
-    width: 100%; 
 
     @include media-breakpoint-up(lg) {
-      margin-bottom: 0;
       justify-self: end; 
     }
-
-    .photoPlaceholder {
-      align-items: center;
-      aspect-ratio: 1 / 1;
-      background-color: rgba(255, 255, 255, 0.15);
-      border: 2px dashed rgba(255, 255, 255, 0.4);
-      border-radius: 30px;
-      display: flex;
-      justify-content: end;
-      margin: 0 auto;
-      max-width: 340px;
-      width: 100%;
-
-      @include media-breakpoint-up(lg) {
-        max-width: 480px;
-      }
+    
+    img {
+      max-height: 479px;
     }
   }
 

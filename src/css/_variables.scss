@@ -10,7 +10,7 @@ $grid-breakpoints: (
   xxl: 1440px
 ) !default;
 
-// Mixin für "Ab dieser Größe und aufwärts" (min-width)
+// Mixin for “This width and larger” (min-width)
 @mixin media-breakpoint-up($name) {
   $min: map.get($grid-breakpoints, $name);
   
@@ -23,11 +23,11 @@ $grid-breakpoints: (
   }
 }
 
-// Mixin für "Bis zu dieser Größe und abwärts" (max-width)
+// Mixin for “Up to this size and smaller” (max-width)
 @mixin media-breakpoint-down($name) {
   $max: map.get($grid-breakpoints, $name);
   
-  // 0.02px abziehen, um Überschneidungen (z.B. exakt bei 768px) zu verhindern
+  // Subtract 0.02px to prevent overlap (e.g., exactly at 768px)
   @if $max and $max != 0 {
     @media (max-width: ($max - 0.02px)) {
       @content;

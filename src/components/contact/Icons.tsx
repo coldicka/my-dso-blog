@@ -4,6 +4,13 @@ interface IconProps {
   className?: string;
 }
 
+/**
+ * A stylized SVG Mail (envelope) icon component.
+ *
+ * @param props - The properties for the icon.
+ * @param props.className - Optional CSS class name(s) passed down to the SVG element.
+ * @returns A JSX element containing the Mail SVG graphic.
+ */
 export function MailIcon({ className }: IconProps) {
   return (
     <svg className={className} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -14,6 +21,13 @@ export function MailIcon({ className }: IconProps) {
   );
 }
 
+/**
+ * A stylized SVG LinkedIn logo icon component.
+ *
+ * @param props - The properties for the icon.
+ * @param props.className - Optional CSS class name(s) passed down to the SVG element.
+ * @returns A JSX element containing the LinkedIn SVG graphic.
+ */
 export function LinkedInIcon({ className }: IconProps) {
   return (
     <svg className={className} width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

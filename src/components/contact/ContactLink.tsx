@@ -9,6 +9,17 @@ export interface ContactLinkProps {
   iconName: 'mail' | 'linkedin';
 }
 
+/**
+ * A link component specifically for contact details.
+ * It renders an anchor tag with an optional icon (LinkedIn or Mail) and automatically 
+ * handles safe external link behaviors.
+ *
+ * @param props - The properties for the contact link.
+ * @param props.href - The destination URL or mailto link.
+ * @param props.label - The visible text for the link.
+ * @param props.isExternal - Whether the link should open in a new tab.
+ * @param props.iconName - Specifies the icon to render ('linkedin' or 'mail').
+ */
 export default function ContactLink({ href, label, isExternal, iconName }: ContactLinkProps) {
   return (
     <a 

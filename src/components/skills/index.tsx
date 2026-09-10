@@ -139,7 +139,7 @@ const skills: Skill[] = [
 
 const SKILLS_PER_PAGE = 3;
 
-// Einteilen der Skills in Seiten für den Mobile-Slider (bei 6 Skills = genau 2 Seiten)
+// Organizing the skills into pages for the mobile slider (with 6 skills = exactly 2 pages)
 const skillPages: Skill[][] = Array.from(
   { length: Math.ceil(skills.length / SKILLS_PER_PAGE) },
   (_, index) => skills.slice(index * SKILLS_PER_PAGE, index * SKILLS_PER_PAGE + SKILLS_PER_PAGE)
@@ -148,7 +148,7 @@ const skillPages: Skill[][] = Array.from(
 export default function Skills() {
   const [activePage, setActivePage] = useState(0);
 
-  // Sicherheitsnetz für den ersten Render-Vorgang
+  // Safety net for the first rendering process
   const currentMobileSkills = skillPages[activePage] || [];
 
   const showPreviousPage = () => {
@@ -178,7 +178,7 @@ export default function Skills() {
             ))}
           </div>
 
-          {/* ---------- Mobile Slider Ansicht (Flache Listen-Karten) ---------- */}
+          {/* ---------- Mobile Slider View ---------- */}
           <div className={styles.mobileSlider}>
             <div className={styles.mobileCard}>
               {currentMobileSkills.map((skill, index) => (
@@ -192,7 +192,7 @@ export default function Skills() {
               ))}
             </div>
 
-            {/* Slider-Steuerung mit Punkten */}
+            {/* ---------- Slider control with dots ---------- */}
             <div className={styles.sliderControls}>
               <button type="button" className={styles.sliderArrow} onClick={showPreviousPage}>‹</button>
               <div className={styles.dots}>

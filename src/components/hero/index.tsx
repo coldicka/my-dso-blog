@@ -1,5 +1,4 @@
 import React from 'react'
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Button } from '../button';
 import styles from './hero.module.scss';
@@ -17,13 +16,11 @@ export default function Hero() {
           <p className={styles.title}>DevSecOps Engineer</p>
 
           <div className={styles.photoContainer}>
-            <div className={styles.photoPlaceholder}>
-              <img
-                src={resolvedCdnImage}
-                alt="testa"
-                className={styles.photo}
+            <img
+              src={resolvedCdnImage}
+              alt="testa"
+              className={styles.photo}
             />
-            </div>
           </div>
 
           <div className={styles.bioWrapper}>

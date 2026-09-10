@@ -8,6 +8,16 @@ interface SkillCardProps {
   variant: 'desktop' | 'mobile';
 }
 
+/**
+ * SkillCard-Komponente zur Anzeige von Fähigkeiten.
+ *
+ * @param props - The props for the skill component.
+ * @param props.name - The skill name.
+ * @param props.icon - Icon.
+ * @param props.description - An array of strings describing the usage.
+ * @param props.variant - The display option (e.g., ‘desktop’).
+ * @returns The rendered JSX element of the SkillCard.
+ */
 export function SkillCard({ name, icon, description, variant }: SkillCardProps) {
   const resolvedIconUrl = useBaseUrl(icon);
 
