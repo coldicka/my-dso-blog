@@ -11,7 +11,7 @@ const gitRepoUrl = process.env.GIT_REPOSITORY_URL || "https://github.com/coldick
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH || "main";
 
 const config: Config = {
-  title: 'Mein Docusaurus Blog',
+  title: 'Mein Portfolio',
   tagline: 'Willkommen auf meinem Blog',
   favicon: 'img/favicon.ico',
 
@@ -21,7 +21,7 @@ const config: Config = {
 
   baseUrl:
     process.env.BASE_URL ||
-   "my-dso-blog/",
+   "/my-dso-blog/",
 
   // GitHub pages deployment config.
   organizationName: 
