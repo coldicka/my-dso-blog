@@ -1,0 +1,108 @@
+.contact {
+  background: var(--ifm-color-secondary);
+  color: var(--color-white);
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+
+    @include media-breakpoint-up(lg) {
+      column-gap: 100px;
+      display: grid;
+      grid-template-columns: 2fr 1.3fr;
+    }
+
+    @include media-breakpoint-down(sm) {
+      gap: 28px;
+    }
+  }
+
+  .introText {
+    color: var(--color-white);
+    font-size: var(--font-size-text-18);
+    margin-bottom: 1rem;
+  }
+
+  .list {
+    font-size: var(--font-size-text-18);
+    gap: 8px;
+    line-height: 120%;
+    margin: 0;
+    
+    li {
+       padding-bottom: 9px;
+    }
+  }
+
+  .right {
+    @include media-breakpoint-up(lg) {
+      padding-top: 12px;
+    }
+  }
+
+  .tagline {
+    color: var(--color-white);
+    font-size: var(--font-size-text-24);
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 40px 0;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 1.5rem;
+    }
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .link {
+    align-items: center;
+    color: var(--color-white);
+    display: inline-flex;
+    gap: 12px; 
+    text-decoration: none;
+
+    .linkIcon {
+      align-items: center;
+      justify-content: center;
+      display: inline-flex;
+      
+      width: 40px; 
+      height: 40px;
+      flex-shrink: 0;
+
+      @include media-breakpoint-down(sm) {
+        height: 32px;
+        width: 32px;
+      }
+
+      svg {
+        height: 100%;
+        width: 100%; 
+        display: block;
+
+        rect, circle, path {
+          fill: var(--ifm-color-primary);
+          stroke-width: 1px;
+          transition: fill 0.3s ease, opacity 0.3s ease;
+        }
+      }
+    }
+
+    &:hover {
+      .linkIcon {
+        svg {
+          rect, circle, path {
+            fill: var(--ifm-color-primary-light);
+            stroke-width: 2px;
+          }
+        }
+      }
+    }
+  }
+}

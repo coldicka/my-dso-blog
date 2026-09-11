@@ -1,0 +1,126 @@
+@use 'base';
+@import url('https://googleapis.com');
+
+/* ==========================================================================
+   GLOBAL LAYOUT & BACKGROUND GRADIENT
+   ========================================================================== */
+
+html[data-theme] {
+  padding-top: 0 !important;
+}
+
+html, body {
+  font-family: var(--font-quicksand);
+  scroll-behavior: smooth;
+}
+ 
+/* ==========================================================================
+   INFIMA CORE OVERRIDES (LIGHT THEME)
+   ========================================================================== */
+:root {
+  // Container & Spacing
+  --ifm-container-width: 1440px;
+  --ifm-spacing-horizontal: 1.5rem;
+
+  // Global Primary color
+  --ifm-color-primary: #266AD9;     
+  --ifm-color-primary-light: #5696FF;
+
+  // Global Secondary color
+  --ifm-color-secondary: #262E34;
+
+  /* global font */
+  --font-quicksand: 'Quicksand', sans-serif;
+
+  // 1. TYPOGRAPHY SCALING VARIABLES
+  --font-size-hero-title: 48px;
+  --font-size-section-heading: 32px;
+  --font-size-nav-and-sub: 24px;
+  --font-size-card-title: 21px;
+  --font-size-text-16: 14px;
+  --font-size-text-18: 16px;
+  --font-size-text-20: 16px;
+  --font-size-text-22: 18px;
+  --font-size-text-24: 18px;
+  --font-size-text-40: 18px;
+
+  @include media-breakpoint-up(lg) {
+    --font-size-hero-title: 88px;
+    --font-size-section-heading: 64px;
+    --font-size-nav-and-sub: 32px;
+    --font-size-text-16: 16px;
+    --font-size-text-18: 18px;
+    --font-size-text-20: 20px;
+    --font-size-text-22: 22px;
+    --font-size-text-24: 24px;
+    --font-size-text-40: 40px;
+  }
+
+  // Overwriting Some Values
+  --ifm-font-family-base: var(--font-quicksand);
+  --ifm-heading-font-family: var(--font-quicksand);
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  --ifm-h1-font-size: var(--font-size-hero-title);
+  --ifm-heading-h1-font-size: var(--font-size-hero-title);      
+  
+  --ifm-heading-h2-font-size: var(--font-size-section-heading);    
+  --ifm-heading-h3-font-size: var(--font-size-card-title);   
+  --ifm-heading-line-height: 1.2; 
+
+  // Standard text size (16px) and the base line height
+  --ifm-font-size-base: 16px; 
+  --ifm-line-height-base: 1.5;
+
+  // Custom Colors
+  --color-black: #262E34;
+  --color-white: #ffffff;
+  --color-gray: #404040;
+  --color-bg-dark-gray: #1e2229; 
+  --color-light-black: #404040;
+  --color-card-gray: #404040;    
+  --ifm-font-color-base: #1c1e21; 
+}
+
+/* Global Typography Hierarchy Resets */
+h1 { line-height: 1.1; }
+h2 { line-height: 1.2; }
+h3 { line-height: 1.25; }
+
+/* Global browser resets for form elements */
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+}
+
+/* ==========================================================================
+   CORE OVERRIDES (DARK THEME)
+   ========================================================================== */
+[data-theme='dark'] {
+  --ifm-color-primary: #266ad9;
+  --ifm-color-primary-light: #5696FF;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+// Utility Classes
+.section-padding {
+  padding: 85px 0;
+
+  @include media-breakpoint-up(lg) {
+    padding: 50px 0;
+  }
+}
+
+.section-heading {
+  margin: 0 0 28px;
+  color: var(--color-white);
+  font-size: var(--font-size-section-heading);
+  font-weight: 700;
+  line-height: 120%;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 30px;
+  }
+}
