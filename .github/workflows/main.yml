@@ -4,10 +4,10 @@ on:
     branches:
       - main
       - feature/portfolio
-  pull_request:
-    branches:
-      - main
-      - feature/portfolio
+  #pull_request:
+  #  branches:
+  #    - main
+  #    - feature/portfolio
 
 permissions:
   contents: write
