@@ -25,24 +25,17 @@ export default function Contact() {
           <div className={styles.left}>
             <h2 className="section-heading">Contact me</h2>
             <p className={styles.introText}>
-              <strong>Let’s bridge the gap between Code, Security, and Infrastructure!</strong>
+              <strong>Let's build secure systems together.</strong>
             </p>
             <ul className={styles.list}>
               <li>
-                With <strong>several years of professional frontend development experience</strong>, I understand web applications inside out. 
-                I am now channeling this engineering background into cloud security and automation.
+                I combine my software development background with DevSecOps, cybersecurity, automation, and infrastructure to build secure and reliable software environments.
               </li>
               <li>
-                I am ready to bring my engineering mindset into production environments as a dedicated
-                <strong> DevSecOps, Cloud Engineering, or Systems Engineering</strong>.
-              </li>
-              <li>
-                <strong>My unique advantage:</strong> Because I come from a development background, I can collaborate seamlessly with your dev teams to secure pipelines, fix vulnerabilities directly in the code, and build highly stable infrastructure with a developer-first mindset.
-              </li>
-              <li>
-                🌍 Open to <strong>fully remote roles</strong>, hybrid environments, or relocation.
+               Open to remote · hybrid · relocation
               </li>
             </ul>
+            <p>Let's connect →</p>
           </div>
 
           <div className={styles.right}>

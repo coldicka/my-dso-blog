@@ -25,11 +25,16 @@ export default function Hero() {
 
           <div className={styles.bioWrapper}>
             <p className={styles.bio}>
-              With a solid background in professional frontend development, I have spent years building scalable, user-focused web applications.
+              From Code to Cloud. From Development to Security.
             </p>
             <p className={styles.bio}>
-              Today, I combine my software engineering foundations with a strong focus on cybersecurity and DevSecOps—including infrastructure security, 
-              automation, and pipeline hardening. My development experience allows me to understand software from the ground up while applying a security-first mindset.
+              With several years of professional experience in frontend development, I have built and maintained production web applications and gained a strong understanding of software engineering from the ground up.
+            </p>
+            <p className={styles.bio}>
+              Today, I combine that development background with my DevSecOps expertise — focusing on cybersecurity, secure CI/CD pipelines, containerization, infrastructure, and automation.
+            </p>
+            <p className={styles.bio}>
+              My goal is to bridge the gap between development and operations while bringing a security-first mindset to modern software environments.
             </p>
           </div>
 
