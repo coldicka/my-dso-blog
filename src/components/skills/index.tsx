@@ -10,35 +10,6 @@ interface Skill {
 
 // All Skills
 const skills: Skill[] = [
-   {
-    name: 'HTML',
-    icon: '/img/skills/icon_html.svg',
-    description: ['User-friendly navigation menus', 'Responsive web design', 'Contact forms and login pages', 'Transitions, animations and hover effect' ],
-  },
-  {
-    name: 'CSS',
-    icon: '/img/skills/icon_css.svg',
-    description: ['User-friendly navigation menus', 'Responsive web design ', 'Contact forms and login pages', 'Transitions, animations and hover effect' ],
-  },
-  {
-    name: 'CI/CD With GitHub Actions',
-    icon: '/img/skills/icon_cd_ci.svg',
-    description: ['Automated builds and tests', 'pre-built actions for common tasks', 'push, pull request, or schedule', 'Automated deployments' ],
-  },
-  {
-    name: 'Yaml',
-    icon: '/img/skills/icon_yaml.svg',
-    description: ['A Kubernetes deployment', 'store settings like database connections', 'environment-specific variables', 'complex data structures represent lists and maps' ],
-  },
-  {
-    name: 'Shell scripting',
-    icon: '/img/skills/icon_shellscripting.svg',
-    description: [
-      'Adding new users and setting their permissions.',
-      'Performing calculations or running statistical analysis on data.',
-      'Conditional statements, loops, functions',
-    ],
-  },
   {
     name: 'IT Security',
     icon: '/img/skills/icon_itSecurtiy.svg',
@@ -50,23 +21,9 @@ const skills: Skill[] = [
     ],
   },
   {
-    name: 'Container',
-    icon: '/img/skills/icon_docker.svg',
-    description: [
-      'CI/CD pipelines',
-      'automate building, testing, deploying applications.',
-      'build microservices-based applications',
-    ],
-  },
-  {
-    name: 'Static site generator',
-    icon: '/img/skills/icon_staticsiteGenerator.svg',
-    description: [
-      'search functionality',
-      'static website and customization',
-      'tags, categories, and RSS feeds',
-      'translation',
-    ],
+    name: 'CI/CD With GitHub Actions',
+    icon: '/img/skills/icon_cd_ci.svg',
+    description: ['Automated builds and tests', 'pre-built actions for common tasks', 'push, pull request, or schedule', 'Automated deployments' ],
   },
   {
     name: 'Python',
@@ -79,6 +36,29 @@ const skills: Skill[] = [
     ],
   },
   {
+    name: 'Shell scripting',
+    icon: '/img/skills/icon_shellscripting.svg',
+    description: [
+      'Adding new users and setting their permissions.',
+      'Performing calculations or running statistical analysis on data.',
+      'Conditional statements, loops, functions',
+    ],
+  },
+  {
+    name: 'Yaml',
+    icon: '/img/skills/icon_yaml.svg',
+    description: ['A Kubernetes deployment', 'store settings like database connections', 'environment-specific variables', 'complex data structures represent lists and maps' ],
+  },
+  {
+    name: 'Container',
+    icon: '/img/skills/icon_docker.svg',
+    description: [
+      'CI/CD pipelines',
+      'automate building, testing, deploying applications.',
+      'build microservices-based applications',
+    ],
+  },
+  {
     name: 'Git',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
     description: [
@@ -87,6 +67,24 @@ const skills: Skill[] = [
       'CI/CD integration',
     ],
   },
+/*   {
+    name: 'HTML',
+    icon: '/img/skills/icon_html.svg',
+    description: ['User-friendly navigation menus', 'Responsive web design', 'Contact forms and login pages', 'Transitions, animations and hover effect' ],
+  }, */
+  
+/*   {
+    name: 'Static site generator',
+    icon: '/img/skills/icon_staticsiteGenerator.svg',
+    description: [
+      'search functionality',
+      'static website and customization',
+      'tags, categories, and RSS feeds',
+      'translation',
+    ],
+  }, */
+  
+  
   {
     name: 'OXID',
     icon: '/img/skills/icon_oxid.png',
@@ -100,6 +98,19 @@ const skills: Skill[] = [
     description: [
       'Building Custom Themes and Front Ends',
     ],
+  },
+  {
+    name: 'React',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    description: [
+      'Component-Based Architecture',
+      'One-Way Data Binding',
+    ],
+  },
+  {
+    name: 'CSS',
+    icon: '/img/skills/icon_css.svg',
+    description: ['User-friendly navigation menus', 'Responsive web design ', 'Contact forms and login pages', 'Transitions, animations and hover effect' ],
   },
   {
     name: 'SCSS/SASS',
@@ -125,14 +136,6 @@ const skills: Skill[] = [
     description: [
       'PLC Programming',
       'Visualization and Operation',
-    ],
-  },
-  {
-    name: 'React',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-    description: [
-      'Component-Based Architecture',
-      'One-Way Data Binding',
     ],
   },
 ];
