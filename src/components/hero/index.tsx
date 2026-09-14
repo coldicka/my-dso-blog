@@ -20,6 +20,7 @@ export default function Hero() {
               src={resolvedCdnImage}
               alt="testa"
               className={styles.photo}
+              loading="lazy"
             />
           </div>
 

@@ -225,12 +225,15 @@
   }
 
   .sliderArrow {
+    align-items: center;
     background: transparent;
     border: 0;
     color: var(--color-white);
     cursor: pointer;
+    display: flex;
     font-size: var(--font-size-nav-and-sub);
     height: 26px;
+    justify-content: center;
     width: 26px;
   }
 

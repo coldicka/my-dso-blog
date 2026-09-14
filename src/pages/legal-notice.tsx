@@ -103,11 +103,6 @@ export default function LegalNotice(): ReactNode {
             aware of legal violations, I will remove such content promptly.
           </p>
 
-          <h2>Privacy</h2>
-          <p>
-            Information about the processing of personal data can be found in the separate Privacy Policy of this website.
-          </p>
-
           <h2>EU Online Dispute Resolution</h2>
           <p>
             The European Commission provides a platform for online dispute resolution (ODR). However, I am neither 
