@@ -69,22 +69,16 @@
 
     .linkIcon {
       align-items: center;
-      justify-content: center;
       display: inline-flex;
-      
-      width: 40px; 
-      height: 40px;
       flex-shrink: 0;
-
-      @include media-breakpoint-down(sm) {
-        height: 32px;
-        width: 32px;
-      }
+      height: 32px;
+      justify-content: center;
+      width: 32px;
 
       svg {
+        display: block;
         height: 100%;
         width: 100%; 
-        display: block;
 
         rect, circle, path {
           fill: var(--ifm-color-primary);

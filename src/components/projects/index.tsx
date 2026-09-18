@@ -121,7 +121,7 @@ export default function Projects() {
               />
             ))}
 
-            <Link to={`${baseUrl}docs/minecraft-gaming-server`} className={styles.mobileSeeMore}>
+            <Link to={`${baseUrl}docs/truck-signs-api/`} className={styles.mobileSeeMore}>
               ↳ see more projects
             </Link>
           </div>
