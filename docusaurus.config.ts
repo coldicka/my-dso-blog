@@ -99,11 +99,11 @@ stylesheets: [
     navbar: {
       title: 'My Homepage',
 
-      logo: {
+      /*logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
         href: '/',
-      },
+      },*/
 
       items: [
         {

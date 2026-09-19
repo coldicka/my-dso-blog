@@ -102,6 +102,8 @@ h3 { line-height: 1.25; }
   --ifm-color-primary: #266ad9;
   --ifm-color-primary-light: #5696FF;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-content: var(--color-white);
+  --ifm-font-color-base: var(--ifm-color-content);
 }
 
 // Utility Classes
