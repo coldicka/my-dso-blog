@@ -4,9 +4,9 @@ This repository contains a legacy full-stack application consisting of a Postgre
 
 # Table of Contents
 
-1. [Prerequisites](#Prerequisites) 
-2. [Quickstart](#Quickstart) 
-3. [Usage](#Usage)
+1. [Prerequisites](#prerequisites) 
+2. [Quickstart](#quickstart) 
+3. [Usage](#usage)
 4. [Deployment](#deployment)
 
 ## PREREQUISITES

@@ -2,13 +2,13 @@
 
 This repository contains a legacy full-stack application consisting of a PostgreSQL database, a Django backend, and an Angular frontend. The project is fully containerized using Docker and can be started with Docker Compose.
 
-# Table of Contents
+## Table of Contents
 
-1. [Prerequisites](#Prerequisites) 
-2. [Quickstart](#Quickstart) 
-3. [Usage](#Usage)
+1. [Prerequisites](#prerequisites) 
+2. [Quickstart](#quickstart) 
+3. [Usage](#usage)
 
-## PREREQUISITES
+## Prerequisites
 
 Before you begin, make sure the following software is installed on your system:
 
