@@ -10,6 +10,7 @@ interface Skill {
 
 // All Skills
 const skills: Skill[] = [
+  // Row 1: Core Web Languages
   {
     name: 'IT Security',
     icon: '/img/skills/icon_itSecurtiy.svg',
@@ -20,19 +21,33 @@ const skills: Skill[] = [
       'Implement authentication and authorization mechanisms',
     ],
   },
+  /* {
+    name: 'Linux',
+    icon: 'https://jsdelivr.net',
+    description: [
+      'System Administration & Command Line Operations',
+      'User Management and Permissions Control',
+      'Environment Configurations for Deployments',
+    ],
+  }, */
+  {
+    name: 'Container (Docker)',
+    icon: '/img/skills/icon_docker.svg',
+    description: [
+      'CI/CD pipelines',
+      'automate building, testing, deploying applications.',
+      'build microservices-based applications',
+    ],
+  },
+  // Row 2: Frameworks & E-Commerce
   {
     name: 'CI/CD With GitHub Actions',
     icon: '/img/skills/icon_cd_ci.svg',
-    description: ['Automated builds and tests', 'pre-built actions for common tasks', 'push, pull request, or schedule', 'Automated deployments' ],
-  },
-  {
-    name: 'Python',
-    icon: '/img/skills/icon_python.svg',
     description: [
-      'Build APIs',
-      'spam filtering, recommendation systems',
-      'automate software testing',
-      'using libraries like Tkinter, PyQt, or Kivy',
+      'Automated builds and tests',
+      'pre-built actions for common tasks',
+      'push, pull request, or schedule',
+      'Automated deployments'
     ],
   },
   {
@@ -47,44 +62,51 @@ const skills: Skill[] = [
   {
     name: 'Yaml',
     icon: '/img/skills/icon_yaml.svg',
-    description: ['A Kubernetes deployment', 'store settings like database connections', 'environment-specific variables', 'complex data structures represent lists and maps' ],
+    description: [
+      'A Kubernetes deployment',
+      'store settings like database connections',
+      'environment-specific variables',
+      'complex data structures represent lists and maps'
+    ],
+  },
+  // Row 3: Automation & Python
+  {
+    name: 'JavaScript ',
+    icon: '/img/skills/icon_js.svg',
+    description: [
+      'ES6+ Core Features & Async Programming',
+      'DOM Manipulation and Event Handling',
+      'Object-Oriented & Functional Concepts',
+    ],
   },
   {
-    name: 'Container',
-    icon: '/img/skills/icon_docker.svg',
+    name: 'TypeScript',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
     description: [
-      'CI/CD pipelines',
-      'automate building, testing, deploying applications.',
-      'build microservices-based applications',
+      'Strongly Typed JavaScript Development',
+      'Interfaces, Types, and Generic Code',
+      'Catching Errors during Development Time',
     ],
   },
   {
-    name: 'Git',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+    name: 'Python',
+    icon: '/img/skills/icon_python.svg',
     description: [
-      'Branching & merging',
-      'Version control',
-      'CI/CD integration',
+      'Build APIs',
+      'spam filtering, recommendation systems',
+      'automate software testing',
+      'using libraries like Tkinter, PyQt, or Kivy',
     ],
   },
-/*   {
-    name: 'HTML',
-    icon: '/img/skills/icon_html.svg',
-    description: ['User-friendly navigation menus', 'Responsive web design', 'Contact forms and login pages', 'Transitions, animations and hover effect' ],
-  }, */
-  
-/*   {
-    name: 'Static site generator',
-    icon: '/img/skills/icon_staticsiteGenerator.svg',
+  // Row 4: Infrastructure & OS
+  {
+    name: 'React',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
     description: [
-      'search functionality',
-      'static website and customization',
-      'tags, categories, and RSS feeds',
-      'translation',
+      'Component-Based Architecture',
+      'One-Way Data Binding',
     ],
-  }, */
-  
-  
+  },
   {
     name: 'OXID',
     icon: '/img/skills/icon_oxid.png',
@@ -99,18 +121,53 @@ const skills: Skill[] = [
       'Building Custom Themes and Front Ends',
     ],
   },
+  // Row 5: DevOps & Foundations
   {
-    name: 'React',
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    name: 'Git',
+    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
     description: [
-      'Component-Based Architecture',
-      'One-Way Data Binding',
+      'Branching & merging',
+      'Version control',
+      'CI/CD integration',
     ],
   },
   {
+    name: 'TIA Portal (SPS)',
+    icon: '/img/skills/icon_tia_portal_hmi_logo.svg',
+    description: [
+      'PLC Programming',
+      'Visualization and Operation',
+    ],
+  },
+  {
+    name: 'Angular',
+    icon: '/img/skills/icon_angular.png',
+    description: [
+      'Component-Based Architecture',
+      'Two-Way Data Binding & Services',
+      'Basic understanding of framework concepts',
+    ],
+  },
+  {
+    name: 'HTML',
+    icon: '/img/skills/icon_html.svg',
+    description: [
+      'User-friendly navigation menus',
+      'Responsive web design',
+      'Contact forms and login pages',
+      'Transitions, animations and hover effect'
+    ],
+  },
+  // Row 6: Styling Foundations
+  {
     name: 'CSS',
     icon: '/img/skills/icon_css.svg',
-    description: ['User-friendly navigation menus', 'Responsive web design ', 'Contact forms and login pages', 'Transitions, animations and hover effect' ],
+    description: [
+      'User-friendly navigation menus',
+      'Responsive web design ',
+      'Contact forms and login pages',
+      'Transitions, animations and hover effect'
+    ],
   },
   {
     name: 'SCSS/SASS',
@@ -128,14 +185,6 @@ const skills: Skill[] = [
       'Building Layouts and Structures',
       'Optimizing Websites for Smartphones (Responsive Design)',
       'Styling Interactive States',
-    ],
-  },
-  {
-    name: 'TIA Portal (SPS)',
-    icon: '/img/skills/icon_tia_portal_hmi_logo.svg',
-    description: [
-      'PLC Programming',
-      'Visualization and Operation',
     ],
   },
 ];
