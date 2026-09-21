@@ -1,0 +1,36 @@
+@use "sass:map";
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+) !default;
+
+// Mixin for “This width and larger” (min-width)
+@mixin media-breakpoint-up($name) {
+  $min: map.get($grid-breakpoints, $name);
+  
+  @if $min and $min != 0 {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Mixin for “Up to this size and smaller” (max-width)
+@mixin media-breakpoint-down($name) {
+  $max: map.get($grid-breakpoints, $name);
+  
+  // Subtract 0.02px to prevent overlap (e.g., exactly at 768px)
+  @if $max and $max != 0 {
+    @media (max-width: ($max - 0.02px)) {
+      @content;
+    }
+  }
+}
