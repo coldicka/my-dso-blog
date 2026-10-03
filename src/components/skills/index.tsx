@@ -1,206 +1,197 @@
 import { useState } from 'react';
+import { translate } from '@docusaurus/Translate';
+import Translate from '@docusaurus/Translate';
 import { SkillCard } from './SkillCard';
 import styles from './skills.module.scss';
 
-interface Skill {
-  name: string;
-  icon: string;
-  description: string[];
-}
+const SKILLS_PER_PAGE = 3;
 
-// All Skills
-const skills: Skill[] = [
-  // Row 1: Core Web Languages
+const activeSkills = [
   {
-    name: 'IT Security',
+    id: 'itSecurity',
     icon: '/img/skills/icon_itSecurtiy.svg',
-    description: [
-      'simulate attacks and identify vulnerabilities',
-      'Setting up multi-factor authentication',
-      'login security',
-      'Implement authentication and authorization mechanisms',
+    label: <Translate id="skills.itSecurity.name">IT Security</Translate>,
+    usage: [
+      <Translate id="skills.itSecurity.desc1">simulate attacks and identify vulnerabilities</Translate>,
+      <Translate id="skills.itSecurity.desc2">Setting up multi-factor section-heading</Translate>,
+      <Translate id="skills.itSecurity.desc3">login security</Translate>,
     ],
   },
-  /* {
-    name: 'Linux',
-    icon: 'https://jsdelivr.net',
-    description: [
-      'System Administration & Command Line Operations',
-      'User Management and Permissions Control',
-      'Environment Configurations for Deployments',
-    ],
-  }, */
   {
-    name: 'Container (Docker)',
+    id: 'container',
     icon: '/img/skills/icon_docker.svg',
-    description: [
-      'CI/CD pipelines',
-      'automate building, testing, deploying applications.',
-      'build microservices-based applications',
+    label: <Translate id="skills.container.name">Container (Docker)</Translate>,
+    usage: [
+      <Translate id="skills.docker.desc1">CI/CD pipelines</Translate>,
+      <Translate id="skills.docker.desc2">automate building, testing, deploying applications.</Translate>,
+      <Translate id="skills.docker.desc3">build microservices-based applications</Translate>,
     ],
   },
-  // Row 2: Frameworks & E-Commerce
   {
-    name: 'CI/CD With GitHub Actions',
+    id: 'githubActions',
     icon: '/img/skills/icon_cd_ci.svg',
-    description: [
-      'Automated builds and tests',
-      'pre-built actions for common tasks',
-      'push, pull request, or schedule',
-      'Automated deployments'
+    label: <Translate id="skills.githubActions.name">CI/CD With GitHub Actions</Translate>,
+    usage: [
+      <Translate id="skills.githubActions.desc1">Automated builds and tests</Translate>,
+      <Translate id="skills.githubActions.desc2">pre-built actions for common tasks</Translate>,
+      <Translate id="skills.githubActions.desc3">push, pull request, or schedule</Translate>,
+      <Translate id="skills.githubActions.desc4">Automated deployments</Translate>,
     ],
   },
   {
-    name: 'Shell scripting',
+    id: 'shellScripting',
     icon: '/img/skills/icon_shellscripting.svg',
-    description: [
-      'Adding new users and setting their permissions.',
-      'Performing calculations or running statistical analysis on data.',
-      'Conditional statements, loops, functions',
+    label: <Translate id="skills.shellScripting.name">Shell scripting</Translate>,
+    usage: [
+      <Translate id="skills.shellScripting.desc1">Adding new users and setting their permissions.</Translate>,
+      <Translate id="skills.shellScripting.desc2">Performing calculations or running statistical analysis on data.</Translate>,
+      <Translate id="skills.shellScripting.desc3">Conditional statements, loops, functions</Translate>,
     ],
   },
   {
-    name: 'Yaml',
+    id: 'yaml',
     icon: '/img/skills/icon_yaml.svg',
-    description: [
-      'A Kubernetes deployment',
-      'store settings like database connections',
-      'environment-specific variables',
-      'complex data structures represent lists and maps'
+    label: <Translate id="skills.yaml.name">Yaml</Translate>,
+    usage: [
+      <Translate id="skills.yaml.desc1">A Kubernetes deployment</Translate>,
+      <Translate id="skills.yaml.desc2">store settings like database connections</Translate>,
+      <Translate id="skills.yaml.desc3">environment-specific variables</Translate>,
     ],
   },
-  // Row 3: Automation & Python
   {
-    name: 'JavaScript ',
+    id: 'javascript',
     icon: '/img/skills/icon_js.svg',
-    description: [
-      'ES6+ Core Features & Async Programming',
-      'DOM Manipulation and Event Handling',
-      'Object-Oriented & Functional Concepts',
+    label: <Translate id="skills.javascript.name">JavaScript</Translate>,
+    usage: [
+      <Translate id="skills.javascript.desc1">ES6+ Core Features & Async Programming</Translate>,
+      <Translate id="skills.javascript.desc2">DOM Manipulation and Event Handling</Translate>,
+      <Translate id="skills.javascript.desc3">Object-Oriented & Functional Concepts</Translate>,
     ],
   },
   {
-    name: 'TypeScript',
+    id: 'typescript',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-    description: [
-      'Strongly Typed JavaScript Development',
-      'Interfaces, Types, and Generic Code',
-      'Catching Errors during Development Time',
+    label: <Translate id="skills.typescript.name">TypeScript</Translate>,
+    usage: [
+      <Translate id="skills.typescript.desc1">Strongly Typed JavaScript Development</Translate>,
+      <Translate id="skills.typescript.desc2">Interfaces, Types, and Generic Code</Translate>,
+      <Translate id="skills.typescript.desc3">Catching Errors during Development Time</Translate>,
     ],
   },
   {
-    name: 'Python',
+    id: 'python',
     icon: '/img/skills/icon_python.svg',
-    description: [
-      'Build APIs',
-      'spam filtering, recommendation systems',
-      'automate software testing',
-      'using libraries like Tkinter, PyQt, or Kivy',
+    label: <Translate id="skills.python.name">Python</Translate>,
+    usage: [
+      <Translate id="skills.python.desc1">Build APIs</Translate>,
+      <Translate id="skills.python.desc2">spam filtering, recommendation systems</Translate>,
+      <Translate id="skills.python.desc3">automate software testing</Translate>,
+      <Translate id="skills.python.desc4">using libraries like Tkinter, PyQt, or Kivy</Translate>,
     ],
   },
-  // Row 4: Infrastructure & OS
   {
-    name: 'React',
+    id: 'react',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
-    description: [
-      'Component-Based Architecture',
-      'One-Way Data Binding',
+    label: <Translate id="skills.react.name">React</Translate>,
+    usage: [
+      <Translate id="skills.react.desc1">Component-Based Architecture</Translate>,
+      <Translate id="skills.react.desc2">One-Way Data Binding</Translate>,
     ],
   },
   {
-    name: 'OXID',
+    id: 'oxid',
     icon: '/img/skills/icon_oxid.png',
-    description: [
-      'Building Custom Themes and Front Ends',
+    label: <Translate id="skills.oxid.name">OXID</Translate>,
+    usage: [
+      <Translate id="skills.oxid.desc1">Building Custom Themes and Front Ends</Translate>,
     ],
   },
   {
-    name: 'Shopware',
+    id: 'shopware',
     icon: '/img/skills/icon_shopware.svg',
-    description: [
-      'Building Custom Themes and Front Ends',
+    label: <Translate id="skills.shopware.name">Shopware</Translate>,
+    usage: [
+      <Translate id="skills.shopware.desc1">Building Custom Themes and Front Ends</Translate>,
     ],
   },
-  // Row 5: DevOps & Foundations
   {
-    name: 'Git',
+    id: 'git',
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
-    description: [
-      'Branching & merging',
-      'Version control',
-      'CI/CD integration',
+    label: <Translate id="skills.git.name">Git</Translate>,
+    usage: [
+      <Translate id="skills.git.desc1">Branching & merging</Translate>,
+      <Translate id="skills.git.desc2">Version control</Translate>,
+      <Translate id="skills.git.desc3">CI/CD integration</Translate>,
     ],
   },
   {
-    name: 'TIA Portal (SPS)',
+    id: 'tia_portal',
     icon: '/img/skills/icon_tia_portal_hmi_logo.svg',
-    description: [
-      'PLC Programming',
-      'Visualization and Operation',
+    label: <Translate id="skills.tia_portal.name">TIA Portal (SPS)</Translate>,
+    usage: [
+      <Translate id="skills.tia_portal.desc1">PLC Programming</Translate>,
+      <Translate id="skills.tia_portal.desc2">Visualization and Operation</Translate>,
     ],
   },
   {
-    name: 'Angular',
+    id: 'angular',
     icon: '/img/skills/icon_angular.png',
-    description: [
-      'Component-Based Architecture',
-      'Two-Way Data Binding & Services',
-      'Basic understanding of framework concepts',
+    label: <Translate id="skills.angular.name">Angular</Translate>,
+    usage: [
+      <Translate id="skills.angular.desc1">Component-Based Architecture</Translate>,
+      <Translate id="skills.angular.desc2">Two-Way Data Binding & Services</Translate>,
+      <Translate id="skills.angular.desc3">Basic understanding of framework concepts</Translate>,
     ],
   },
   {
-    name: 'HTML',
+    id: 'html',
     icon: '/img/skills/icon_html.svg',
-    description: [
-      'User-friendly navigation menus',
-      'Responsive web design',
-      'Contact forms and login pages',
-      'Transitions, animations and hover effect'
+    label: <Translate id="skills.html.name">HTML</Translate>,
+    usage: [
+      <Translate id="skills.html.desc1">User-friendly navigation menus</Translate>,
+      <Translate id="skills.html.desc2">Responsive web design</Translate>,
+      <Translate id="skills.html.desc3">Contact forms and login pages</Translate>,
     ],
   },
-  // Row 6: Styling Foundations
   {
-    name: 'CSS',
+    id: 'css',
     icon: '/img/skills/icon_css.svg',
-    description: [
-      'User-friendly navigation menus',
-      'Responsive web design ',
-      'Contact forms and login pages',
-      'Transitions, animations and hover effect'
+    label: <Translate id="skills.css.name">CSS</Translate>,
+    usage: [
+      <Translate id="skills.css.desc1">User-friendly navigation menus</Translate>,
+      <Translate id="skills.css.desc2">Responsive web design </Translate>,
+      <Translate id="skills.css.desc3">Contact forms and login pages</Translate>,
     ],
   },
   {
-    name: 'SCSS/SASS',
+    id: 'scss',
     icon: '/img/skills/icon_sass.svg',
-    description: [
-      'Building Layouts and Structures',
-      'Optimizing Websites for Smartphones (Responsive Design)',
-      'Styling Interactive States',
+    label: <Translate id="skills.scss.name">SCSS/SASS</Translate>,
+    usage: [
+      <Translate id="skills.scss.desc1">Building Layouts and Structures</Translate>,
+      <Translate id="skills.scss.desc2">Optimizing Websites for Smartphones (Responsive Design)</Translate>,
+      <Translate id="skills.scss.desc3">Modular CSS Architecture</Translate>,
     ],
   },
   {
-    name: 'LESS',
+    id: 'less',
     icon: '/img/skills/icon_lessjs.svg',
-    description: [
-      'Building Layouts and Structures',
-      'Optimizing Websites for Smartphones (Responsive Design)',
-      'Styling Interactive States',
+    label: <Translate id="skills.less.name">LESS</Translate>,
+    usage: [
+      <Translate id="skills.less.desc1">Building Layouts and Structures</Translate>,
+      <Translate id="skills.less.desc2">Optimizing Websites for Smartphones (Responsive Design)</Translate>,
+      <Translate id="skills.less.desc3">Styling Interactive States</Translate>,
     ],
   },
 ];
-
-const SKILLS_PER_PAGE = 3;
-
-// Organizing the skills into pages for the mobile slider (with 6 skills = exactly 2 pages)
-const skillPages: Skill[][] = Array.from(
-  { length: Math.ceil(skills.length / SKILLS_PER_PAGE) },
-  (_, index) => skills.slice(index * SKILLS_PER_PAGE, index * SKILLS_PER_PAGE + SKILLS_PER_PAGE)
-);
-
 export default function Skills() {
   const [activePage, setActivePage] = useState(0);
 
-  // Safety net for the first rendering process
+  const skillPages = Array.from(
+    { length: Math.ceil(activeSkills.length / SKILLS_PER_PAGE) },
+    (_, index) => activeSkills.slice(index * SKILLS_PER_PAGE, index * SKILLS_PER_PAGE + SKILLS_PER_PAGE)
+  );
+
   const currentMobileSkills = skillPages[activePage] || [];
 
   const showPreviousPage = () => {
@@ -215,36 +206,35 @@ export default function Skills() {
     <section className={[styles.skillsSection, 'section-padding'].join(' ')} id="skills">
       <div className="container">
         <div className={styles.inner}>
-          <h2 className="section-heading">My skills</h2>
+          <h2 className="section-heading">
+            <Translate id="skills.heading">My skills</Translate>
+          </h2>
 
-          {/*Desktop*/}
           <div className={styles.grid}>
-            {skills.map((skill, index) => (
+            {activeSkills.map((skill, index) => (
               <SkillCard 
-                key={`desktop-${skill.name}-${index}`} 
-                name={skill.name}
+                key={`desktop-${skill.id}-${index}`} 
+                name={skill.label as unknown as string}
                 icon={skill.icon}
-                description={skill.description}
+                description={skill.usage as unknown as string[]}
                 variant="desktop" 
               />
             ))}
           </div>
 
-          {/* ---------- Mobile Slider View ---------- */}
           <div className={styles.mobileSlider}>
             <div className={styles.mobileCard}>
               {currentMobileSkills.map((skill, index) => (
                 <SkillCard 
-                  key={`mobile-${skill.name}-${index}`} 
-                  name={skill.name}
+                  key={`mobile-${skill.id}-${index}`} 
+                  name={skill.label as unknown as string}
                   icon={skill.icon}
-                  description={skill.description}
+                  description={skill.usage as unknown as string[]}
                   variant="mobile" 
                 />
               ))}
             </div>
 
-            {/* ---------- Slider control with dots ---------- */}
             <div className={styles.sliderControls}>
               <button type="button" className={styles.sliderArrow} onClick={showPreviousPage}>‹</button>
               <div className={styles.dots}>

@@ -126,3 +126,8 @@ h3 { line-height: 1.25; }
     margin-bottom: 30px;
   }
 }
+
+.navbar__items--right .navbar__item[type="localeDropdown"],
+.navbar__item.dropdown {
+  display: none !important;
+}

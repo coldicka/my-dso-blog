@@ -1,4 +1,5 @@
 import React from 'react';
+import Translate, { translate } from '@docusaurus/Translate';
 import styles from './contact.module.scss';
 import ContactLink, { ContactLinkProps } from './ContactLink';
 
@@ -11,7 +12,7 @@ export default function Contact() {
     },
     {
       href: 'https://linkedin.com/in/collins-dicka-ned-b05a71405/',
-      label: 'Profile Page',
+      label: translate({ id: 'contact.links.linkedin', message: 'Profile Page' }),
       isExternal: true,
       iconName: 'linkedin',
     },
@@ -23,23 +24,41 @@ export default function Contact() {
         <div className={styles.inner}>
           
           <div className={styles.left}>
-            <h2 className="section-heading">Contact me</h2>
+            <h2 className="section-heading">
+              <Translate id="contact.heading">Contact me</Translate>
+            </h2>
             <p className={styles.introText}>
-              <strong>Let's build secure systems together.</strong>
+              <strong>
+                <Translate id="contact.intro">
+                  Let's build secure systems together.
+                </Translate>
+              </strong>
             </p>
             <ul className={styles.list}>
               <li>
-                I combine my software development background with DevSecOps, cybersecurity, automation, and infrastructure to build secure and reliable software environments.
+                <Translate id="contact.list.item1">
+                  I combine my software development background with DevSecOps, cybersecurity, automation, and infrastructure to build secure and reliable software environments.
+                </Translate>
               </li>
               <li>
-               Open to remote · hybrid · relocation
+                <Translate id="contact.list.item2">
+                  Open to remote · hybrid · relocation
+                </Translate>
               </li>
             </ul>
-            <p>Let's connect →</p>
+            <p>
+              <Translate id="contact.connect">
+                Let's connect →
+              </Translate>
+            </p>
           </div>
 
           <div className={styles.right}>
-            <p className={styles.tagline}>Looking forward to hearing from you!</p>
+            <p className={styles.tagline}>
+              <Translate id="contact.tagline">
+                Looking forward to hearing from you!
+              </Translate>
+            </p>
             <div className={styles.links}>
               {contactLinks.map((link) => (
                 <ContactLink key={link.href} {...link} />

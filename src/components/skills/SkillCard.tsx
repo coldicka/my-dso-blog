@@ -1,4 +1,5 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Translate from '@docusaurus/Translate';
 import styles from './skills.module.scss';
 
 interface SkillCardProps {
@@ -30,7 +31,9 @@ export function SkillCard({ name, icon, description, variant }: SkillCardProps) 
             <span className={styles.label}>{name}</span>
           </div>
           <div className={styles.flipCardBack}>
-            <p className={styles.hoverTitle}>How I used this skill</p>
+            <p className={styles.hoverTitle}>
+              <Translate id="skills.card.hoverTitle">How I used this skill</Translate>
+            </p>
             <ul className={styles.hoverList}>
               {description.map((item) => (
                 <li key={item}>{item}</li>

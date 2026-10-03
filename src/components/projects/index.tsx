@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Translate, { translate } from '@docusaurus/Translate';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { ProjectCard } from './ProjectCard';
@@ -9,8 +10,10 @@ import { Project, getTags } from './projectTypes';
 const projects: Project[] = [
   {
     title: 'Baby Tools Shop',
-    description:
-      'A simple, full-stack, Dockerized shop application built with Python and Django 6. It uses SQLite as the database and runs behind a custom Docker setup, with volume mapping configured for persistent data storage.',
+    description: translate({
+      id: 'projects.baby-tools-shop.description',
+      message: 'A simple, full-stack, Dockerized shop application built with Python and Django 6. It uses SQLite as the database and runs behind a custom Docker setup, with volume mapping configured for persistent data storage.',
+    }),
     tags: getTags(['python', 'docker', 'django']),
     docPath: 'docs/baby-tools-shop',
     githubLink: 'https://github.com/coldicka/baby-tools-world',
@@ -18,8 +21,10 @@ const projects: Project[] = [
   },
   {
     title: 'Conduit Container',
-    description:
-      'An automated CI/CD workflow powered by GitHub Actions and the GitHub Container Registry. The pipeline is divided into three sequential stages: building the application, preparing the configuration, and deploying the project remotely through SSH.',
+    description: translate({
+      id: 'projects.conduit-container.description',
+      message: 'An automated CI/CD workflow powered by GitHub Actions and the GitHub Container Registry. The pipeline is divided into three sequential stages: building the application, preparing the configuration, and deploying the project remotely through SSH.',
+    }),
     tags: getTags(['docker', 'django', 'angular', 'nginx']),
     docPath: 'docs/conduit-container',
     githubLink: 'https://github.com/coldicka/Conduit-Container',
@@ -27,8 +32,10 @@ const projects: Project[] = [
   },
   {
     title: 'Conduit Deployment',
-    description:
-      'A fully Dockerized and automated CI/CD workflow powered by GitHub Actions and the GitHub Container Registry. The pipeline consists of three sequential stages responsible for building the application, preparing the required configuration, and deploying it remotely via SSH.',
+    description: translate({
+      id: 'projects.conduit-deployment.description',
+      message: 'A fully Dockerized and automated CI/CD workflow powered by GitHub Actions and the GitHub Container Registry. The pipeline consists of three sequential stages responsible for building the application, preparing the required configuration, and deploying it remotely via SSH.',
+    }),
     tags: getTags(['githubActions', 'docker', 'linux']),
     docPath: 'docs/conduit-deployment',
     githubLink: 'https://github.com/coldicka/Conduit-Container',
@@ -36,8 +43,10 @@ const projects: Project[] = [
   },
   {
     title: 'Juice Shop Master',
-    description:
-      'OWASP Juice Shop vulnerability writeups covering SQL injection, exposed password hashes, authentication flaws, and other common web security issues. The project demonstrates real-world vulnerabilities and provides practical insights into identifying and preventing them.',
+    description: translate({
+      id: 'projects.juice-shop-master.description',
+      message: 'OWASP Juice Shop vulnerability writeups covering SQL injection, exposed password hashes, authentication flaws, and other common web security issues. The project demonstrates real-world vulnerabilities and provides practical insights into identifying and preventing them.',
+    }),
     tags: getTags(['security', 'python', 'linux']),
     docPath: 'docs/juice-shop-master',
     githubLink: '',
@@ -45,8 +54,10 @@ const projects: Project[] = [
   },
   {
     title: 'Minecraft Server',
-    description:
-      'A containerized, Java-based Minecraft server deployment built from a custom Dockerfile using an OpenJDK base image. An entrypoint script automates runtime initialization, server provisioning, configuration, and startup.',
+    description: translate({
+      id: 'projects.minecraft-server.description',
+      message: 'A containerized, Java-based Minecraft server deployment built from a custom Dockerfile using an OpenJDK base image. An entrypoint script automates runtime initialization, server provisioning, configuration, and startup.',
+    }),
     tags: getTags(['docker', 'java', 'shell']),
     docPath: 'docs/minecraft-server',
     githubLink: 'https://github.com/coldicka/minecraft-server',
@@ -54,8 +65,10 @@ const projects: Project[] = [
   },
   {
     title: 'Truck Signs API',
-    description:
-      'A Dockerized Django REST API for managing truck sign products, categories and orders with PostgreSQL, Gunicorn and Nginx — deployed without Docker Compose.',
+    description: translate({
+      id: 'projects.truck-signs-api.description',
+      message: 'A Dockerized Django REST API for managing truck sign products, categories and orders with PostgreSQL, Gunicorn and Nginx — deployed without Docker Compose.',
+    }),
     tags: getTags(['python', 'django', 'docker', 'nginx']),
     docPath: 'docs/truck-signs-api',
     githubLink: 'https://github.com/coldicka/truck-signs-api',
@@ -78,7 +91,9 @@ export default function Projects() {
       <div className="container">
         <div className={styles.inner}>
           
-          <h2 className={`section-heading ${styles.projectHeadline}`}>My project highlightss</h2>
+          <h2 className={`section-heading ${styles.projectHeadline}`}>
+            <Translate id="projects.heading">My project highlights</Translate>
+          </h2>
 
           {/* ---------- DESKTOP LAYOUT ---------- */}
           <div className={styles.desktopLayout}>
@@ -101,7 +116,7 @@ export default function Projects() {
               </ol>
 
               <Link to={`${baseUrl}docs/truck-signs-api/`} className={styles.seeMore}>
-                ↳ see more projects
+                <Translate id="projects.seeMore">↳ see more projects</Translate>
               </Link>
             </div>
 

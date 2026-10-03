@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation } from '@docusaurus/router';
-import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './header.module.scss';
 
 interface NavLinkProps {
@@ -11,40 +11,53 @@ interface NavLinkProps {
 
 function NavLink({ to, label, onItemClick }: NavLinkProps) {
   const location = useLocation();
+  const { i18n: { currentLocale }, siteConfig: { baseUrl } } = useDocusaurusContext();
+
+  const isGerman = currentLocale === 'de';
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (to.startsWith('#') && location.pathname === '/') {
+    onItemClick();
+
+    const cleanPath = location.pathname.replace(/\/\$/, '');
+    const cleanBase = baseUrl.replace(/\/\$/, '');
+    const isAtHome = 
+      cleanPath === cleanBase || 
+      cleanPath === `${cleanBase}/de` || 
+      cleanPath === '';
+
+    if (to.startsWith('#') && isAtHome) {
       e.preventDefault();
-      
       const targetId = to.replace('#', '');
       const element = document.getElementById(targetId);
-      
       if (element) {
-        element.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.history.pushState(null, '', to);
       }
     }
-    
-    onItemClick();
   };
 
-  const targetPath = to.startsWith('#') && location.pathname !== '/' 
-    ? `/${to}` 
-    : to;
+  let targetPath = '';
+  if (to.startsWith('#')) {
+    const langModifier = isGerman ? 'de/' : '';
+    targetPath = location.pathname.includes('/imprint') ? `${baseUrl}${langModifier}${to}` : to;
+  } else {
+    targetPath = to.startsWith('/') ? to : `/${to}`;
+  }
 
   return (
-    <Link to={targetPath} onClick={handleScroll}>
+    <a href={targetPath} onClick={handleScroll}>
       {label}
-    </Link>
+    </a>
   );
 }
-
 export default function Header() {
   const [hidden, setHidden] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  
+  const { i18n: { currentLocale }, siteConfig: { baseUrl } } = useDocusaurusContext();
+  const isGerman = currentLocale === 'de';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,21 +65,76 @@ export default function Header() {
       setHidden(current > lastScroll && current > 100);
       setLastScroll(current);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScroll]);
 
   const closeMenu = () => {
     setMenuOpen(false);
+    setDropdownOpen(false);
   };
 
-  const navItems = [
+  const navItems = isGerman ? [
+    { to: '#about', label: 'Über mich' },
+    { to: '#skills', label: 'Fähigkeiten' },
+    { to: '#projects', label: 'Projekte' },
+    { to: '#contact', label: 'Kontakt' },
+  ] : [
     { to: '#about', label: 'About me' },
     { to: '#skills', label: 'My skills' },
     { to: '#projects', label: 'My projects' },
     { to: '#contact', label: 'Contact' },
   ];
+
+  const navigateToLanguage = (e: React.MouseEvent<HTMLAnchorElement>, targetLocale: 'en' | 'de') => {
+    e.preventDefault();
+    closeMenu();
+
+    const pureBase = baseUrl.replace(/\//g, '');
+    const currentHash = typeof window !== 'undefined' ? window.location.hash : '';
+    
+    // Setzt den Pfad absolut sauber ohne doppelte Slashes zusammen
+    const targetPath = targetLocale === 'de' 
+      ? `/${pureBase}/de/${currentHash}` 
+      : `/${pureBase}/${currentHash}`;
+
+    window.location.href = targetPath; 
+  };
+
+  const renderDropdownMenu = () => (
+    <>
+      <button 
+        type="button" 
+        className={styles.dropdownButton}
+        onClick={() => setDropdownOpen(!dropdownOpen)}
+      >
+        {isGerman ? '🌐 DE' : '🌐 EN'} <span className={styles.arrow}>▼</span>
+      </button>
+      
+      {dropdownOpen && (
+        <ul className={styles.dropdownMenu}>
+          <li>
+            <a 
+              href="#"
+              onClick={(e) => navigateToLanguage(e, 'en')}
+              className={styles.dropdownLink}
+            >
+              English
+            </a>
+          </li>
+          <li>
+            <a 
+              href="#"
+              onClick={(e) => navigateToLanguage(e, 'de')}
+              className={styles.dropdownLink}
+            >
+              Deutsch
+            </a>
+          </li>
+        </ul>
+      )}
+    </>
+  );
 
   return (
     <header className={`${styles.header} ${hidden ? styles.hidden : ''}`}>
@@ -82,7 +150,15 @@ export default function Header() {
                 onItemClick={closeMenu} 
               />
             ))}
+            
+            <div className={`${styles.langDropdownWrapper} ${styles.mobileLang}`}>
+              {renderDropdownMenu()}
+            </div>
           </nav>
+
+          <div className={`${styles.langDropdownWrapper} ${styles.desktopLang}`}>
+            {renderDropdownMenu()}
+          </div>
 
           <button
             type="button"

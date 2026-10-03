@@ -8,7 +8,7 @@ import Hero from '../components/hero';
 import Skills from '../components/skills';
 import Projects from '../components/projects';
 import Contact from '../components/contact';
-import Footer from '../components/footer'; // 1. Importiere deine Footer-Komponente!
+import Footer from '../components/footer';
 
 export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();

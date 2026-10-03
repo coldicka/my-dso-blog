@@ -1,5 +1,6 @@
 import styles from './footer.module.scss';
 import Link from '@docusaurus/Link';
+import Translate from '@docusaurus/Translate';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -31,7 +32,9 @@ export default function Footer() {
               to="/legal-notice"
               className={styles.legal}
             >
-              Legal notice
+              <Translate id="footer.legalNotice">
+                Legal notice
+              </Translate>
             </Link>
           </div>
 

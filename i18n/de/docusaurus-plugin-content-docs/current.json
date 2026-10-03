@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Baby Tools Shop": {
+    "message": "Baby Tools Shop",
+    "description": "The label for category Baby Tools Shop in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Juice Shop Master": {
+    "message": "Juice Shop Master",
+    "description": "The label for category Juice Shop Master in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.challenges": {
+    "message": "challenges",
+    "description": "The label for category challenges in sidebar tutorialSidebar"
+  }
+}

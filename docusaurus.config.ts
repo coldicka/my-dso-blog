@@ -41,7 +41,15 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'de'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+      },
+      de: {
+        label: 'Deutsch',
+      },
+    },
   },
 stylesheets: [
     {
@@ -117,6 +125,10 @@ stylesheets: [
           label: 'Github',
           position: 'right',
         },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+        },
       ],
     },
     prism: {
@@ -124,7 +136,6 @@ stylesheets: [
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['powershell', 'hcl'],
       magicComments: [
-        // Remember to extend the default highlight class name as well!
         {
           className: 'theme-code-block-highlighted-line',
           line: 'highlight-next-line',
@@ -138,11 +149,5 @@ stylesheets: [
     },
   } satisfies Preset.ThemeConfig,
 };
-
-
-if (blogEnabled) {
-  (config.themeConfig.navbar as any).items.push({to: '/blog', label: 'Blog', position: 'left'});
-  (config.themeConfig.footer as any).links[2].items.push({to: '/blog', label: 'Blog'});
-}
 
 export default config;

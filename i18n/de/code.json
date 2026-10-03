@@ -1,0 +1,506 @@
+{
+  "footer.legalNotice": {
+    "message": "Impressum"
+  },
+  "contact.links.linkedin": {
+    "message": "Profilseite"
+  },
+  "contact.heading": {
+    "message": "Kontaktiere mich"
+  },
+  "contact.intro": {
+    "message": "Lass uns gemeinsam sichere Systeme bauen."
+  },
+  "contact.list.item1": {
+    "message": "Ich kombiniere meinen Hintergrund in der Softwareentwicklung mit DevSecOps, Cybersicherheit, Automatisierung und Infrastruktur, um sichere und zuverlässige Softwareumgebungen aufzubauen."
+  },
+  "contact.list.item2": {
+    "message": "Offen für Remote · Hybrid · Relocation"
+  },
+  "contact.connect": {
+    "message": "Lass uns vernetzen →"
+  },
+  "contact.tagline": {
+    "message": "Ich freue mich darauf, von dir zu hören!"
+  },
+  "hero.greeting": {
+    "message": "Hallo zusammen 👋 Ich bin"
+  },
+  "hero.title": {
+    "message": "DevSecOps Engineer"
+  },
+  "hero.bio.slogan": {
+    "message": "Vom Code zur Cloud. Von der Entwicklung zur Sicherheit."
+  },
+  "hero.bio.p1": {
+    "message": "Mit mehrjähriger Berufserfahrung in der Frontend-Entwicklung habe ich produktive Webanwendungen erstellt sowie gewartet und ein tiefes Verständnis für Software-Engineering von der Pike auf erlernt."
+  },
+  "hero.bio.p2": {
+    "message": "Heute kombiniere ich diesen Entwicklungshintergrund mit meiner DevSecOps-Expertise – mit Fokus auf Cybersicherheit, sichere CI/CD-Pipelines, Containerisierung, Infrastruktur und Automatisierung."
+  },
+  "hero.bio.p3": {
+    "message": "Mein Ziel ist es, die Lücke zwischen Entwicklung und Betrieb zu schließen und gleichzeitig eine Security-First-Mentalität in moderne Softwareumgebungen einzubringen."
+  },
+  "hero.cta.contact": {
+    "message": "Kontaktiere mich"
+  },
+  "projects.baby-tools-shop.description": {
+    "message": "Eine einfache, containerisierte Full-Stack-Shop-Anwendung, die mit Python und Django 6 entwickelt wurde. Sie nutzt SQLite als Datenbank und läuft in einem maßgeschneiderten Docker-Setup mit konfiguriertem Volume-Mapping für persistente Datenspeicherung."
+  },
+  "projects.conduit-container.description": {
+    "message": "Ein automatisierter CI/CD-Workflow, betrieben durch GitHub Actions und die GitHub Container Registry. Die Pipeline ist in drei aufeinanderfolgende Phasen unterteilt: Erstellen der Anwendung, Vorbereiten der Konfiguration und Remote-Bereitstellung des Projekts über SSH."
+  },
+  "projects.conduit-deployment.description": {
+    "message": "Ein vollständig containerisierter und automatisierter CI/CD-Workflow, betrieben durch GitHub Actions und die GitHub Container Registry. Die Pipeline besteht aus drei sequenziellen Phasen, die für das Erstellen der Anwendung, das Vorbereiten der erforderlichen Konfiguration und das Remote-Deployment über SSH zuständig sind."
+  },
+  "projects.juice-shop-master.description": {
+    "message": "OWASP Juice Shop Sicherheitsanalysen (Write-ups), die SQL-Injections, offengelegte Passwörthashes, Authentifizierungsfehler und andere gängige Schwachstellen im Web abdecken. Das Projekt demonstriert praxisnahe Sicherheitslücken und bietet wertvolle Einblicke in deren Identifizierung und Vermeidung."
+  },
+  "projects.minecraft-server.description": {
+    "message": "Ein containerisiertes, Java-basiertes Minecraft-Server-Deployment, erstellt aus einem eigenen Dockerfile auf Basis eines OpenJDK-Images. Ein Entrypoint-Skript automatisiert die Laufzeitinitialisierung, die Server-Bereitstellung, die Konfiguration und den Start."
+  },
+  "projects.truck-signs-api.description": {
+    "message": "Eine containerisierte Django REST API zur Verwaltung von Lkw-Schilder-Produkten, Kategorien und Bestellungen mittels PostgreSQL, Gunicorn und Nginx — bereitgestellt ohne Docker Compose."
+  },
+  "projects.heading": {
+    "message": "Meine Projekt-Highlights"
+  },
+  "projects.seeMore": {
+    "message": "↳ mehr Projekte anzeigen"
+  },
+  "skills.heading": {
+    "message": "Meine Fähigkeiten"
+  },
+  "skills.card.hoverTitle": {
+    "message": "Praxisbeispiele"
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "Die Seite ist abgestürzt."
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Zurück nach oben scrollen"
+  },
+  "theme.blog.archive.title": {
+    "message": "Archiv"
+  },
+  "theme.blog.archive.description": {
+    "message": "Archiv"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Navigation der Blog-Listenseite"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Neuere Einträge"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Ältere Einträge"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Blog Post Seiten Navigation"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Neuer Post"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Älterer Post"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Alle Tags anzeigen"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Umschalten zwischen dunkler und heller Ansicht (momentan {mode})"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Breadcrumbs"
+  },
+  "theme.docs.DocCard.categoryDescription.plurals": {
+    "message": "1 Eintrag|{count} Einträge"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Dokumentation Seiten"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Zurück"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Weiter"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Ein doc getaggt|{count} docs getaggt"
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "{nDocsTagged} mit \"{tagName}\""
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Version: {versionLabel}"
+  },
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "Das ist die unveröffentlichte Dokumentation für {siteTitle} {versionLabel}."
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "Das ist die Dokumentation für {siteTitle} {versionLabel} und wird nicht weiter gewartet."
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel": {
+    "message": "Für die aktuellste Dokumentation bitte auf {latestVersionLink} ({versionLabel}) gehen."
+  },
+  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "letzte Version"
+  },
+  "theme.common.editThisPage": {
+    "message": "Diese Seite bearbeiten"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Direkter Link zur {heading}"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " am {date}"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " von {user}"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "Letztes Update{atDate}{byUser}"
+  },
+  "theme.NotFound.title": {
+    "message": "Seite nicht gefunden"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versionen"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Tags:"
+  },
+  "theme.admonition.caution": {
+    "message": "Vorsicht"
+  },
+  "theme.admonition.danger": {
+    "message": "Gefahr"
+  },
+  "theme.admonition.info": {
+    "message": "Info"
+  },
+  "theme.admonition.note": {
+    "message": "Hinweis"
+  },
+  "theme.admonition.tip": {
+    "message": "Tipp"
+  },
+  "theme.admonition.warning": {
+    "message": "Warnung"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Schließen"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Navigation der letzten Beiträge im Blog"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Kopiert"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "In die Zwischenablage kopieren"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Kopieren"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Zeilenumbruch umschalten"
+  },
+  "theme.DocSidebarItem.expandCategoryAriaLabel": {
+    "message": "Seitenleisten-Kategorie '{label}' ausklappen"
+  },
+  "theme.DocSidebarItem.collapseCategoryAriaLabel": {
+    "message": "Seitenleisten-Kategorie '{label}' einklappen"
+  },
+  "theme.NavBar.navAriaLabel": {
+    "message": "Hauptnavigation"
+  },
+  "theme.NotFound.p1": {
+    "message": "Wir konnten nicht finden, wonach Sie gesucht haben."
+  },
+  "theme.NotFound.p2": {
+    "message": "Bitte kontaktieren Sie den Besitzer der Seite, die Sie mit der ursprünglichen URL verlinkt hat, und teilen Sie ihm mit, dass der Link nicht mehr funktioniert."
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Sprachen"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "Auf dieser Seite"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Mehr lesen"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "Mehr lesen über {title}"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "Eine Minute Lesezeit|{readingTime} Minuten Lesezeit"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Startseite"
+  },
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Seitenleiste einklappen"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Seitenleiste einklappen"
+  },
+  "theme.docs.sidebar.navAriaLabel": {
+    "message": "Dokumentations-Seitenleiste"
+  },
+  "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
+    "message": "Navigationsleiste schließen"
+  },
+  "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
+    "message": "Navigationsleiste umschalten"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Zurück zum Hauptmenü"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Seitenleiste ausklappen"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Seitenleiste ausklappen"
+  },
+  "theme.blog.post.plurals": {
+    "message": "Ein Beitrag|{count} Beiträge"
+  },
+  "theme.blog.tagTitle": {
+    "message": "{nPosts} getaggt mit \"{tagName}\""
+  },
+  "theme.blog.author.pageTitle": {
+    "message": "{authorName} - {nPosts}"
+  },
+  "theme.blog.authorsList.pageTitle": {
+    "message": "Autoren"
+  },
+  "theme.blog.authorsList.viewAll": {
+    "message": "Alle Autoren anzeigen"
+  },
+  "theme.contentVisibility.unlistedBanner.title": {
+    "message": "Nicht gelistete Seite"
+  },
+  "theme.contentVisibility.unlistedBanner.message": {
+    "message": "Diese Seite ist nicht gelistet. Suchmaschinen werden sie nicht indexieren, und nur Nutzer mit einem direkten Link können darauf zugreifen."
+  },
+  "theme.contentVisibility.draftBanner.title": {
+    "message": "Entwurfsseite"
+  },
+  "theme.contentVisibility.draftBanner.message": {
+    "message": "Diese Seite ist ein Entwurf. Sie ist nur in der Entwicklungsumgebung sichtbar und wird vom Produktions-Build ausgeschlossen."
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Nochmal versuchen"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Zum Hauptinhalt springen"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Tags"
+  },
+  "skills.itSecurity.name": {
+    "message": "IT-Sicherheit"
+  },
+  "skills.itSecurity.desc1": {
+    "message": "Angriffe simulieren und Schwachstellen identifizieren"
+  },
+  "skills.itSecurity.desc2": {
+    "message": "Multi-Faktor-Authentifizierung (MFA) einrichten"
+  },
+  "skills.itSecurity.desc3": {
+    "message": "Anmeldesicherheit erhöhen"
+  },
+  "skills.container.name": {
+    "message": "Container (Docker)"
+  },
+  "skills.docker.desc1": {
+    "message": "CI/CD-Pipelines aufbauen"
+  },
+  "skills.docker.desc2": {
+    "message": "Erstellung, Testung und Bereitstellung von Anwendungen automatisieren"
+  },
+  "skills.docker.desc3": {
+    "message": "Microservices-basierte Anwendungen entwickeln"
+  },
+  "skills.githubActions.name": {
+    "message": "CI/CD mit GitHub Actions"
+  },
+  "skills.githubActions.desc1": {
+    "message": "Automatisierte Builds und Tests umsetzen"
+  },
+  "skills.githubActions.desc2": {
+    "message": "Vorgefertigte Actions für gängige Aufgaben nutzen"
+  },
+  "skills.githubActions.desc3": {
+    "message": "Trigger per Push, Pull Request oder Zeitplan einrichten"
+  },
+  "skills.githubActions.desc4": {
+    "message": "Automatisierte Deployments ausführen"
+  },
+  "skills.shellScripting.name": {
+    "message": "Shell-Scripting"
+  },
+  "skills.shellScripting.desc1": {
+    "message": "Neue Benutzer hinzufügen und deren Berechtigungen konfigurieren"
+  },
+  "skills.shellScripting.desc2": {
+    "message": "Berechnungen durchführen oder statistische Datenanalysen ausführen"
+  },
+  "skills.shellScripting.desc3": {
+    "message": "Bedingte Anweisungen, Schleifen und Funktionen programmieren"
+  },
+  "skills.yaml.name": {
+    "message": "YAML"
+  },
+  "skills.yaml.desc1": {
+    "message": "Kubernetes-Deployments beschreiben"
+  },
+  "skills.yaml.desc2": {
+    "message": "Einstellungen wie Datenbankverbindungen sicher speichern"
+  },
+  "skills.yaml.desc3": {
+    "message": "Umgebungsspezifische Variables verwalten"
+  },
+  "skills.javascript.name": {
+    "message": "JavaScript"
+  },
+  "skills.javascript.desc1": {
+    "message": "ES6+ Kernfunktionen & Asynchrone Programmierung"
+  },
+  "skills.javascript.desc2": {
+    "message": "DOM-Manipulation und Ereignisbehandlung (Event Handling)"
+  },
+  "skills.javascript.desc3": {
+    "message": "Objektorientierte und funktionale Konzepte anwenden"
+  },
+  "skills.typescript.name": {
+    "message": "TypeScript"
+  },
+  "skills.typescript.desc1": {
+    "message": "Streng typisierte JavaScript-Entwicklung"
+  },
+  "skills.typescript.desc2": {
+    "message": "Schnittstellen (Interfaces), Typen und generischen Code erstellen"
+  },
+  "skills.typescript.desc3": {
+    "message": "Fehler direkt während der Entwicklungszeit abfangen"
+  },
+  "skills.python.name": {
+    "message": "Python"
+  },
+  "skills.python.desc1": {
+    "message": "REST-APIs entwickeln"
+  },
+  "skills.python.desc2": {
+    "message": "Spam-Filterung und Empfehlungssysteme implementieren"
+  },
+  "skills.python.desc3": {
+    "message": "Automatisierte Softwaretests schreiben"
+  },
+  "skills.python.desc4": {
+    "message": "GUIs mit Bibliotheken wie Tkinter, PyQt oder Kivy erstellen"
+  },
+  "skills.react.name": {
+    "message": "React"
+  },
+  "skills.react.desc1": {
+    "message": "Komponentenbasierte Architektur nutzen"
+  },
+  "skills.react.desc2": {
+    "message": "Einweg-Datenbindung (One-Way Data Binding) einsetzen"
+  },
+  "skills.oxid.name": {
+    "message": "OXID eShop"
+  },
+  "skills.oxid.desc1": {
+    "message": "Eigene Themes und Frontends für E-Commerce-Systeme entwickeln"
+  },
+  "skills.shopware.name": {
+    "message": "Shopware"
+  },
+  "skills.shopware.desc1": {
+    "message": "Eigene Themes und Frontends für E-Commerce-Systeme entwickeln"
+  },
+  "skills.git.name": {
+    "message": "Git"
+  },
+  "skills.git.desc1": {
+    "message": "Branching & Merging zur Versionsverwaltung"
+  },
+  "skills.git.desc2": {
+    "message": "Umfassende Quellcode-Versionskontrolle"
+  },
+  "skills.git.desc3": {
+    "message": "Nahtlose Integration in CI/CD-Pipelines"
+  },
+  "skills.tia_portal.name": {
+    "message": "TIA Portal (SPS)"
+  },
+  "skills.tia_portal.desc1": {
+    "message": "SPS-Programmierung für industrielle Steuerungen"
+  },
+  "skills.tia_portal.desc2": {
+    "message": "HMI-Visualisierung und Anlagenbedienung"
+  },
+  "skills.angular.name": {
+    "message": "Angular"
+  },
+  "skills.angular.desc1": {
+    "message": "Komponentenbasierte Applikationsarchitektur"
+  },
+  "skills.angular.desc2": {
+    "message": "Zwei-Wege-Datenbindung (Two-Way Data Binding) & Services"
+  },
+  "skills.angular.desc3": {
+    "message": "Grundlegendes Verständnis fortgeschrittener Framework-Konzepte"
+  },
+  "skills.html.name": {
+    "message": "HTML"
+  },
+  "skills.html.desc1": {
+    "message": "Benutzerfreundliche Navigationsmenüs strukturieren"
+  },
+  "skills.html.desc2": {
+    "message": "Semantisches und responsives Webdesign umsetzen"
+  },
+  "skills.html.desc3": {
+    "message": "Kontaktformulare und Login-Seiten aufbauen"
+  },
+  "skills.css.name": {
+    "message": "CSS"
+  },
+  "skills.css.desc1": {
+    "message": "Benutzerfreundliche Navigationsmenüs stylen"
+  },
+  "skills.css.desc2": {
+    "message": "Responsives Layout-Design gestalten"
+  },
+  "skills.css.desc3": {
+    "message": "Kontaktformulare und Login-Seiten visuell anpassen"
+  },
+  "skills.scss.name": {
+    "message": "SCSS/SASS"
+  },
+  "skills.scss.desc1": {
+    "message": "Komplexe Layouts und Strukturen modular aufbauen"
+  },
+  "skills.scss.desc2": {
+    "message": "Websites für Smartphones und Tablets optimieren (Responsive Design)"
+  },
+  "skills.scss.desc3": {
+    "message": "Modulare und wartbare CSS-Architekturen umsetzen"
+  },
+  "skills.less.name": {
+    "message": "LESS"
+  },
+  "skills.less.desc1": {
+    "message": "Layouts und Design-Strukturen aufbauen"
+  },
+  "skills.less.desc2": {
+    "message": "Websites für mobile Endgeräte optimieren (Responsive Design)"
+  },
+  "skills.less.desc3": {
+    "message": "Interaktive Komponenten-Zustände stylen"
+  }
+}
