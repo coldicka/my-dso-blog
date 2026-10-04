@@ -75,229 +75,303 @@
     "message": "Praxisbeispiele"
   },
   "theme.ErrorPageContent.title": {
-    "message": "Die Seite ist abgestürzt."
+    "message": "Die Seite ist abgestürzt.",
+    "description": "The title of the fallback page when the page crashed"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Zurück nach oben scrollen"
+    "message": "Zurück nach oben scrollen",
+    "description": "The ARIA label for the back to top button"
   },
   "theme.blog.archive.title": {
-    "message": "Archiv"
+    "message": "Archiv",
+    "description": "The page & hero title of the blog archive page"
   },
   "theme.blog.archive.description": {
-    "message": "Archiv"
+    "message": "Archiv",
+    "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Navigation der Blog-Listenseite"
+    "message": "Navigation der Blog-Listenseite",
+    "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "Neuere Einträge"
+    "message": "Neuere Einträge",
+    "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "Ältere Einträge"
+    "message": "Ältere Einträge",
+    "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Blog Post Seiten Navigation"
+    "message": "Blog Post Seiten Navigation",
+    "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
-    "message": "Neuer Post"
+    "message": "Neuer Post",
+    "description": "The blog post button label to navigate to the newer/previous post"
   },
   "theme.blog.post.paginator.olderPost": {
-    "message": "Älterer Post"
+    "message": "Älterer Post",
+    "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.tags.tagsPageLink": {
-    "message": "Alle Tags anzeigen"
+    "message": "Alle Tags anzeigen",
+    "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Umschalten zwischen dunkler und heller Ansicht (momentan {mode})"
+    "message": "Umschalten zwischen dunkler und heller Ansicht (momentan {mode})",
+    "description": "The ARIA label for the navbar color mode toggle"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Breadcrumbs"
+    "message": "Breadcrumbs",
+    "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "1 Eintrag|{count} Einträge"
+    "message": "1 Eintrag|{count} Einträge",
+    "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "Dokumentation Seiten"
+    "message": "Dokumentation Seiten",
+    "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
-    "message": "Zurück"
+    "message": "Zurück",
+    "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "Weiter"
+    "message": "Weiter",
+    "description": "The label used to navigate to the next doc"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "Ein doc getaggt|{count} docs getaggt"
+    "message": "Ein doc getaggt|{count} docs getaggt",
+    "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} mit \"{tagName}\""
+    "message": "{nDocsTagged} mit \"{tagName}\"",
+    "description": "The title of the page for a docs tag"
   },
   "theme.docs.versionBadge.label": {
     "message": "Version: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "Das ist die unveröffentlichte Dokumentation für {siteTitle} {versionLabel}."
+    "message": "Das ist die unveröffentlichte Dokumentation für {siteTitle} {versionLabel}.",
+    "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "Das ist die Dokumentation für {siteTitle} {versionLabel} und wird nicht weiter gewartet."
+    "message": "Das ist die Dokumentation für {siteTitle} {versionLabel} und wird nicht weiter gewartet.",
+    "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "Für die aktuellste Dokumentation bitte auf {latestVersionLink} ({versionLabel}) gehen."
+    "message": "Für die aktuellste Dokumentation bitte auf {latestVersionLink} ({versionLabel}) gehen.",
+    "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
-    "message": "letzte Version"
+    "message": "letzte Version",
+    "description": "The label used for the latest version suggestion link label"
   },
   "theme.common.editThisPage": {
-    "message": "Diese Seite bearbeiten"
+    "message": "Diese Seite bearbeiten",
+    "description": "The link label to edit the current page"
   },
   "theme.common.headingLinkTitle": {
-    "message": "Direkter Link zur {heading}"
+    "message": "Direkter Link zur {heading}",
+    "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
-    "message": " am {date}"
+    "message": " am {date}",
+    "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
-    "message": " von {user}"
+    "message": " von {user}",
+    "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "Letztes Update{atDate}{byUser}"
+    "message": "Letztes Update{atDate}{byUser}",
+    "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.NotFound.title": {
-    "message": "Seite nicht gefunden"
+    "message": "Seite nicht gefunden",
+    "description": "The title of the 404 page"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versionen"
+    "message": "Versionen",
+    "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.tags.tagsListLabel": {
-    "message": "Tags:"
+    "message": "Tags:",
+    "description": "The label alongside a tag list"
   },
   "theme.admonition.caution": {
-    "message": "Vorsicht"
+    "message": "Vorsicht",
+    "description": "The default label used for the Caution admonition (:::caution)"
   },
   "theme.admonition.danger": {
-    "message": "Gefahr"
+    "message": "Gefahr",
+    "description": "The default label used for the Danger admonition (:::danger)"
   },
   "theme.admonition.info": {
-    "message": "Info"
+    "message": "Info",
+    "description": "The default label used for the Info admonition (:::info)"
   },
   "theme.admonition.note": {
-    "message": "Hinweis"
+    "message": "Hinweis",
+    "description": "The default label used for the Note admonition (:::note)"
   },
   "theme.admonition.tip": {
-    "message": "Tipp"
+    "message": "Tipp",
+    "description": "The default label used for the Tip admonition (:::tip)"
   },
   "theme.admonition.warning": {
-    "message": "Warnung"
+    "message": "Warnung",
+    "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Schließen"
+    "message": "Schließen",
+    "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Navigation der letzten Beiträge im Blog"
+    "message": "Navigation der letzten Beiträge im Blog",
+    "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.CodeBlock.copied": {
-    "message": "Kopiert"
+    "message": "Kopiert",
+    "description": "The copied button label on code blocks"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "In die Zwischenablage kopieren"
+    "message": "In die Zwischenablage kopieren",
+    "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.copy": {
-    "message": "Kopieren"
+    "message": "Kopieren",
+    "description": "The copy button label on code blocks"
   },
   "theme.CodeBlock.wordWrapToggle": {
-    "message": "Zeilenumbruch umschalten"
+    "message": "Zeilenumbruch umschalten",
+    "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Seitenleisten-Kategorie '{label}' ausklappen"
+    "message": "Seitenleisten-Kategorie '{label}' ausklappen",
+    "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Seitenleisten-Kategorie '{label}' einklappen"
+    "message": "Seitenleisten-Kategorie '{label}' einklappen",
+    "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "Hauptnavigation"
+    "message": "Hauptnavigation",
+    "description": "The ARIA label for the main navigation"
   },
   "theme.NotFound.p1": {
-    "message": "Wir konnten nicht finden, wonach Sie gesucht haben."
+    "message": "Wir konnten nicht finden, wonach Sie gesucht haben.",
+    "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Bitte kontaktieren Sie den Besitzer der Seite, die Sie mit der ursprünglichen URL verlinkt hat, und teilen Sie ihm mit, dass der Link nicht mehr funktioniert."
+    "message": "Bitte kontaktieren Sie den Besitzer der Seite, die Sie mit der ursprünglichen URL verlinkt hat, und teilen Sie ihm mit, dass der Link nicht mehr funktioniert.",
+    "description": "The 2nd paragraph of the 404 page"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Sprachen"
+    "message": "Sprachen",
+    "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "Auf dieser Seite"
+    "message": "Auf dieser Seite",
+    "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.blog.post.readMore": {
-    "message": "Mehr lesen"
+    "message": "Mehr lesen",
+    "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.post.readMoreLabel": {
-    "message": "Mehr lesen über {title}"
+    "message": "Mehr lesen über {title}",
+    "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "Eine Minute Lesezeit|{readingTime} Minuten Lesezeit"
+    "message": "Eine Minute Lesezeit|{readingTime} Minuten Lesezeit",
+    "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.breadcrumbs.home": {
-    "message": "Startseite"
+    "message": "Startseite",
+    "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Seitenleiste einklappen"
+    "message": "Seitenleiste einklappen",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Seitenleiste einklappen"
+    "message": "Seitenleiste einklappen",
+    "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Dokumentations-Seitenleiste"
+    "message": "Dokumentations-Seitenleiste",
+    "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
-    "message": "Navigationsleiste schließen"
+    "message": "Navigationsleiste schließen",
+    "description": "The ARIA label for close button of mobile sidebar"
   },
   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
-    "message": "Navigationsleiste umschalten"
+    "message": "Navigationsleiste umschalten",
+    "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
-    "message": "← Zurück zum Hauptmenü"
+    "message": "← Zurück zum Hauptmenü",
+    "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
   "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Seitenleiste ausklappen"
+    "message": "Seitenleiste ausklappen",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Seitenleiste ausklappen"
+    "message": "Seitenleiste ausklappen",
+    "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.blog.post.plurals": {
-    "message": "Ein Beitrag|{count} Beiträge"
+    "message": "Ein Beitrag|{count} Beiträge",
+    "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} getaggt mit \"{tagName}\""
+    "message": "{nPosts} getaggt mit \"{tagName}\"",
+    "description": "The title of the page for a blog tag"
   },
   "theme.blog.author.pageTitle": {
-    "message": "{authorName} - {nPosts}"
+    "message": "{authorName} - {nPosts}",
+    "description": "The title of the page for a blog author"
   },
   "theme.blog.authorsList.pageTitle": {
-    "message": "Autoren"
+    "message": "Autoren",
+    "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "Alle Autoren anzeigen"
+    "message": "Alle Autoren anzeigen",
+    "description": "The label of the link targeting the blog authors page"
   },
   "theme.contentVisibility.unlistedBanner.title": {
-    "message": "Nicht gelistete Seite"
+    "message": "Nicht gelistete Seite",
+    "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
-    "message": "Diese Seite ist nicht gelistet. Suchmaschinen werden sie nicht indexieren, und nur Nutzer mit einem direkten Link können darauf zugreifen."
+    "message": "Diese Seite ist nicht gelistet. Suchmaschinen werden sie nicht indexieren, und nur Nutzer mit einem direkten Link können darauf zugreifen.",
+    "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Entwurfsseite"
+    "message": "Entwurfsseite",
+    "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "Diese Seite ist ein Entwurf. Sie ist nur in der Entwicklungsumgebung sichtbar und wird vom Produktions-Build ausgeschlossen."
+    "message": "Diese Seite ist ein Entwurf. Sie ist nur in der Entwicklungsumgebung sichtbar und wird vom Produktions-Build ausgeschlossen.",
+    "description": "The draft content banner message"
   },
   "theme.ErrorPageContent.tryAgain": {
-    "message": "Nochmal versuchen"
+    "message": "Nochmal versuchen",
+    "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.common.skipToMainContent": {
-    "message": "Zum Hauptinhalt springen"
+    "message": "Zum Hauptinhalt springen",
+    "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsPageTitle": {
-    "message": "Tags"
+    "message": "Tags",
+    "description": "The title of the tag list page"
   },
   "skills.itSecurity.name": {
     "message": "IT-Sicherheit"
@@ -502,5 +576,208 @@
   },
   "skills.less.desc3": {
     "message": "Interaktive Komponenten-Zustände stylen"
+  },
+  "legal.title": {
+    "message": "Impressum",
+    "description": "The main title of the legal notice (imprint) page"
+  },
+  "legal.section1.title": {
+    "message": "Angaben gemäß § 5 DDG",
+    "description": "Heading for the primary legal identification section according to German law"
+  },
+  "legal.contact.title": {
+    "message": "Kontakt",
+    "description": "Subheading for the contact possibilities section"
+  },
+  "legal.contact.email": {
+    "message": "E-Mail:",
+    "description": "Label for the email address field"
+  },
+  "legal.contact.linkedin": {
+    "message": "Sie können mich auch über mein LinkedIn-Profil kontaktieren:",
+    "description": "Introductory sentence for the direct LinkedIn contact option"
+  },
+  "legal.contact.profilePage": {
+    "message": "Profilseite",
+    "description": "Anchor text pointing to the external LinkedIn profile"
+  },
+  "legal.responsible.title": {
+    "message": "Verantwortlich für den Inhalt",
+    "description": "Heading for the section defining content responsibility under German broadcasting treaties"
+  },
+  "legal.responsible.description": {
+    "message": "Verantwortlich für den Inhalt dieser Website gemäß § 18 Abs. 2 MStV:",
+    "description": "Statutory legal baseline sentence referring to MStV content responsibility"
+  },
+  "legal.liability.title": {
+    "message": "Haftung für Inhalte",
+    "description": "Heading for the disclaimer regarding platform content liability"
+  },
+  "legal.liability.description1": {
+    "message": "Als Diensteanbieter bin ich gemäß den allgemeinen Gesetzen für eigene Inhalte auf diesen Seiten verantwortlich. Ich bin jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+    "description": "First paragraph about the service provider's legal duty to monitor third-party information"
+  },
+  "legal.liability.description2": {
+    "message": "Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.",
+    "description": "Second short clause regarding statutory obligations to block or remove information"
+  },
+  "legal.liability.links.title": {
+    "message": "Haftung für Links",
+    "description": "Heading for the section disclaiming liability for external outgoing hyperlinks"
+  },
+  "legal.liability.links.description1": {
+    "message": "Diese Website enthält unter Umständen Links zu externen Websites Dritter. Auf die Inhalte dieser externen Websites habe ich keinen Einfluss und kann daher für diese fremden Inhalte auch keine Gewähr übernehmen.",
+    "description": "First disclaimer clause concerning third-party website links and content influence"
+  },
+  "legal.liability.links.description2": {
+    "message": "Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.",
+    "description": "Second clause defining operator responsibility and notice validation timelines"
+  },
+  "legal.liability.links.description3": {
+    "message": "Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.",
+    "description": "Third paragraph explaining standard reaction guidelines upon notice of legal violations"
+  },
+  "legal.copyright.title": {
+    "message": "Urheberrecht",
+    "description": "Heading for the copyright disclaimer statement"
+  },
+  "legal.copyright.description1": {
+    "message": "Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der vorherigen schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
+    "description": "First copyright paragraph identifying German law and exploitation limits without consent"
+  },
+  "legal.copyright.description2": {
+    "message": "Downloads und Kopien dieser Seite sind nur für den privaten, nicht-kommerziellen Gebrauch gestattet, sofern nicht anders angegeben.",
+    "description": "Second paragraph allowing only private, non-commercial page copying"
+  },
+  "legal.copyright.description3": {
+    "message": "Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet.",
+    "description": "Third paragraph respecting intellectual properties of non-operator assets"
+  },
+  "legal.copyright.description4": {
+    "message": "Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen.",
+    "description": "Fourth paragraph requesting active user reporting in case of copyright infringements"
+  },
+  "legal.odr.title": {
+    "message": "EU-Streitschlichtung",
+    "description": "Heading for the EU Online Dispute Resolution platform compliance section"
+  },
+  "legal.odr.description": {
+    "message": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit. Ich bin jedoch weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+    "description": "Paragraph explaining the non-willingness to enter into consumer arbitration proceedings"
+  },
+  "privacyPolicy.title": {
+    "message": "Datenschutzerklärung",
+    "description": "Heading for the privacy policy page"
+  },
+  "privacyPolicy.collection.title": {
+    "message": "2. Datenerfassung auf unserer Website",
+    "description": "Heading for the second main section of the privacy policy regarding data collection"
+  },
+  "privacyPolicy.collection.github.title": {
+    "message": "Hosting über GitHub Pages",
+    "description": "Subheading for the section about website hosting via GitHub Pages"
+  },
+  "privacyPolicy.collection.github.text1": {
+    "message": "Wir hosten unsere Website bei GitHub Pages. Anbieter ist die GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA (nachfolgend „GitHub“).",
+    "description": "Paragraph explaining who the hosting provider is and giving GitHub's address"
+  },
+  "privacyPolicy.collection.github.text2": {
+    "message": "Wenn Sie unsere Website besuchen, erfasst GitHub Logfiles (Server-Logdaten), darunter Ihre IP-Adresse, um die Bereitstellung und Sicherheit des Dienstes zu gewährleisten. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer fehlerfreien und sicheren Bereitstellung unserer Website).",
+    "description": "Paragraph explaining that GitHub collects server log files and specifying the GDPR legal basis"
+  },
+  "privacyPolicy.collection.github.text3": {
+    "message": "Da GitHub ein US-amerikanisches Unternehmen ist, kann nicht ausgeschlossen werden, dass Daten in die USA übertragen werden. GitHub stützt sich dabei auf die Standardvertragsklauseln der EU-Kommission sowie auf das EU-U.S. Data Privacy Framework, sofern der Anbieter dort zertifiziert ist. Weitere Informationen finden Sie in der Datenschutzerklärung von GitHub: ",
+    "description": "Paragraph explaining the international data transfer and linking to GitHub's privacy statement"
+  },
+  "privacyPolicy.collection.email.title": {
+    "message": "Kontaktaufnahme per E-Mail",
+    "description": "Subheading for the section regarding contacting the site operator via direct email"
+  },
+  "privacyPolicy.collection.email.text1": {
+    "message": "Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben inklusive der von Ihnen dort angegebenen Kontaktdaten (wie z. B. Ihre E-Mail-Adresse und Ihr Name) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.",
+    "description": "Paragraph stating how personal data from incoming emails is handled and stored"
+  },
+  "privacyPolicy.collection.email.text2": {
+    "message": "Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) falls diese abgefragt wurde.",
+    "description": "Paragraph clarifying the GDPR legal basis for processing email contacts"
+  },
+  "privacyPolicy.collection.email.text3": {
+    "message": "Die von Ihnen an uns per E-Mail übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.",
+    "description": "Paragraph explaining the retention periods for email data and user deletion options"
+  },
+  "privacyPolicy.general.title": {
+    "message": "1. Allgemeine Hinweise und Pflichtinformationen",
+    "description": "Heading for the first main section of the privacy policy containing general legal notices"
+  },
+  "privacyPolicy.general.dataProtection.title": {
+    "message": "Datenschutz",
+    "description": "Subheading introducing the basic data protection stance"
+  },
+  "privacyPolicy.general.dataProtection.text1": {
+    "message": "Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.",
+    "description": "Paragraph about treating user data confidentially according to statutory rules"
+  },
+  "privacyPolicy.general.dataProtection.text2": {
+    "message": "Wenn Sie diese Website benutzen, werden verschiedene personenbezogene Daten erhoben. Personenbezogene Daten sind Daten, mit denen Sie persönlich identifiziert werden können. Die vorliegende Datenschutzerklärung erläutert, welche Daten wir erheben und wofür wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das geschieht.",
+    "description": "Paragraph explaining that using the site triggers collection of different personal data"
+  },
+  "privacyPolicy.general.dataProtection.text3": {
+    "message": "Wir weisen darauf hin, dass die Datenübertragung im Internet (z. B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.",
+    "description": "Paragraph warning about general security vulnerabilities during web data transfers"
+  },
+  "privacyPolicy.general.controller.title": {
+    "message": "Hinweis zur verantwortlichen Stelle",
+    "description": "Subheading for identifying the data controller"
+  },
+  "privacyPolicy.general.controller.text": {
+    "message": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:",
+    "description": "Short introductory line before listing the controller contact details"
+  },
+  "privacyPolicy.general.controller.definition": {
+    "message": "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet.",
+    "description": "Legal definition under GDPR specifying what a data controller is"
+  },
+  "privacyPolicy.general.withdrawal.title": {
+    "message": "Widerruf Ihrer Einwilligung zur Datenverarbeitung",
+    "description": "Subheading for user rights concerning the revocation of consent"
+  },
+  "privacyPolicy.general.withdrawal.text": {
+    "message": "Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen Einwilligung möglich. Sie können eine bereits erteilte Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.",
+    "description": "Paragraph detailing how an informal email can revoke given processing consent"
+  },
+  "privacyPolicy.general.complaint.title": {
+    "message": "Beschwerderecht bei der zuständigen Aufsichtsbehörde",
+    "description": "Subheading regarding the right to lodge structural complaints with supervisory authorities"
+  },
+  "privacyPolicy.general.complaint.text": {
+    "message": "Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes oder des Orts des mutmaßlichen Verstoßes zu. Das Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe.",
+    "description": "Paragraph clarifying right to complain to GDPR watchdogs in case of violations"
+  },
+  "privacyPolicy.general.access.title": {
+    "message": "Auskunft, Löschung und Berichtigung",
+    "description": "Subheading regarding user rights to access, erase, and correct personal information"
+  },
+  "privacyPolicy.general.access.text": {
+    "message": "Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf Berichtigung oder Löschung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.",
+    "description": "Paragraph explaining legal rights to free informational access, fixes, and deletions"
+  },
+  "privacyPolicy.general.restriction.title": {
+    "message": "Recht auf Einschränkung der Verarbeitung",
+    "description": "Subheading for user rights concerning the restriction of processing"
+  },
+  "privacyPolicy.general.restriction.text": {
+    "message": "Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Hierzu können Sie sich jederzeit unter der im Impressum angegebenen Adresse an uns wenden.",
+    "description": "Paragraph defining conditions and contact routes for requesting processing restriction"
+  },
+  "footer.privacyPolicy": {
+    "message": "Datenschutzerklärung"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "dunkler Modus",
+    "description": "The name for the dark color mode"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "heller Modus",
+    "description": "The name for the light color mode"
   }
 }

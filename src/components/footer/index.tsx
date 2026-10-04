@@ -36,6 +36,15 @@ export default function Footer() {
                 Legal notice
               </Translate>
             </Link>
+
+            <Link
+              to="/privacy-policy"
+              className={styles.legal}
+            >
+              <Translate id="footer.privacyPolicy">
+                Privacy policy
+              </Translate>
+            </Link>
           </div>
 
         </div>

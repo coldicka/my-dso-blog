@@ -15,7 +15,7 @@ export default function Home(): ReactNode {
 
   return (
     <Layout 
-      title={`Home | ${siteConfig.title}`} 
+      title=""
       description="DevSecOps Engineer Portfolio"
       noFooter
     >
