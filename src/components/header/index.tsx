@@ -15,16 +15,23 @@ function NavLink({ to, label, onItemClick }: NavLinkProps) {
 
   const isGerman = currentLocale === 'de';
 
+  // 1. Bereinige die Pfade für einen sicheren Vergleich (z.B. "my-dso-blog")
+  const clean = (p: string) => p.replace(/^\/|\/\$/g, '');
+  
+  const currentPath = clean(location.pathname);
+  const basePath = clean(baseUrl);
+  const baseGermanPath = clean(`${baseUrl}de`);
+
+  // Ermittle, ob wir uns auf der Startseite befinden
+  const isAtHome = 
+    currentPath === basePath || 
+    currentPath === baseGermanPath || 
+    currentPath === '';
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     onItemClick();
 
-    const cleanPath = location.pathname.replace(/\/\$/, '');
-    const cleanBase = baseUrl.replace(/\/\$/, '');
-    const isAtHome = 
-      cleanPath === cleanBase || 
-      cleanPath === `${cleanBase}/de` || 
-      cleanPath === '';
-
+    // Nur auf der echten Startseite nutzen wir das JavaScript-Smooth-Scrolling
     if (to.startsWith('#') && isAtHome) {
       e.preventDefault();
       const targetId = to.replace('#', '');
@@ -38,8 +45,23 @@ function NavLink({ to, label, onItemClick }: NavLinkProps) {
 
   let targetPath = '';
   if (to.startsWith('#')) {
-    const langModifier = isGerman ? 'de/' : '';
-    targetPath = location.pathname.includes('/imprint') ? `${baseUrl}${langModifier}${to}` : to;
+    if (isAtHome) {
+      // Auf der Landingpage scrollen wir direkt über den Hash
+      targetPath = to;
+    } else {
+      // 2. WENN WIR AUF EINER UNTERSEITE SIND:
+      // Wir holen uns die Basis des Projekts (immer "/my-dso-blog/")
+      const projectBase = baseUrl.includes('/de/') 
+        ? baseUrl.replace('de/', '') 
+        : baseUrl;
+
+      // Wir säubern doppelte Slashes im Pfad
+      const cleanBase = projectBase.replace(/\/{2,}/g, '/');
+
+      // Wir bauen den Pfad absolut starr auf, ohne Docusaurus die Chance für Doppler zu geben
+      targetPath = isGerman ? `${cleanBase}de/${to}` : `${cleanBase}${to}`;
+      targetPath = targetPath.replace(/\/{2,}/g, '/');
+    }
   } else {
     targetPath = to.startsWith('/') ? to : `/${to}`;
   }
@@ -50,6 +72,7 @@ function NavLink({ to, label, onItemClick }: NavLinkProps) {
     </a>
   );
 }
+
 export default function Header() {
   const [hidden, setHidden] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
