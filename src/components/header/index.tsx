@@ -86,19 +86,28 @@ export default function Header() {
     { to: '#contact', label: 'Contact' },
   ];
 
-  const navigateToLanguage = (e: React.MouseEvent<HTMLAnchorElement>, targetLocale: 'en' | 'de') => {
+    const navigateToLanguage = (e: React.MouseEvent<HTMLAnchorElement>, targetLocale: 'en' | 'de') => {
     e.preventDefault();
     closeMenu();
 
-    const pureBase = baseUrl.replace(/\//g, '');
-    const currentHash = typeof window !== 'undefined' ? window.location.hash : '';
+    const url = new URL(window.location.href);
     
-    // Setzt den Pfad absolut sauber ohne doppelte Slashes zusammen
-    const targetPath = targetLocale === 'de' 
-      ? `/${pureBase}/de/${currentHash}` 
-      : `/${pureBase}/${currentHash}`;
+    // If “/de/” is included, we'll remove it
+    const projectBase = baseUrl.includes('/de/') 
+      ? baseUrl.replace('de/', '') 
+      : baseUrl;
 
-    window.location.href = targetPath; 
+    const cleanBase = projectBase.replace(/\/{2,}/g, '/');
+
+    if (targetLocale === 'de') {
+      // Force the path /my-dso-blog/de/
+      url.pathname = `${cleanBase}de/`.replace(/\/{2,}/g, '/');
+    } else {
+      // Force the path /my-dso-blog/
+      url.pathname = cleanBase;
+    }
+
+    window.location.href = url.toString();
   };
 
   const renderDropdownMenu = () => (
