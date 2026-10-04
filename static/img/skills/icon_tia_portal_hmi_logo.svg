@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-labelledby="title desc">
+  <title id="title">TIA Portal HMI Logo</title>
+  <desc id="desc">Modern vector logo showing a PLC connected to an HMI display.</desc>
+
+  <!-- Transparent background -->
+
+  <!-- Connection -->
+  <path d="M278 184 H322" fill="none" stroke="#63B9E8" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- PLC body -->
+  <rect x="55" y="62" width="225" height="285" rx="22" fill="#355F86"/>
+  <rect x="55" y="62" width="225" height="52" rx="22" fill="#2E567B"/>
+  <rect x="55" y="90" width="225" height="24" fill="#2E567B"/>
+
+  <!-- PLC status LEDs -->
+  <circle cx="92" cy="138" r="11" fill="#70C8F0"/>
+  <circle cx="128" cy="138" r="11" fill="#4D91B8"/>
+  <circle cx="164" cy="138" r="11" fill="#4D91B8"/>
+
+  <!-- PLC terminal marks -->
+  <rect x="78" y="88" width="25" height="9" rx="4.5" fill="#B7D9EA"/>
+  <rect x="121" y="88" width="25" height="9" rx="4.5" fill="#B7D9EA"/>
+  <rect x="164" y="88" width="25" height="9" rx="4.5" fill="#B7D9EA"/>
+  <rect x="207" y="88" width="25" height="9" rx="4.5" fill="#B7D9EA"/>
+
+  <!-- PLC interface lines -->
+  <rect x="78" y="196" width="145" height="14" rx="7" fill="#B7D9EA"/>
+  <rect x="78" y="236" width="145" height="14" rx="7" fill="#8DB9D2"/>
+
+  <!-- HMI frame -->
+  <rect x="322" y="78" width="205" height="185" rx="20" fill="#355F86"/>
+  <rect x="343" y="99" width="163" height="143" rx="7" fill="#6FC0E8"/>
+
+  <!-- HMI graph -->
+  <path d="M364 204 L407 161 L444 187 L483 131"
+        fill="none" stroke="#234766" stroke-width="12"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- HMI stand -->
+  <rect x="400" y="263" width="50" height="28" rx="2" fill="#355F86"/>
+  <rect x="365" y="291" width="120" height="18" rx="9" fill="#355F86"/>
+
+  <!-- Wordmark -->
+  <text x="167" y="392" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="30" font-weight="700" letter-spacing="3"
+        fill="#355F86">TIA</text>
+  <text x="425" y="392" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="30" font-weight="700" letter-spacing="3"
+        fill="#355F86">HMI</text>
+</svg>
