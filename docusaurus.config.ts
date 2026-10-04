@@ -11,7 +11,7 @@ const gitRepoUrl = process.env.GIT_REPOSITORY_URL || "https://github.com/coldick
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH || "main";
 
 const config: Config = {
-  title: 'Mein Portfolio',
+  title: 'CD Portfolio',
   tagline: 'Willkommen auf meinem Blog',
   favicon: 'img/favicon.ico',
 
