@@ -15,15 +15,21 @@ function NavLink({ to, label, onItemClick }: NavLinkProps) {
 
   const isGerman = currentLocale === 'de';
 
+  // 1. Clean up the paths for a reliable comparison
+  const clean = (p: string) => p.replace(/^\/|\/\$/g, '');
+  
+  const currentPath = clean(location.pathname);
+  const basePath = clean(baseUrl);
+  const baseGermanPath = clean(`${baseUrl}de`);
+
+  // Determine whether we are on the home page
+  const isAtHome = 
+    currentPath === basePath || 
+    currentPath === baseGermanPath || 
+    currentPath === '';
+
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     onItemClick();
-
-    const cleanPath = location.pathname.replace(/\/\$/, '');
-    const cleanBase = baseUrl.replace(/\/\$/, '');
-    const isAtHome = 
-      cleanPath === cleanBase || 
-      cleanPath === `${cleanBase}/de` || 
-      cleanPath === '';
 
     if (to.startsWith('#') && isAtHome) {
       e.preventDefault();
@@ -38,8 +44,22 @@ function NavLink({ to, label, onItemClick }: NavLinkProps) {
 
   let targetPath = '';
   if (to.startsWith('#')) {
-    const langModifier = isGerman ? 'de/' : '';
-    targetPath = location.pathname.includes('/imprint') ? `${baseUrl}${langModifier}${to}` : to;
+    if (isAtHome) {
+      // On the landing page, scroll directly past the hash
+      targetPath = to;
+    } else {
+      // Fetch the project's base path (always "/my-dso-blog/")
+      const projectBase = baseUrl.includes('/de/') 
+        ? baseUrl.replace('de/', '') 
+        : baseUrl;
+
+      // Remove duplicate slashes from the path
+      const cleanBase = projectBase.replace(/\/{2,}/g, '/');
+
+      // Build the path absolutely, without giving Docusaurus the chance for doppler
+      targetPath = isGerman ? `${cleanBase}de/${to}` : `${cleanBase}${to}`;
+      targetPath = targetPath.replace(/\/{2,}/g, '/');
+    }
   } else {
     targetPath = to.startsWith('/') ? to : `/${to}`;
   }
@@ -50,6 +70,7 @@ function NavLink({ to, label, onItemClick }: NavLinkProps) {
     </a>
   );
 }
+
 export default function Header() {
   const [hidden, setHidden] = useState(false);
   const [lastScroll, setLastScroll] = useState(0);
