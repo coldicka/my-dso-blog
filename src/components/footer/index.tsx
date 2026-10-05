@@ -28,23 +28,25 @@ export default function Footer() {
               © Collins Dicka {new Date().getFullYear()}
             </p>
 
-            <Link
-              to="/legal-notice"
-              className={styles.legal}
-            >
-              <Translate id="footer.legalNotice">
-                Legal notice
-              </Translate>
-            </Link>
+            <div className={styles.legalLinks}>
+              <Link
+                to="/legal-notice"
+                className={styles.legal}
+              >
+                <Translate id="footer.legalNotice">
+                  Legal notice
+                </Translate>
+              </Link>
 
-            <Link
-              to="/privacy-policy"
-              className={styles.legal}
-            >
-              <Translate id="footer.privacyPolicy">
-                Privacy policy
-              </Translate>
-            </Link>
+              <Link
+                to="/privacy-policy"
+                className={styles.legal}
+              >
+                <Translate id="footer.privacyPolicy">
+                  Privacy policy
+                </Translate>
+              </Link>
+              </div>
           </div>
 
         </div>

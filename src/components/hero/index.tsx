@@ -23,7 +23,7 @@ export default function Hero() {
           <div className={styles.photoContainer}>
             <img
               src={resolvedCdnImage}
-              alt="testa"
+              alt="Collins Dicka"
               className={styles.photo}
               loading="lazy"
             />
