@@ -11,7 +11,7 @@ export default function Contact() {
       iconName: 'mail',
     },
     {
-      href: 'https://linkedin.com/in/collins-dicka-ned-b05a71405/',
+      href: 'https://linkedin.com/in/collins-dicka-ned/',
       label: translate({ id: 'contact.links.linkedin', message: 'Profile Page' }),
       isExternal: true,
       iconName: 'linkedin',
