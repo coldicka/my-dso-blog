@@ -33,13 +33,13 @@
     "message": "Vom Code zur Cloud. Von der Entwicklung zur Sicherheit."
   },
   "hero.bio.p1": {
-    "message": "Mit mehrjähriger Berufserfahrung in der Frontend-Entwicklung habe ich produktive Webanwendungen erstellt sowie gewartet und ein tiefes Verständnis für Software-Engineering von der Pike auf erlernt."
+    "message": "Mit rund neun Jahren Berufserfahrung in der Frontend-Entwicklung habe ich produktive Webanwendungen entwickelt, gewartet und weiterentwickelt."
   },
   "hero.bio.p2": {
-    "message": "Heute kombiniere ich diesen Entwicklungshintergrund mit meiner DevSecOps-Expertise – mit Fokus auf Cybersicherheit, sichere CI/CD-Pipelines, Containerisierung, Infrastruktur und Automatisierung."
+    "message": "Durch meine abgeschlossene DevSecOps-Weiterbildung habe ich diesen Hintergrund um praktische Kenntnisse in Linux, Docker, GitHub Actions und IT-Sicherheit ergänzt. In praxisnahen Projekten habe ich Anwendungen containerisiert, Deployments automatisiert und Sicherheitslücken in einer Testumgebung untersucht."
   },
   "hero.bio.p3": {
-    "message": "Mein Ziel ist es, die Lücke zwischen Entwicklung und Betrieb zu schließen und gleichzeitig eine Security-First-Mentalität in moderne Softwareumgebungen einzubringen."
+    "message": "Jetzt möchte ich meine Entwicklungserfahrung und diese neuen Kenntnisse in einem Team einsetzen und weiter ausbauen – mit dem Ziel, Software zuverlässig bereitzustellen und sicher zu betreiben."
   },
   "hero.cta.contact": {
     "message": "Kontaktiere mich"

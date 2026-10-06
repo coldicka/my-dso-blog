@@ -34,13 +34,13 @@ export default function Hero() {
               <Translate id="hero.bio.slogan">From Code to Cloud. From Development to Security.</Translate>
             </p>
            <p className={styles.bio}>
-              <Translate id="hero.bio.p1">With several years of professional experience in frontend development, I have built and maintained production web applications and gained a strong understanding of software engineering from the ground up.</Translate>
+              <Translate id="hero.bio.p1">With around nine years of professional experience in frontend development, I have built, maintained, and improved production web applications.</Translate>
             </p>
             <p className={styles.bio}>
-              <Translate id="hero.bio.p2">Today, I combine that development background with my DevSecOps expertise — focusing on cybersecurity, secure CI/CD pipelines, containerization, infrastructure, and automation.</Translate>
+              <Translate id="hero.bio.p2">Having completed a DevSecOps training program, I have expanded my development background with practical skills in Linux, Docker, GitHub Actions, and IT security. Through hands-on projects, I have containerized applications, automated deployments, and investigated security vulnerabilities in a test environment.</Translate>
             </p>
             <p className={styles.bio}>
-              <Translate id="hero.bio.p3">My goal is to bridge the gap between development and operations while bringing a security-first mindset to modern software environments.</Translate>
+              <Translate id="hero.bio.p3">I am now looking to contribute my development experience and these new skills to a team, while continuing to grow in software delivery and secure operations.</Translate>
             </p>
           </div>
 
