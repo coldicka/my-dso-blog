@@ -23,7 +23,7 @@ const projects: Project[] = [
     title: 'Conduit Container',
     description: translate({
       id: 'projects.conduit-container.description',
-      message: 'An automated CI/CD workflow powered by GitHub Actions and the GitHub Container Registry. The pipeline is divided into three sequential stages: building the application, preparing the configuration, and deploying the project remotely through SSH.',
+      message: 'I adapted an existing Angular/Django application for containerized operation. My contribution includes Dockerfiles, an Nginx reverse proxy, PostgreSQL integration, and Docker Compose configuration with persistent storage and a database healthcheck.',
     }),
     tags: getTags(['docker', 'django', 'angular', 'nginx']),
     docPath: 'docs/conduit-container',
@@ -34,7 +34,7 @@ const projects: Project[] = [
     title: 'Conduit Deployment',
     description: translate({
       id: 'projects.conduit-deployment.description',
-      message: 'A fully Dockerized and automated CI/CD workflow powered by GitHub Actions and the GitHub Container Registry. The pipeline consists of three sequential stages responsible for building the application, preparing the required configuration, and deploying it remotely via SSH.',
+      message: 'I implemented an automated deployment workflow using GitHub Actions. It builds the frontend and backend images, publishes them to the GitHub Container Registry, and updates the application on a Linux server via SSH. Configuration is supplied through GitHub Secrets.',
     }),
     tags: getTags(['githubActions', 'docker', 'linux']),
     docPath: 'docs/conduit-deployment',

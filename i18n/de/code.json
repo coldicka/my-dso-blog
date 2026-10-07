@@ -48,10 +48,10 @@
     "message": "Eine einfache, containerisierte Full-Stack-Shop-Anwendung, die mit Python und Django 6 entwickelt wurde. Sie nutzt SQLite als Datenbank und läuft in einem maßgeschneiderten Docker-Setup mit konfiguriertem Volume-Mapping für persistente Datenspeicherung."
   },
   "projects.conduit-container.description": {
-    "message": "Ein automatisierter CI/CD-Workflow, betrieben durch GitHub Actions und die GitHub Container Registry. Die Pipeline ist in drei aufeinanderfolgende Phasen unterteilt: Erstellen der Anwendung, Vorbereiten der Konfiguration und Remote-Bereitstellung des Projekts über SSH."
+    "message": "Ich habe eine bestehende Angular-/Django-Anwendung für den containerisierten Betrieb angepasst. Mein Beitrag umfasst Dockerfiles, einen Nginx-Reverse-Proxy, die PostgreSQL-Anbindung und eine Docker-Compose-Konfiguration mit persistenten Datenvolumes und Datenbank-Healthcheck."
   },
   "projects.conduit-deployment.description": {
-    "message": "Ein vollständig containerisierter und automatisierter CI/CD-Workflow, betrieben durch GitHub Actions und die GitHub Container Registry. Die Pipeline besteht aus drei sequenziellen Phasen, die für das Erstellen der Anwendung, das Vorbereiten der erforderlichen Konfiguration und das Remote-Deployment über SSH zuständig sind."
+    "message": "Ich habe einen automatisierten Deployment-Workflow mit GitHub Actions umgesetzt. Er erstellt die Frontend- und Backend-Images, veröffentlicht sie in der GitHub Container Registry und aktualisiert die Anwendung per SSH auf einem Linux-Server. Die Konfiguration wird über GitHub Secrets bereitgestellt."
   },
   "projects.juice-shop-master.description": {
     "message": "OWASP Juice Shop Sicherheitsanalysen (Write-ups), die SQL-Injections, offengelegte Passwörthashes, Authentifizierungsfehler und andere gängige Schwachstellen im Web abdecken. Das Projekt demonstriert praxisnahe Sicherheitslücken und bietet wertvolle Einblicke in deren Identifizierung und Vermeidung."
