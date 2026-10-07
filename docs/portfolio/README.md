@@ -114,8 +114,8 @@ The project combines my frontend development experience with practical work in b
 ### Installation
 
 ```bash
-git clone git@github.com:coldicka/my_dso_blog.git
-cd my_dso_blog
+git clone git@github.com:coldicka/my-dso-blog.git
+cd my-dso-blog
 npm install
 ```
 
@@ -227,4 +227,3 @@ build/
 ## License
 
 This project is intended as a personal portfolio and documentation website.
-:::
