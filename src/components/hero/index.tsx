@@ -1,14 +1,31 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Button } from '../button';
 import styles from './hero.module.scss';
 import Translate, { translate } from '@docusaurus/Translate';
 
 export default function Hero() {
+  const heroRef = useRef<HTMLElement>(null);
+  const [heroVisible, setHeroVisible] = useState(false);
+
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
+    if (typeof IntersectionObserver === 'undefined') {
+      setHeroVisible(true);
+      return;
+    }
+    const observer = new IntersectionObserver(([entry]) => {
+      setHeroVisible(entry.isIntersecting);
+    }, { threshold: 0 });
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, []);
+
   const resolvedCdnImage = useBaseUrl('/img/cdn.jpg');
 
   return (
-    <section className={styles.hero} id="about">
+    <section ref={heroRef} className={styles.hero} id="about">
       <div className="container">
         <div className={styles.heroGrid}>
   
@@ -21,12 +38,17 @@ export default function Hero() {
           </p>
 
           <div className={styles.photoContainer}>
-            <img
+            <div className={`${styles.careerSlogan} ${heroVisible ? styles.sloganActive : ''}`}>
+              <span>Bringing experience.</span>
+              <span>Learning something new.</span>
+              <span>Creating solutions together.</span>
+              <img
               src={resolvedCdnImage}
               alt="Collins Dicka"
               className={styles.photo}
               loading="lazy"
             />
+          </div>
           </div>
 
           <div className={styles.bioWrapper}>
