@@ -13,7 +13,7 @@ const deploymentBranch = process.env.DEPLOYMENT_BRANCH || "main";
 const config: Config = {
   title: 'CD Portfolio',
   tagline: 'Willkommen auf meinem Blog',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/cd-favicon.png',
 
   url:
     process.env.DEPLOYMENT_URL ||
@@ -51,13 +51,6 @@ const config: Config = {
       },
     },
   },
-stylesheets: [
-    {
-      href: 'https://googleapis.com',
-      type: 'text/css',
-    },
-  ],
-  
   presets: [
     [
       'classic',
@@ -103,15 +96,15 @@ stylesheets: [
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/cd-social-card.png',
     navbar: {
       title: 'My Homepage',
 
-      /*logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+      logo: {
+        alt: 'CD Portfolio',
+        src: 'img/cd-logo.png',
         href: '/',
-      },*/
+      },
 
       items: [
         {

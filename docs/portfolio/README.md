@@ -1,4 +1,4 @@
-# Docusaurus Portfolio
+# Portfolio
 
 Personal portfolio and documentation website built with **Docusaurus**, **React**, and **TypeScript**. Deployed to **GitHub Pages** using **GitHub Actions**.
 
@@ -11,8 +11,40 @@ Showcases work in:
 
 ---
 
+## Project Background and My Contribution
+
+This portfolio was developed during my DevSecOps training using the [Developer Akademie Docusaurus template](https://github.com/Developer-Akademie-DevSecOpsKurs/dev-blog-template) as a starting point. The template provided the documentation infrastructure, basic configuration, and GitHub Actions workflows.
+
+My main contribution was replacing the default homepage with a custom portfolio interface built with React and TypeScript.
+
+### Portfolio Interface
+
+- Created custom components for navigation, hero, skills, projects, contact, and footer.
+- Implemented project cards and technology tags to present my practical work.
+- Built responsive layouts for desktop and mobile.
+- Added German and English content with Docusaurus internationalization.
+
+### SCSS Integration
+
+- Added Sass and the Docusaurus Sass plugin.
+- Created SCSS modules for individual components.
+- Introduced shared styling variables and breakpoint utilities.
+- Updated the Docusaurus configuration to load the SCSS styles.
+
+### Configuration and Deployment
+
+- Adapted the site configuration for my repository and GitHub Pages URL.
+- Configured environment variables for my website.
+- Adapted the provided GitHub Actions workflows for automated builds and deployment.
+- Reworked the README to document the portfolio structure, local development, and publishing process.
+
+The project combines my frontend development experience with practical work in build configuration, internationalization, and automated software delivery.
+
+---
+
 ## Table of Contents
 
+* [Project Background and My Contribution](#project-background-and-my-contribution)
 * [Tech Stack](#tech-stack)
 * [Project Structure](#project-structure)
 * [Getting Started](#getting-started)

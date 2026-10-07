@@ -10,7 +10,7 @@
   .heroGrid {
     display: grid;
     gap: 1.2rem 1.5rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
       "greeting"
       "name"
@@ -21,7 +21,7 @@
 
     @include media-breakpoint-up(lg) {
       align-items: center;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
       grid-template-areas:
         "greeting photo"
         "name     photo"
@@ -63,6 +63,12 @@
     grid-area: photo; 
     justify-self: center; 
     margin-bottom: 1.5rem;
+    width: 100%;
+    max-width: 450px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 
     @include media-breakpoint-up(lg) {
       justify-self: end; 
@@ -71,6 +77,57 @@
     img {
       border-radius: 30px;
       max-height: 479px;
+      display: block;
+      max-width: 100%;
+      height: auto;
+      align-self: center;
+    }
+
+    .careerSlogan {
+      margin: 0;
+      padding: 0.8rem 1rem;
+      border: 5px solid transparent;
+      border-radius: 16px;
+      color: #fff;
+      background:
+        linear-gradient(#142448, #142448) padding-box,
+        linear-gradient(110deg, #35e5ed, #a978ff, #ff72bc, #35e5ed) border-box;
+      background-size: 100% 100%, 300% 100%;
+      overflow-wrap: anywhere;
+      text-align: center;
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      font-weight: 600;
+      line-height: 1.6;
+      animation: sloganPulse 2s ease-in-out infinite;
+      animation-play-state: paused;
+
+      span {
+        display: block;
+        opacity: 1;
+        animation: sloganReveal 0.7s ease-out both;
+        animation-play-state: paused;
+
+        &:nth-child(1) { color: #70f2ef; }
+        &:nth-child(2) {
+          color: #d9bdff;
+          animation-delay: 0.25s;
+        }
+        &:nth-child(3) {
+          color: #ffb5d9;
+          animation: sloganReveal 0.7s ease-out 0.5s both,
+                     sloganShimmer 6s ease-in-out 1.2s infinite;
+          animation-play-state: paused;
+        }
+      }
+
+      &.sloganActive {
+        animation-play-state: running;
+
+        span,
+        span:nth-child(3) {
+          animation-play-state: running;
+        }
+      }
     }
   }
 
@@ -99,5 +156,43 @@
     @include media-breakpoint-up(lg) {
       justify-self: start;
     } 
+  }
+}
+
+@keyframes sloganPulse {
+  0%, 100% {
+    background-position: 0 0, 0% 50%;
+    box-shadow: 0 0 5px rgba(53, 229, 237, 0.15);
+  }
+  50% {
+    background-position: 0 0, 100% 50%;
+    box-shadow: 0 0 18px rgba(53, 229, 237, 0.45),
+                0 0 26px rgba(255, 114, 188, 0.30);
+  }
+}
+
+@keyframes sloganReveal {
+  from { opacity: 0.65; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes sloganShimmer {
+  0%, 65%, 100% { text-shadow: none; }
+  82% { text-shadow: 0 0 8px rgba(255, 181, 217, 0.9),
+                     0 0 16px rgba(255, 181, 217, 0.5); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero .photoContainer .careerSlogan {
+    animation: none;
+
+    span,
+    span:nth-child(3) {
+      animation: none;
+      opacity: 1;
+      transform: none;
+      background: none;
+      text-shadow: none;
+    }
   }
 }

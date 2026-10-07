@@ -3,25 +3,25 @@
     "message": "Impressum"
   },
   "contact.links.linkedin": {
-    "message": "Profilseite"
+    "message": "LinkedIn-Profil"
   },
   "contact.heading": {
-    "message": "Kontaktiere mich"
+    "message": "Kontakt"
   },
   "contact.intro": {
-    "message": "Lass uns gemeinsam sichere Systeme bauen."
+    "message": "Sie suchen Unterstützung für Ihr IT-Team?"
   },
   "contact.list.item1": {
-    "message": "Ich kombiniere meinen Hintergrund in der Softwareentwicklung mit DevSecOps, Cybersicherheit, Automatisierung und Infrastruktur, um sichere und zuverlässige Softwareumgebungen aufzubauen."
+    "message": "Ich bringe rund neun Jahre Erfahrung in der Webentwicklung mit, ergänzt durch praktische Weiterbildung in Linux, Docker, Automatisierung und IT-Sicherheit. Ich suche eine Tätigkeit in der Anwendungsentwicklung, Automatisierung oder im IT-Betrieb."
   },
   "contact.list.item2": {
-    "message": "Offen für Remote · Hybrid · Relocation"
+    "message": "Wohnort Meldorf · Offen für Vor-Ort-, Hybrid- und Remote-Tätigkeiten mit gut erreichbarem Arbeitsort · Gelegentliche Kundenbesuche nach Absprache möglich."
   },
   "contact.connect": {
-    "message": "Lass uns vernetzen →"
+    "message": "Gerne bespreche ich mit Ihnen, wie ich Ihr Team unterstützen kann."
   },
   "contact.tagline": {
-    "message": "Ich freue mich darauf, von dir zu hören!"
+    "message": "Lassen Sie uns über Ihren Bedarf sprechen."
   },
   "hero.greeting": {
     "message": "Hallo zusammen 👋 Ich bin"
@@ -48,10 +48,10 @@
     "message": "Eine einfache, containerisierte Full-Stack-Shop-Anwendung, die mit Python und Django 6 entwickelt wurde. Sie nutzt SQLite als Datenbank und läuft in einem maßgeschneiderten Docker-Setup mit konfiguriertem Volume-Mapping für persistente Datenspeicherung."
   },
   "projects.conduit-container.description": {
-    "message": "Ein automatisierter CI/CD-Workflow, betrieben durch GitHub Actions und die GitHub Container Registry. Die Pipeline ist in drei aufeinanderfolgende Phasen unterteilt: Erstellen der Anwendung, Vorbereiten der Konfiguration und Remote-Bereitstellung des Projekts über SSH."
+    "message": "Ich habe eine bestehende Angular-/Django-Anwendung für den containerisierten Betrieb angepasst. Mein Beitrag umfasst Dockerfiles, einen Nginx-Reverse-Proxy, die PostgreSQL-Anbindung und eine Docker-Compose-Konfiguration mit persistenten Datenvolumes und Datenbank-Healthcheck."
   },
   "projects.conduit-deployment.description": {
-    "message": "Ein vollständig containerisierter und automatisierter CI/CD-Workflow, betrieben durch GitHub Actions und die GitHub Container Registry. Die Pipeline besteht aus drei sequenziellen Phasen, die für das Erstellen der Anwendung, das Vorbereiten der erforderlichen Konfiguration und das Remote-Deployment über SSH zuständig sind."
+    "message": "Ich habe einen automatisierten Deployment-Workflow mit GitHub Actions umgesetzt. Er erstellt die Frontend- und Backend-Images, veröffentlicht sie in der GitHub Container Registry und aktualisiert die Anwendung per SSH auf einem Linux-Server. Die Konfiguration wird über GitHub Secrets bereitgestellt."
   },
   "projects.juice-shop-master.description": {
     "message": "OWASP Juice Shop Sicherheitsanalysen (Write-ups), die SQL-Injections, offengelegte Passwörthashes, Authentifizierungsfehler und andere gängige Schwachstellen im Web abdecken. Das Projekt demonstriert praxisnahe Sicherheitslücken und bietet wertvolle Einblicke in deren Identifizierung und Vermeidung."
@@ -577,21 +577,9 @@
   "skills.less.desc3": {
     "message": "Interaktive Komponenten-Zustände stylen"
   },
-  "legal.title": {
-    "message": "Impressum",
-    "description": "The main title of the legal notice (imprint) page"
-  },
   "legal.section1.title": {
     "message": "Angaben gemäß § 5 DDG",
     "description": "Heading for the primary legal identification section according to German law"
-  },
-  "legal.contact.title": {
-    "message": "Kontakt",
-    "description": "Subheading for the contact possibilities section"
-  },
-  "legal.contact.email": {
-    "message": "E-Mail:",
-    "description": "Label for the email address field"
   },
   "legal.contact.linkedin": {
     "message": "Sie können mich auch über mein LinkedIn-Profil kontaktieren:",
@@ -664,10 +652,6 @@
   "legal.odr.description": {
     "message": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit. Ich bin jedoch weder verpflichtet noch bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
     "description": "Paragraph explaining the non-willingness to enter into consumer arbitration proceedings"
-  },
-  "privacyPolicy.title": {
-    "message": "Datenschutzerklärung",
-    "description": "Heading for the privacy policy page"
   },
   "privacyPolicy.collection.title": {
     "message": "2. Datenerfassung auf unserer Website",
@@ -779,5 +763,131 @@
   "theme.colorToggle.ariaLabel.mode.light": {
     "message": "heller Modus",
     "description": "The name for the light color mode"
+  },
+  "projects.portfolio.title": {
+    "message": "Mein Portfolio"
+  },
+  "projects.portfolio.description": {
+    "message": "Ich entwickle mein zweisprachiges Portfolio mit Docusaurus, React und TypeScript. Eigene Komponenten und responsive SCSS-Layouts präsentieren meine Projekte. Nach einem Push auf main erstellt GitHub Actions die Website und veröffentlicht sie auf GitHub Pages."
+  },
+  "hero.careerSlogan.experience": {
+    "message": "Erfahrung mitbringen."
+  },
+  "hero.careerSlogan.learning": {
+    "message": "Neues lernen."
+  },
+  "hero.careerSlogan.together": {
+    "message": "Gemeinsam Lösungen schaffen."
+  },
+  "footer.scrollToTop": {
+    "message": "Zurück nach oben"
+  },
+  "legal.title": {
+    "message": "Impressum"
+  },
+  "legal.meta.description": {
+    "message": "Angaben zum Betreiber dieser Website und Kontaktmöglichkeiten."
+  },
+  "legal.operator.title": {
+    "message": "Betreiber der Website"
+  },
+  "legal.country": {
+    "message": "Deutschland"
+  },
+  "legal.contact.title": {
+    "message": "Kontakt"
+  },
+  "legal.contact.email": {
+    "message": "E-Mail:"
+  },
+  "legal.content.title": {
+    "message": "Über diese Website"
+  },
+  "legal.content.text": {
+    "message": "Dieses persönliche Portfolio stellt meine beruflichen Erfahrungen, Qualifikationen und Projekte vor. Für die von mir auf dieser Website veröffentlichten Inhalte bin ich verantwortlich."
+  },
+  "legal.external.title": {
+    "message": "Externe Links"
+  },
+  "legal.external.text": {
+    "message": "Diese Website enthält Links zu externen Websites, unter anderem zu GitHub und LinkedIn. Für deren Inhalte sind die jeweiligen Betreiber verantwortlich. Falls Ihnen eine möglicherweise rechtswidrige verlinkte Seite auffällt, kontaktieren Sie mich bitte, damit ich den Link prüfen kann."
+  },
+  "legal.rights.title": {
+    "message": "Urheberrecht und Lizenzen"
+  },
+  "legal.rights.text": {
+    "message": "Für die Nutzung der hier vorgestellten Inhalte, Quellcodes und Materialien gelten die jeweiligen urheberrechtlichen Bestimmungen und Lizenzen. Materialien Dritter unterliegen weiterhin den Rechten und Lizenzen ihrer jeweiligen Rechteinhaber. Für auf GitHub veröffentlichten Quellcode beachten Sie bitte die Lizenzangaben im jeweiligen Repository."
+  },
+  "privacyPolicy.title": {
+    "message": "Datenschutzerklärung"
+  },
+  "privacyPolicy.meta.description": {
+    "message": "Informationen zur Verarbeitung personenbezogener Daten im Zusammenhang mit diesem Portfolio."
+  },
+  "privacyPolicy.overview.title": {
+    "message": "1. Überblick"
+  },
+  "privacyPolicy.overview.text": {
+    "message": "Diese Website präsentiert meine beruflichen Erfahrungen und Projekte. Sie enthält kein Kontaktformular und bietet keine Registrierung an. Personenbezogene Daten können beim Aufruf der Website, beim Laden externer Ressourcen und bei einer Kontaktaufnahme per E-Mail verarbeitet werden."
+  },
+  "privacyPolicy.controller.title": {
+    "message": "2. Verantwortlicher"
+  },
+  "privacyPolicy.hosting.title": {
+    "message": "3. Hosting über GitHub Pages"
+  },
+  "privacyPolicy.hosting.text": {
+    "message": "Diese Website wird über GitHub Pages bereitgestellt. GitHub verarbeitet technische Anfragedaten, um die Website auszuliefern und seine Dienste zu schützen. Nach Angaben von GitHub werden die IP-Adressen der Besucher zu Sicherheitszwecken protokolliert und gespeichert, unabhängig davon, ob sie bei GitHub angemeldet sind. Grundlage für meine Nutzung dieses Hostingdienstes ist mein berechtigtes Interesse an der sicheren Bereitstellung meines Portfolios gemäß Art. 6 Abs. 1 lit. f DSGVO."
+  },
+  "privacyPolicy.hosting.details": {
+    "message": "Die Datenschutzerklärung von GitHub enthält Informationen zu den verantwortlichen GitHub-Gesellschaften, Empfängern, Kriterien für die Speicherdauer und internationalen Datenübermittlungen, einschließlich einer Verarbeitung in den USA. Die Speicherdauer der Sicherheitsprotokolle von GitHub lege ich nicht fest."
+  },
+  "privacyPolicy.hosting.link": {
+    "message": "Datenschutzerklärung von GitHub"
+  },
+  "privacyPolicy.resources.title": {
+    "message": "4. Über jsDelivr geladene Icons"
+  },
+  "privacyPolicy.resources.text": {
+    "message": "Einige Technologie-Icons werden von cdn.jsdelivr.net geladen. Wenn Ihr Browser diese Dateien anfordert, stellt er eine Verbindung zum Content Delivery Network her. Dabei werden Ihre IP-Adresse und technische Anfrageinformationen an die beteiligten Server übermittelt. Dies dient der Darstellung der Icons in den Bereichen Kenntnisse und Projekte."
+  },
+  "privacyPolicy.resources.link": {
+    "message": "Datenschutzerklärung von jsDelivr"
+  },
+  "privacyPolicy.email.title": {
+    "message": "5. Kontaktaufnahme per E-Mail"
+  },
+  "privacyPolicy.email.text": {
+    "message": "Wenn Sie mich per E-Mail kontaktieren, verarbeite ich Ihre E-Mail-Adresse, Ihre Nachricht und weitere von Ihnen übermittelte Angaben, um Ihre Anfrage zu beantworten. Grundlage ist Art. 6 Abs. 1 lit. f DSGVO und mein berechtigtes Interesse an der Bearbeitung von Anfragen. Soweit die Verarbeitung für einen Vertrag oder von Ihnen angefragte vorvertragliche Maßnahmen erforderlich ist, gilt Art. 6 Abs. 1 lit. b DSGVO."
+  },
+  "privacyPolicy.email.provider": {
+    "message": "Zum Empfangen und Versenden von E-Mails nutze ich Gmail. Google verarbeitet deshalb Nachrichteninhalte und zugehörige technische Daten im Rahmen der Bereitstellung des E-Mail-Dienstes. Informationen zur Verarbeitung durch Google und zu internationalen Datenübermittlungen finden Sie in der Datenschutzerklärung von Google."
+  },
+  "privacyPolicy.email.link": {
+    "message": "Datenschutzerklärung von Google"
+  },
+  "privacyPolicy.email.retention": {
+    "message": "Ich speichere Ihre Nachricht und Kontaktdaten so lange, wie dies zur Bearbeitung Ihrer Anfrage und möglicher Rückfragen erforderlich ist. Danach lösche ich die Daten, sofern keine gesetzlichen Aufbewahrungspflichten oder andere rechtlichen Gründe eine weitere Speicherung erfordern."
+  },
+  "privacyPolicy.links.title": {
+    "message": "6. Links zu externen Websites"
+  },
+  "privacyPolicy.links.text": {
+    "message": "Links zu GitHub, LinkedIn und anderen externen Websites führen zu Diensten Dritter. Wenn Sie einem Link folgen, verarbeitet die Zielwebsite Daten gemäß ihrer eigenen Datenschutzerklärung. Diese Links sind keine eingebetteten Social-Media-Plugins."
+  },
+  "privacyPolicy.rights.title": {
+    "message": "7. Ihre Rechte"
+  },
+  "privacyPolicy.rights.text": {
+    "message": "Unter den jeweiligen gesetzlichen Voraussetzungen haben Sie das Recht auf Auskunft, Berichtigung und Löschung Ihrer personenbezogenen Daten, Einschränkung der Verarbeitung und Datenübertragbarkeit. Wenn eine Verarbeitung auf Ihrer Einwilligung beruht, können Sie diese jederzeit mit Wirkung für die Zukunft widerrufen. Kontaktieren Sie mich hierzu über die oben angegebene E-Mail-Adresse."
+  },
+  "privacyPolicy.rights.objection": {
+    "message": "Wenn eine Verarbeitung auf Art. 6 Abs. 1 lit. f DSGVO beruht, können Sie aus Gründen, die sich aus Ihrer besonderen Situation ergeben, Widerspruch gegen die Verarbeitung einlegen."
+  },
+  "privacyPolicy.rights.complaint": {
+    "message": "Sie haben außerdem das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren, insbesondere im Land Ihres gewöhnlichen Aufenthalts, Ihres Arbeitsplatzes oder des mutmaßlichen Verstoßes. In Schleswig-Holstein können Sie sich an das Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein (ULD) wenden."
+  },
+  "privacyPolicy.rights.authority": {
+    "message": "ULD Schleswig-Holstein"
   }
 }

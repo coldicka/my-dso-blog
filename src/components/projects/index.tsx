@@ -9,6 +9,17 @@ import { Project, getTags } from './projectTypes';
 
 const projects: Project[] = [
   {
+    title: translate({ id: 'projects.portfolio.title', message: 'My Portfolio' }),
+    description: translate({
+      id: 'projects.portfolio.description',
+      message: 'I develop my bilingual portfolio with Docusaurus, React and TypeScript. Custom components and responsive SCSS layouts showcase my projects. GitHub Actions builds and publishes the website to GitHub Pages after a push to main.',
+    }),
+    tags: getTags(['react', 'typescript', 'githubActions']),
+    docPath: 'docs/portfolio',
+    githubLink: 'https://github.com/coldicka/my-dso-blog',
+    image: '/img/cdn.jpg',
+  },
+  {
     title: 'Baby Tools Shop',
     description: translate({
       id: 'projects.baby-tools-shop.description',
@@ -23,7 +34,7 @@ const projects: Project[] = [
     title: 'Conduit Container',
     description: translate({
       id: 'projects.conduit-container.description',
-      message: 'An automated CI/CD workflow powered by GitHub Actions and the GitHub Container Registry. The pipeline is divided into three sequential stages: building the application, preparing the configuration, and deploying the project remotely through SSH.',
+      message: 'I adapted an existing Angular/Django application for containerized operation. My contribution includes Dockerfiles, an Nginx reverse proxy, PostgreSQL integration, and Docker Compose configuration with persistent storage and a database healthcheck.',
     }),
     tags: getTags(['docker', 'django', 'angular', 'nginx']),
     docPath: 'docs/conduit-container',
@@ -34,7 +45,7 @@ const projects: Project[] = [
     title: 'Conduit Deployment',
     description: translate({
       id: 'projects.conduit-deployment.description',
-      message: 'A fully Dockerized and automated CI/CD workflow powered by GitHub Actions and the GitHub Container Registry. The pipeline consists of three sequential stages responsible for building the application, preparing the required configuration, and deploying it remotely via SSH.',
+      message: 'I implemented an automated deployment workflow using GitHub Actions. It builds the frontend and backend images, publishes them to the GitHub Container Registry, and updates the application on a Linux server via SSH. Configuration is supplied through GitHub Secrets.',
     }),
     tags: getTags(['githubActions', 'docker', 'linux']),
     docPath: 'docs/conduit-deployment',
@@ -76,8 +87,8 @@ const projects: Project[] = [
   },
 ];
 
-const VISIBLE_COUNT = 5;
-const MOBILE_VISIBLE_COUNT = 3;
+const VISIBLE_COUNT = 6;
+const MOBILE_VISIBLE_COUNT = 4;
 
 export default function Projects() {
   const [activeIndex, setActiveIndex] = useState<number>(0);

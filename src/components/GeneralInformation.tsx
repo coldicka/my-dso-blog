@@ -63,7 +63,7 @@ export default function GeneralInformation(): ReactNode {
             </Translate>
         </p>
         <p style={{ lineHeight: '1.5', marginBottom: '1rem' }}>
-            <strong>Collins Dicka</strong><br />
+            <strong>Henri Collins Dicka Ned</strong><br />
             Ernst-Günter-Albers-Str. 6<br />
             25704 Meldorf<br /><br />
             Email: collins.dicka@gmail.com

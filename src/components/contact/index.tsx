@@ -12,7 +12,7 @@ export default function Contact() {
     },
     {
       href: 'https://linkedin.com/in/collins-dicka-ned/',
-      label: translate({ id: 'contact.links.linkedin', message: 'Profile Page' }),
+      label: translate({ id: 'contact.links.linkedin', message: 'LinkedIn profile' }),
       isExternal: true,
       iconName: 'linkedin',
     },
@@ -30,25 +30,25 @@ export default function Contact() {
             <p className={styles.introText}>
               <strong>
                 <Translate id="contact.intro">
-                  Let's build secure systems together.
+                  Looking for support for your IT team?
                 </Translate>
               </strong>
             </p>
             <ul className={styles.list}>
               <li>
                 <Translate id="contact.list.item1">
-                  I combine my software development background with DevSecOps, cybersecurity, automation, and infrastructure to build secure and reliable software environments.
+                  I bring around nine years of web development experience, complemented by practical training in Linux, Docker, automation, and IT security. I am looking for a role in application development, automation, or IT operations.
                 </Translate>
               </li>
               <li>
                 <Translate id="contact.list.item2">
-                  Open to remote · hybrid · relocation
+                  Based in Meldorf · Open to on-site, hybrid, and remote roles with a manageable commute · Available for occasional client visits by arrangement.
                 </Translate>
               </li>
             </ul>
             <p>
               <Translate id="contact.connect">
-                Let's connect →
+                I welcome the opportunity to discuss how I could contribute to your team.
               </Translate>
             </p>
           </div>
@@ -56,7 +56,7 @@ export default function Contact() {
           <div className={styles.right}>
             <p className={styles.tagline}>
               <Translate id="contact.tagline">
-                Looking forward to hearing from you!
+                Let’s talk about your team’s needs.
               </Translate>
             </p>
             <div className={styles.links}>
