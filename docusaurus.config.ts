@@ -98,7 +98,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/cd-social-card.png',
     navbar: {
-      title: 'My Homepage',
+      title: 'CD Portfolio',
 
       logo: {
         alt: 'CD Portfolio',

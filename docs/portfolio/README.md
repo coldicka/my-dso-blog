@@ -136,9 +136,9 @@ Configure:
 | `BLOG_ENABLED`               | enable blog          | false                            |
 | `DEPLOYMENT_URL`             | GitHub Pages URL     | https://YOUR_USERNAME.github.io  |
 | `DEPLOYMENT_BRANCH`          | Your branch          | main                             |
-| `BASE_URL`                   | Repository base path | /my-dso-blog/                    |
+| `BASE_URL`                   | Repository base path | /my_dso_blog/                    |
 | `GITHUB_ORG`                 | GitHub organisation  | YOUR_GITHUB_ORGANISATION         |
-| `GITHUB_PROJECT`             | Repository base name | my-dso-blog                      |
+| `GITHUB_PROJECT`             | Repository base name | my_dso_blog                      |
 | `GIT_REPOSITORY_URL`         | GitHub URL           | https://github.com/YOUR_USERNAME |
 | `GITHUB_USERNAME`            | GitHub username      | YOUR_GITHUB_NAME                 |
 

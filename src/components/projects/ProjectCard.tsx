@@ -1,4 +1,5 @@
 import React from 'react';
+import { translate } from '@docusaurus/Translate';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'; 
 import { Button } from '../button';
@@ -69,7 +70,7 @@ export function ProjectCard({
         <div className={styles.cardBody}>
           <p className={styles.cardDesc}>{description}</p>
           <div className={styles.buttons}>
-            <Button text="Documentation" style="btnPrimary" href={resolvedDocUrl} />
+            <Button text={translate({ id: 'projects.card.documentation', message: 'Documentation' })} style="btnPrimary" href={resolvedDocUrl} />
             {githubLink && (
               <Button text="GitHub" style="btnSecondary" href={githubLink} />
             )}
@@ -101,7 +102,7 @@ export function ProjectCard({
       <p className={styles.mobileDescription}>{description}</p>
 
       <div className={styles.mobileButtons}>
-        <Button text="Documentation" style="btnPrimary" href={resolvedDocUrl} />
+        <Button text={translate({ id: 'projects.card.documentation', message: 'Documentation' })} style="btnPrimary" href={resolvedDocUrl} />
 
         {githubLink && (
           <Button text="GitHub" style="btnSecondary" href={githubLink} />

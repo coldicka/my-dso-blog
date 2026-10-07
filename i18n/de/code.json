@@ -434,7 +434,7 @@
     "message": "Einstellungen wie Datenbankverbindungen sicher speichern"
   },
   "skills.yaml.desc3": {
-    "message": "Umgebungsspezifische Variables verwalten"
+    "message": "Umgebungsspezifische Variablen verwalten"
   },
   "skills.javascript.name": {
     "message": "JavaScript"
@@ -889,5 +889,17 @@
   },
   "privacyPolicy.rights.authority": {
     "message": "ULD Schleswig-Holstein"
+  },
+  "projects.card.documentation": {
+    "message": "Dokumentation"
+  },
+  "skills.pagination.page": {
+    "message": "Zu Seite {page} wechseln"
+  },
+  "skills.pagination.previous": {
+    "message": "Vorherige Seite mit Fähigkeiten"
+  },
+  "skills.pagination.next": {
+    "message": "Nächste Seite mit Fähigkeiten"
   }
 }
