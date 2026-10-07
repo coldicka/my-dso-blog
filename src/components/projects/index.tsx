@@ -9,6 +9,17 @@ import { Project, getTags } from './projectTypes';
 
 const projects: Project[] = [
   {
+    title: translate({ id: 'projects.portfolio.title', message: 'My Portfolio' }),
+    description: translate({
+      id: 'projects.portfolio.description',
+      message: 'I develop my bilingual portfolio with Docusaurus, React and TypeScript. Custom components and responsive SCSS layouts showcase my projects. GitHub Actions builds and publishes the website to GitHub Pages after a push to main.',
+    }),
+    tags: getTags(['react', 'typescript', 'githubActions']),
+    docPath: 'docs/portfolio',
+    githubLink: 'https://github.com/coldicka/my-dso-blog',
+    image: '/img/cdn.jpg',
+  },
+  {
     title: 'Baby Tools Shop',
     description: translate({
       id: 'projects.baby-tools-shop.description',
@@ -76,8 +87,8 @@ const projects: Project[] = [
   },
 ];
 
-const VISIBLE_COUNT = 5;
-const MOBILE_VISIBLE_COUNT = 3;
+const VISIBLE_COUNT = 6;
+const MOBILE_VISIBLE_COUNT = 4;
 
 export default function Projects() {
   const [activeIndex, setActiveIndex] = useState<number>(0);

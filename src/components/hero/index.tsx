@@ -39,9 +39,9 @@ export default function Hero() {
 
           <div className={styles.photoContainer}>
             <div className={`${styles.careerSlogan} ${heroVisible ? styles.sloganActive : ''}`}>
-              <span>Bringing experience.</span>
-              <span>Learning something new.</span>
-              <span>Creating solutions together.</span>
+              <span><Translate id="hero.careerSlogan.experience">Bringing experience.</Translate></span>
+              <span><Translate id="hero.careerSlogan.learning">Learning something new.</Translate></span>
+              <span><Translate id="hero.careerSlogan.together">Creating solutions together.</Translate></span>
               <img
               src={resolvedCdnImage}
               alt="Collins Dicka"
