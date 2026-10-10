@@ -9,6 +9,24 @@ This repository contains a legacy full-stack application consisting of a Postgre
 3. [Usage](#usage)
 4. [Deployment](#deployment)
 
+
+## Project contribution
+
+*Existing application · Training project*
+
+**Task:** Automate deployment of an existing Angular/Django application.
+
+**My contribution:** I implemented image builds, publishing to GHCR and deployment via SSH using GitHub Actions.
+
+**Result:** The workflow connects the build process to updating the containers on the server.
+
+### Technical choices and scope
+
+Builds run in GitHub Actions and publish images to GHCR. The deployment job depends on both builds and updates the services using SSH and Docker Compose. This configuration documents the workflow; it does not establish a test or security-scanning stage.
+
+[Project source code](https://github.com/coldicka/Conduit-Container)
+
+
 ## PREREQUISITES
 
 Before you begin, make sure the following software is installed on your system:
@@ -58,7 +76,7 @@ At a minimum, you should set:
 
 ```bash
 cd Conduit-Container/
-docker compose build
+docker compose pull
 ```  
 
 ### Start the application
@@ -141,7 +159,7 @@ The application consists of three Docker services:
 * Django Backend – Exposes the REST API and contains the application logic.
 * PostgreSQL Database – Stores all persistent application data.
 
-The project uses multi-stage Docker builds, which exclude the build environment from the final images. This reduces image size and improves deployment efficiency.
+The frontend uses a multi-stage Docker build to separate the Angular build environment from the Nginx runtime image.
 
 A persistent Docker volume is used for the PostgreSQL database to prevent data loss. All services communicate through an isolated Docker network.
 

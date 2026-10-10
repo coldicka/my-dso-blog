@@ -2,6 +2,24 @@
 
 This repository contains everything required to set up, run, and maintain a personal Minecraft server. It includes installation instructions, configuration guidance, server startup procedures, and backup management workflows. Whether you're setting up a server for the first time or are an experienced administrator, this README serves as a convenient reference for deploying and managing your server environment.
 
+
+## Project contribution
+
+*Container setup · Training project*
+
+**Task:** Configure a Minecraft server with persistent world data.
+
+**My contribution:** I configured Docker and Compose and wrote a startup script for server settings and Java memory parameters.
+
+**Result:** Server settings are configurable through environment variables; the world is mounted in its own volume.
+
+### Technical choices and scope
+
+Minecraft provides the server software. My project concerns its container configuration and startup. The world volume separates game data from the container; it is not an automated backup.
+
+[Project source code](https://github.com/coldicka/minecraft-server)
+
+
 ## Table of contents
 
 * [Prerequisites](#prerequisites)

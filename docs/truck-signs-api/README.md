@@ -10,11 +10,29 @@
 
 A Dockerized **Django REST API** for managing truck sign products, categories, customer orders, and payments, backed by **PostgreSQL**.
 
-The production setup uses **Nginx** as a reverse proxy/static-file server and **Gunicorn** as the WSGI application server.
+The current Compose setup runs **Gunicorn** as the WSGI application server with PostgreSQL. A separate Nginx configuration is present but is not wired into Compose.
 
 > **Note:** This project is currently managed only with Docker Compose.
 
 ---
+
+
+## Project contribution
+
+*Existing application · Training project*
+
+**Task:** Investigate and repair a faulty container setup for an existing API.
+
+**My contribution:** I corrected the Dockerfile, Compose configuration and entrypoint, including database migrations and superuser creation.
+
+**Result:** The revised startup sequence waits for PostgreSQL, applies migrations and starts Gunicorn.
+
+### Technical choices and scope
+
+The API came from the course template. My contribution is the repair and adaptation of its container configuration. The current Compose setup has a backend and PostgreSQL service. A separate nginx.conf exists, but Nginx is not included as a service. Payments are not implemented.
+
+[Project source code](https://github.com/coldicka/truck-signs-api/tree/feature/truckSignsApi)
+
 
 ## Table of Contents
 
@@ -50,44 +68,18 @@ Customers can:
 - purchase fire-extinguisher vinyls;
 - purchase vinyls containing a truck unit number or another custom number.
 
-The repository also contains the backend configuration and Docker setup required to run the Django application with PostgreSQL, Gunicorn, and Nginx.
+The repository also contains the backend configuration and Docker setup required to run the Django application with PostgreSQL and Gunicorn.
 
 ---
 
 ## Architecture
 
-```text
-                         ┌──────────────────┐
-                         │      Client      │
-                         └────────┬─────────┘
-                                  │
-                                  ▼
-                         ┌──────────────────┐
-                         │      Nginx       │
-                         │  Reverse Proxy   │
-                         └────────┬─────────┘
-                                  │
-                                  ▼
-                         ┌──────────────────┐
-                         │ Django REST API  │
-                         │     Gunicorn     │
-                         └────────┬─────────┘
-                                  │
-                         ┌────────┴─────────┐
-                         ▼                  ▼
-                ┌────────────────┐  ┌────────────────┐
-                │   PostgreSQL   │  │ Static / Media │
-                │       DB       │  │     Volumes    │
-                └────────────────┘  └────────────────┘
-```
+The client connects to the Django API served by Gunicorn. The backend connects to PostgreSQL; named volumes are configured for database, static and media data.
 
-The Docker setup consists of three containers:
-
-| Container | Image / Application | Purpose |
-|---|---|---|
-| `db` | `postgres:16-alpine` | PostgreSQL database |
-| `tsa_backend` | `backend` | Django REST API |
-| `tsa_nginx` | `nginx:alpine` | Reverse proxy and static/media delivery |
+| Compose service | Purpose |
+| --- | --- |
+| `db` | PostgreSQL database with healthcheck |
+| `backend` | Django API served by Gunicorn |
 
 ---
 
@@ -98,7 +90,7 @@ Important project components include:
 - `trucks_signs_api_app (tsa_app)/settings` — environment-specific Django settings.
 - `Dockerfile` — builds the Django application image.
 - `requirements.txt` — Python dependencies.
-- `nginx.conf` — Nginx configuration mounted into the Nginx container.
+- `nginx.conf` — Nginx configuration retained separately; not connected to the current Compose setup.
 - `entrypoint.sh` — prepares the Django application when the container starts.
 - `.env` — runtime configuration and sensitive environment variables.
 - `.gitignore` — prevents sensitive and generated files from being committed.
@@ -140,7 +132,7 @@ Some workflows require custom behavior and therefore use a more flexible `Generi
 
 For example:
 
-- **Order and payment creation** are handled together in one workflow.
+- The application includes order-related views; payment processing is not implemented.
 - **`UploadCustomerImage`** accepts a customer-uploaded vinyl template and creates a new product from it.
 
 ---
@@ -159,7 +151,7 @@ Make sure the following are installed:
 ### 1. Clone the repository
 
 ```bash
-git clone git@github.com:coldicka/truck-signs-api.git
+git clone --branch feature/truckSignsApi https://github.com/coldicka/truck-signs-api.git
 cd truck-signs-api
 ```
 
@@ -211,16 +203,15 @@ docker-compose build
 docker-compose up -d
 ```
 
-This will start all you need for this project: network, database, django, nginx
+This starts the configured database and backend services.
 
 ---
 
 ### 4. Check the logs
 
 ```bash
-docker logs django_web
-docker logs nginx
-docker logs db
+docker compose logs backend
+docker compose logs db
 ```
 
 ---
@@ -245,7 +236,7 @@ The `Dockerfile` uses `python:3.12-slim` as the base image for the Django backen
 
 PostgreSQL is provided by the official `postgres:16-alpine` image.
 
-Nginx uses the `nginx.conf` file from the project root, mounted into the container as a bind mount.
+The current Compose file does not include an Nginx service.
 
 The `.gitignore` excludes temporary files, sensitive data, and generated content from Git. The `.dockerignore` excludes unnecessary files from the Docker build context to keep builds smaller and faster.
 

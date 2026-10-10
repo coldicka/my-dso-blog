@@ -9,37 +9,37 @@
     "message": "Kontakt"
   },
   "contact.intro": {
-    "message": "Sie suchen Unterstützung für Ihr IT-Team?"
+    "message": "Bei welchen Aufgaben kann ich Ihr Team unterstützen?"
   },
   "contact.list.item1": {
-    "message": "Ich bringe fast zehn Jahre Erfahrung in der Webentwicklung mit, ergänzt durch praktische Weiterbildung in Linux, Docker, Automatisierung und IT-Sicherheit. Ich suche eine Tätigkeit in der Anwendungsentwicklung, Automatisierung oder im IT-Betrieb."
+    "message": "Ich freue mich auf Gespräche über Software- und Webentwicklung, Anwendungsbetreuung sowie Aufgaben mit Bezug zu Automatisierung, CI/CD oder Deployment."
   },
   "contact.list.item2": {
-    "message": "Wohnort Meldorf · Offen für Vor-Ort-, Hybrid- und Remote-Tätigkeiten mit gut erreichbarem Arbeitsort · Gelegentliche Kundenbesuche nach Absprache möglich."
+    "message": "Mein Wohnort ist Meldorf. Remote und hybrid organisierte Teams kommen ebenso infrage wie gut erreichbare Vor-Ort-Positionen."
   },
   "contact.connect": {
-    "message": "Gerne bespreche ich mit Ihnen, wie ich Ihr Team unterstützen kann."
+    "message": "Schreiben Sie mir gern kurz, um welche Rolle oder welches Vorhaben es geht. Gemeinsam können wir besprechen, wo meine Erfahrung passt und wo ich mich weiterentwickeln kann."
   },
   "contact.tagline": {
-    "message": "Lassen Sie uns über Ihren Bedarf sprechen."
+    "message": "Eine Stelle, ein Projekt oder ein erstes Kennenlernen?"
   },
   "hero.greeting": {
     "message": "Hallo, ich bin"
   },
   "hero.title": {
-    "message": "Frontend Developer · mit Weiterbildung in DevSecOps"
+    "message": "Softwareentwickler | Webentwicklung & Automatisierung"
   },
   "hero.bio.slogan": {
-    "message": "Frontend-Erfahrung. Ein erweiterter Blick auf Bereitstellung und Sicherheit."
+    "message": "Erfahrung in Frontend und Anwendungsbetreuung · Weiterbildungen in DevSecOps und SPS"
   },
   "hero.bio.p1": {
-    "message": "Seit fast zehn Jahren entwickle, warte und verbessere ich als Frontend-Entwickler produktive Webanwendungen."
+    "message": "Seit fast zehn Jahren entwickle, betreue und verbessere ich Webanwendungen – von responsiven Oberflächen bis zu bestehenden E-Commerce-Plattformen."
   },
   "hero.bio.p2": {
-    "message": "Meine abgeschlossene DevSecOps-Weiterbildung ergänzt diese Erfahrung durch praktische Projekte mit Linux, Docker, GitHub Actions und IT-Sicherheit."
+    "message": "Meine Weiterbildungen in DevSecOps und SPS erweitern diese Erfahrung. In Praxisprojekten ergänze ich Anwendungen, konfiguriere Container und automatisiere die Bereitstellung von Software."
   },
   "hero.bio.p3": {
-    "message": "Diese Kombination möchte ich in ein Team einbringen und mich in Automatisierung und sicherer Softwarebereitstellung weiterentwickeln."
+    "message": "Diese Erfahrung möchte ich in Softwareentwicklung, Anwendungsbetreuung und Automatisierung einbringen und mich in entwicklungsnahe Betriebsaufgaben einarbeiten."
   },
   "hero.cta.contact": {
     "message": "Kontakt aufnehmen"
@@ -66,7 +66,7 @@
     "message": "Meine Projekt-Highlights"
   },
   "projects.seeMore": {
-    "message": "↳ mehr Projekte anzeigen"
+    "message": "Alle Projekte anzeigen"
   },
   "skills.heading": {
     "message": "Meine Fähigkeiten"
@@ -918,7 +918,7 @@
     "message": "Ergänzende Kenntnisse aus Weiterbildungen und praktischen Projekten. Meine DevSecOps-Erfahrung stammt aus dieser Lern- und Projektarbeit."
   },
   "home.description": {
-    "message": "Collins Dicka — Frontend-Entwickler mit fast zehn Jahren Erfahrung und abgeschlossener DevSecOps-Weiterbildung. Projekte aus Webentwicklung, Automatisierung und Sicherheit."
+    "message": "Collins Dicka – Softwareentwickler mit fast zehn Jahren Frontend-Erfahrung. Webentwicklung, Anwendungsbetreuung und Praxisprojekte in Automatisierung und DevSecOps."
   },
   "contact.links.xing": {
     "message": "XING-Profil"
@@ -1030,5 +1030,194 @@
   },
   "privacyPolicy.links.xingPolicy": {
     "message": "Datenschutzerklärung von XING"
+  },
+  "skills.focus.web.name": {
+    "message": "Weboberflächen"
+  },
+  "skills.focus.web.body": {
+    "message": "Responsive Oberflächen und kontinuierliche Weiterentwicklung bestehender Webanwendungen."
+  },
+  "skills.focus.commerce.name": {
+    "message": "E-Commerce"
+  },
+  "skills.focus.commerce.body": {
+    "message": "Entwicklung und technische Betreuung von Shop-Frontends mit Shopware und OXID."
+  },
+  "skills.focus.maintenance.tech": {
+    "message": "Git · Fehlersuche · Scrum"
+  },
+  "skills.focus.maintenance.name": {
+    "message": "Anwendungsbetreuung"
+  },
+  "skills.focus.maintenance.body": {
+    "message": "Fehlerbehebung, Performance-Verbesserungen und Zusammenarbeit mit Git in Scrum-Teams."
+  },
+  "skills.focus.professional.heading": {
+    "message": "Berufspraxis"
+  },
+  "skills.focus.professional.intro": {
+    "message": "Fast zehn Jahre Arbeit an Webanwendungen, Onlineshops und ihrer Weiterentwicklung."
+  },
+  "skills.focus.components.name": {
+    "message": "Komponenten & Integration"
+  },
+  "skills.focus.components.body": {
+    "message": "React-Komponenten und TypeScript in diesem Portfolio; Anpassung der API-Anbindung im bestehenden Angular-Frontend von Conduit."
+  },
+  "skills.focus.django.name": {
+    "message": "Anwendungen erweitern"
+  },
+  "skills.focus.django.body": {
+    "message": "Produkt-Tags, Admin-Verwaltung und Tag-Filterung in einem bestehenden Django-Shop."
+  },
+  "skills.focus.containers.name": {
+    "message": "Container-Umgebungen"
+  },
+  "skills.focus.containers.body": {
+    "message": "Dockerfiles, Dienstnetzwerke, Volumes und Startskripte für vorhandene Anwendungen und Datenbanken."
+  },
+  "skills.focus.delivery.name": {
+    "message": "Build & Deployment"
+  },
+  "skills.focus.delivery.body": {
+    "message": "Image-Builds, Registry-Veröffentlichung und SSH-Deployment bei Conduit; Shell-Skripte für den Anwendungsstart."
+  },
+  "skills.focus.security.name": {
+    "message": "Websecurity-Übungen"
+  },
+  "skills.focus.security.body": {
+    "message": "Dokumentierte Übungen mit OWASP Juice Shop zum Verständnis von Schwachstellen in einer absichtlich verwundbaren Anwendung."
+  },
+  "skills.focus.projects.heading": {
+    "message": "Projektpraxis"
+  },
+  "skills.focus.projects.intro": {
+    "message": "Angewendet im Portfolio und in Projekten der DevSecOps-Weiterbildung. Die Beispiele führen zur jeweiligen Arbeit."
+  },
+  "skills.focus.plc.name": {
+    "message": "SPS-Programmierung & HMI"
+  },
+  "skills.focus.plc.body": {
+    "message": "Weiterbildung in Automatisierungsgrundlagen, SCL-Programmierung und HMI-Oberflächen mit Siemens TIA Portal."
+  },
+  "skills.focus.training.heading": {
+    "message": "Weiterbildung Automatisierung"
+  },
+  "skills.focus.training.intro": {
+    "message": "SPS-Spezialist (IHK): eine Grundlage für die Weiterentwicklung in Richtung technischer Automatisierung und IT/OT-naher Aufgaben."
+  },
+  "skills.focus.background": {
+    "message": "Zum Werdegang"
+  },
+  "skills.focus.example": {
+    "message": "Zum Projekt"
+  },
+  "projects.focus.baby.context": {
+    "message": "Bestehende Anwendung · Weiterbildungsprojekt"
+  },
+  "projects.focus.baby.task": {
+    "message": "Einen bestehenden Django-Shop um Produkt-Tags erweitern."
+  },
+  "projects.focus.baby.contribution": {
+    "message": "Ich ergänzte Tag-Modell, Admin-Verwaltung, verlinkte Tags und eine gefilterte Produktansicht und passte das Bewertungsformular an."
+  },
+  "projects.focus.baby.result": {
+    "message": "Tag-Verwaltung und Produktzuordnung sind mit der Shop-Oberfläche verbunden."
+  },
+  "projects.focus.deployment.context": {
+    "message": "Bestehende Anwendung · Weiterbildungsprojekt"
+  },
+  "projects.focus.deployment.task": {
+    "message": "Die Bereitstellung einer vorhandenen Angular-/Django-Anwendung automatisieren."
+  },
+  "projects.focus.deployment.contribution": {
+    "message": "Ich implementierte Image-Builds, die Veröffentlichung in GHCR und das Deployment über SSH mit GitHub Actions."
+  },
+  "projects.focus.deployment.result": {
+    "message": "Der Workflow verbindet den Build-Prozess mit der Aktualisierung der Container auf dem Server."
+  },
+  "projects.focus.truck.context": {
+    "message": "Bestehende Anwendung · Weiterbildungsprojekt"
+  },
+  "projects.focus.truck.task": {
+    "message": "Ein fehlerhaftes Container-Setup einer vorhandenen API untersuchen und überarbeiten."
+  },
+  "projects.focus.truck.contribution": {
+    "message": "Ich korrigierte Dockerfile, Compose-Konfiguration und Entrypoint einschließlich Datenbankmigrationen und Superuser-Anlage."
+  },
+  "projects.focus.truck.result": {
+    "message": "Der überarbeitete Startablauf wartet auf PostgreSQL, führt Migrationen aus und startet Gunicorn."
+  },
+  "projects.focus.portfolio.context": {
+    "message": "Eigenes Projekt · Auf Basis von Docusaurus"
+  },
+  "projects.focus.portfolio.task": {
+    "message": "Meine Erfahrung und Projekte auf einer übersichtlichen, zweisprachigen Website vorstellen."
+  },
+  "projects.focus.portfolio.contribution": {
+    "message": "Ich entwickle React-Komponenten, responsive SCSS-Layouts und deutsche sowie englische Inhalte mit einem Workflow für GitHub Pages."
+  },
+  "projects.focus.portfolio.result": {
+    "message": "Ein zweisprachiges Portfolio verbindet meinen Werdegang mit dokumentierter Projektarbeit."
+  },
+  "projects.focus.container.context": {
+    "message": "Bestehende Anwendung · Weiterbildungsprojekt"
+  },
+  "projects.focus.container.task": {
+    "message": "Vorhandenes Frontend, Backend und Datenbank in Containern zusammenführen."
+  },
+  "projects.focus.container.contribution": {
+    "message": "Ich ergänzte Dockerfiles, einen Nginx-API-Proxy und die PostgreSQL-Anbindung und konfigurierte Compose, Netzwerke und Volumes."
+  },
+  "projects.focus.container.result": {
+    "message": "Die drei Dienste sind in einem Setup mit Datenbank-Healthcheck und persistenter Speicherung beschrieben."
+  },
+  "projects.focus.minecraft.context": {
+    "message": "Container-Setup · Weiterbildungsprojekt"
+  },
+  "projects.focus.minecraft.task": {
+    "message": "Einen Minecraft-Server mit persistenter Spielwelt konfigurieren."
+  },
+  "projects.focus.minecraft.contribution": {
+    "message": "Ich konfigurierte Docker und Compose und erstellte ein Startskript für Servereinstellungen und Java-Speicherparameter."
+  },
+  "projects.focus.minecraft.result": {
+    "message": "Servereinstellungen sind über Umgebungsvariablen konfigurierbar; die Spielwelt liegt in einem eigenen Volume."
+  },
+  "projects.focus.wordpress.context": {
+    "message": "Software-Setup · Weiterbildungsprojekt"
+  },
+  "projects.focus.wordpress.task": {
+    "message": "WordPress mit Datenbank und persistenter Speicherung konfigurieren."
+  },
+  "projects.focus.wordpress.contribution": {
+    "message": "Ich stellte ein Compose-Setup für WordPress, MySQL und phpMyAdmin mit Netzwerk, Volumes und dateibasierten Secrets zusammen."
+  },
+  "projects.focus.wordpress.result": {
+    "message": "Die Dienstkonfiguration ist zusammengeführt; Datenbank und WordPress-Inhalte nutzen getrennte Volumes."
+  },
+  "projects.focus.security.context": {
+    "message": "Absichtlich verwundbare Anwendung · Lernübungen"
+  },
+  "projects.focus.security.task": {
+    "message": "Typische Schwachstellen von Webanwendungen in einer Übungsumgebung verstehen."
+  },
+  "projects.focus.security.contribution": {
+    "message": "Ich dokumentierte ausgewählte Juice-Shop-Challenges, darunter Probleme bei der Authentifizierung und XSS."
+  },
+  "projects.focus.security.result": {
+    "message": "Die Beschreibungen halten das Vorgehen und die Beobachtungen der jeweiligen Übung fest."
+  },
+  "projects.focus.task": {
+    "message": "Aufgabe"
+  },
+  "projects.focus.contribution": {
+    "message": "Mein Beitrag"
+  },
+  "projects.focus.result": {
+    "message": "Ergebnis"
+  },
+  "projects.showLess": {
+    "message": "Weniger Projekte anzeigen"
   }
 }

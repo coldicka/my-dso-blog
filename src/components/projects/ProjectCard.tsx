@@ -12,7 +12,10 @@ interface Tag {
 
 interface ProjectCardProps {
   title: string;
-  description: string;
+  context: string;
+  task: string;
+  contribution: string;
+  result: string;
   tags: Tag[];
   docPath: string;
   githubLink?: string; // Juice Shop does not have a GitHub repository
@@ -23,7 +26,10 @@ interface ProjectCardProps {
 
 export function ProjectCard({
   title,
-  description,
+  context,
+  task,
+  contribution,
+  result,
   tags,
   docPath,
   githubLink,
@@ -46,12 +52,18 @@ export function ProjectCard({
     return `${cleanBase}${cleanPath}`;
   };
 
+  const summary = <><p className={styles.projectContext}>{context}</p><dl className={styles.projectSummary}>
+    <div><dt>{translate({ id: 'projects.focus.task', message: 'Task' })}</dt><dd>{task}</dd></div>
+    <div><dt>{translate({ id: 'projects.focus.contribution', message: 'My contribution' })}</dt><dd>{contribution}</dd></div>
+    <div><dt>{translate({ id: 'projects.focus.result', message: 'Result' })}</dt><dd>{result}</dd></div>
+  </dl></>;
+
   // ==========================================================================
   // --- DESKTOP VERSION (Grid Layout) ---
   // ==========================================================================
   if (variant === 'desktop') {
     return (
-      <article className={styles.card}>
+      <article className={`${styles.card} ${!image ? styles.cardWithoutImage : ''}`}>
         <h3 className={styles.cardTitle}>{title}</h3>
 
         <div className={styles.tags}>
@@ -63,12 +75,12 @@ export function ProjectCard({
           ))}
         </div>
 
-        <div className={styles.cardImageWrapper}>
+        {image && <div className={styles.cardImageWrapper}>
           <img src={resolvedImageUrl} alt={title} className={styles.cardImage} />
-        </div>
+        </div>}
 
         <div className={styles.cardBody}>
-          <p className={styles.cardDesc}>{description}</p>
+          {summary}
           <div className={styles.buttons}>
             <Button text={translate({ id: 'projects.card.documentation', message: 'Documentation' })} style="btnPrimary" href={resolvedDocUrl} />
             {githubLink && (
@@ -98,8 +110,8 @@ export function ProjectCard({
         ))}
       </div>
 
-      <img src={resolvedImageUrl} alt={title} className={styles.mobileImage} />
-      <p className={styles.mobileDescription}>{description}</p>
+      {image && <img src={resolvedImageUrl} alt={title} className={styles.mobileImage} loading="lazy" />}
+      {summary}
 
       <div className={styles.mobileButtons}>
         <Button text={translate({ id: 'projects.card.documentation', message: 'Documentation' })} style="btnPrimary" href={resolvedDocUrl} />

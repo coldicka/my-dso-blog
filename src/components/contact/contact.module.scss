@@ -17,6 +17,10 @@
     @include media-breakpoint-down(sm) {
       gap: 28px;
     }
+
+    > * {
+      min-width: 0;
+    }
   }
 
   .introText {
@@ -64,7 +68,8 @@
     align-items: center;
     color: var(--color-white);
     display: inline-flex;
-    gap: 12px; 
+    gap: 12px;
+    overflow-wrap: anywhere;
     text-decoration: none;
 
     .linkIcon {
@@ -98,8 +103,12 @@
         }
       }
     }
+
+    &:hover,
+    &:focus-visible {
+      color: var(--portfolio-accent)
+    }
   }
+
+  
 }
-.contact .link { overflow-wrap: anywhere; }
-.contact .link:hover, .contact .link:focus-visible { color: var(--portfolio-accent); }
-.contact .inner > * { min-width: 0; }

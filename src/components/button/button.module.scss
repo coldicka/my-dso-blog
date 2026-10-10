@@ -1,5 +1,44 @@
-.btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: .7rem 1.2rem; border: 1px solid transparent; border-radius: 10px; font-size: 1rem; font-weight: 600; line-height: 1.4; text-decoration: none; cursor: pointer; transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
-  &:hover, &:focus-visible { text-decoration: none; transform: translateY(-2px); }
-  &.btnPrimary, &.btnTertiary { background: var(--portfolio-accent); color: #0f172a; &:hover { background: #5eead4; color: #0f172a; } }
-  &.btnSecondary { background: transparent; border-color: #94a3b8; color: #f8fafc; &:hover { border-color: var(--portfolio-accent); background: rgba(45,212,191,.08); color: #f8fafc; } }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: .7rem 1.2rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease, transform .2s ease;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: none;
+    transform: translateY(-2px);
+  }
+
+  &.btnPrimary,
+  &.btnTertiary {
+    background: var(--portfolio-accent);
+    color: #0f172a;
+    
+    &:hover {
+      background: #5eead4;
+      color: #0f172a;
+    }
+  }
+
+  &.btnSecondary {
+    background: transparent;
+    border-color: #94a3b8;
+    color: #f8fafc;
+    
+    &:hover {
+      border-color: var(--portfolio-accent);
+      background: rgba(45,212,191,.08);
+      color: #f8fafc;
+    }
+  }
 }

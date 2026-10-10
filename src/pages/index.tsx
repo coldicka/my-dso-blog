@@ -16,7 +16,7 @@ export default function Home(): ReactNode {
   return (
     <Layout 
       title=""
-      description={translate({ id: 'home.description', message: 'Collins Dicka — frontend developer with almost ten years of experience and completed DevSecOps training. Web development, automation and security projects.' })}
+      description={translate({ id: 'home.description', message: "Collins Dicka \u2014 software developer with almost ten years of frontend experience. Web development, application support and practical projects in automation and DevSecOps." })}
       noFooter
     >
       <Head>

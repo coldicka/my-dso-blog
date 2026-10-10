@@ -6,24 +6,43 @@ The project was developed for educational purposes only and therefore has no cla
 > [!NOTE]
 > This project assumes you already know the python programming language
 
+
+## Project contribution
+
+*Existing application · Training project*
+
+**Task:** Extend an existing Django shop with product tags.
+
+**My contribution:** I added the tag model, admin management, linked tags and a filtered product view, and adjusted the review form.
+
+**Result:** Tag management and product assignment are connected to the shop interface.
+
+### Technical choices and scope
+
+The shop, authentication and review system came from the course template. My work builds on that application. The tag model uses an optional many-to-many relationship, so a product can have several tags or none.
+
+[Project source code](https://github.com/coldicka/baby-tools-world)
+
+
 ## Table of contents
 
-* [Prerequisites](#prerequisites)
-* [Quickstart](#quickstart)
-* [Project structure](#project-structure)
-* [Apps Overview](#apps-overview)
-* [Usage](#usage)
-  * [Configuration](#configuration)
-  * [Running the linting tools](#running-the-linting-tools)
-  * [When to run this](#when-to-run-this)
-  * [Testing](#testing)
-  * [Running tests](#running-tests)
-  * [Running with a WSGI Server](#running-with-a-wsgi-server)
-  * [Seeding the application with data](#seeding-the-application-with-data)
-* [Containerization](#containerization)
-  * [Build an image](#build-an-image)
-  * [Run a container](#run-a-container)
-  * [Commands in the Docker container](#commands-in-the-docker-container)
+* [Baby Tools World](#project-contribution)
+  * [Prerequisites](#prerequisites)
+  * [Quickstart](#quickstart)
+  * [Project structure](#project-structure)
+  * [Apps Overview](#apps-overview)
+  * [Usage](#usage)
+    * [Configuration](#configuration)
+    * [Running the linting tools](#running-the-linting-tools)
+    * [When to run this](#when-to-run-this)
+    * [Testing](#testing)
+    * [Running tests](#running-tests)
+    * [Running with a WSGI Server](#running-with-a-wsgi-server)
+    * [Seeding the application with data](#seeding-the-application-with-data)
+  * [Containerization](#containerization)
+    * [Build an image](#build-an-image)
+    * [Run a container](#run-a-container)
+    * [Commands in the Docker container](#commands-in-the-docker-container)
 
 ### Prerequisites
 

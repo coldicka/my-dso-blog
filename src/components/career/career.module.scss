@@ -3,8 +3,15 @@
   color: #0f172a;
   scroll-margin-top: 90px;
 
-  :global(.section-heading) { color: #0f172a; margin-bottom: 1rem; }
-  :focus-visible { outline: 3px solid #0f766e; outline-offset: 5px; }
+  :global(.section-heading) { 
+    color: #0f172a;
+    margin-bottom: 1rem;
+  }
+
+  :focus-visible {
+    outline: 3px solid #0f766e;
+    outline-offset: 5px;
+  }
 }
 
 .eyebrow { color: #0f766e; font-size: .8rem; font-weight: 700; letter-spacing: .12em; margin: 0 0 .85rem; }

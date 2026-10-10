@@ -17,7 +17,7 @@ export default function Hero() {
           </p>
           <h1 className={styles.name}>Collins Dicka</h1>
           <p className={styles.title}>
-            <Translate id="hero.title">Frontend Developer | DevSecOps Foundations</Translate>
+            <Translate id="hero.title">Software Developer | Web Development & Automation</Translate>
           </p>
 
           <div className={styles.photoContainer}>
@@ -39,16 +39,16 @@ export default function Hero() {
 
           <div className={styles.bioWrapper}>
             <p className={styles.bio}>
-              <Translate id="hero.bio.slogan">Frontend experience. A broader perspective on delivery and security.</Translate>
+              <Translate id="hero.bio.slogan">Experience in frontend and application support · Further training in DevSecOps and PLC programming</Translate>
             </p>
            <p className={styles.bio}>
-              <Translate id="hero.bio.p1">For almost ten years, I have built, maintained, and improved production web applications as a frontend developer.</Translate>
+              <Translate id="hero.bio.p1">For almost ten years, I have developed, maintained and improved web applications — from responsive interfaces to established e-commerce platforms.</Translate>
             </p>
             <p className={styles.bio}>
-              <Translate id="hero.bio.p2">My completed DevSecOps training adds hands-on project experience with Linux, Docker, GitHub Actions, and IT security.</Translate>
+              <Translate id="hero.bio.p2">My DevSecOps and PLC training broadens this experience. In practical projects, I extend applications, configure containers and automate deployment workflows.</Translate>
             </p>
             <p className={styles.bio}>
-              <Translate id="hero.bio.p3">I want to bring this combination to a team and continue growing in automation and secure software delivery.</Translate>
+              <Translate id="hero.bio.p3">I want to contribute this experience to software development, application support and automation — and grow into development-related operations tasks.</Translate>
             </p>
           </div>
 

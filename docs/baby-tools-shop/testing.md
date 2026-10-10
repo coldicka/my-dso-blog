@@ -36,7 +36,7 @@ To run the tests with the `django testrunner` you can use the following command:
 
 **Full command example**
 
-This example assumes you have activated your virtual env and already have installed the project dependencies, see [Quickstart](./README.md#quickstart)
+This example assumes you have activated your virtual env and already have installed the project dependencies, see [here](https://coldicka.github.io/my-dso-blog/docs/baby-tools-shop/#quickstart)
 
 ```bash
 cd src
