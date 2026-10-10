@@ -118,6 +118,7 @@ export default function Projects() {
                     <button
                       type="button"
                       className={styles.projectButton}
+                      aria-pressed={index === activeIndex}
                       onClick={() => setActiveIndex(index)}
                     >
                       {project.title}
@@ -148,7 +149,7 @@ export default function Projects() {
             ))}
 
             <Link to={`${baseUrl}docs/truck-signs-api/`} className={styles.mobileSeeMore}>
-              ↳ see more projects
+              <Translate id="projects.seeMore">↳ see more projects</Translate>
             </Link>
           </div>
 

@@ -1,5 +1,5 @@
 .projects {
-  background: var(--ifm-color-primary);
+  background: var(--portfolio-bg);
 
   .inner {
     width: 100%;
@@ -80,12 +80,12 @@
 
   .activeItem {
     &::marker {
-      color: var(--color-black);
+      color: var(--portfolio-accent);
     }
     
     .projectButton {
       @include media-breakpoint-up(lg) {
-        color: var(--color-black);
+        color: var(--portfolio-accent);
       }
     }
   }
@@ -112,7 +112,7 @@
   .card {
     @include media-breakpoint-up(lg) {
       align-items: start;
-      background: #2F4563; 
+      background: var(--portfolio-surface); 
       border-radius: 30px;
       box-sizing: border-box;
       column-gap: 34px;
@@ -150,7 +150,7 @@
       grid-area: title;
       line-height: 120%;
       margin: 0;
-      white-space: nowrap;
+      white-space: normal;
     }
 
     @include media-breakpoint-up(md) {
@@ -194,7 +194,7 @@
       line-height: 120%;
       min-height: 40px;
       padding: 6px 10px;
-      white-space: nowrap;
+      white-space: normal;
     }
 
     @include media-breakpoint-up(md) {
@@ -274,7 +274,7 @@
       font-size: var(--font-size-text-20);
       font-weight: 400;
       letter-spacing: normal;
-      line-height: 1.25;
+      line-height: 1.65;
       margin: 0;
     }
   }
@@ -308,7 +308,7 @@
   }
 
   .mobileCard {
-    background: #1e3a6e; 
+    background: var(--portfolio-surface); 
     border-radius: 24px;
     box-sizing: border-box;
     display: flex;
@@ -345,11 +345,11 @@
     border-radius: 5px;
     color: #1e2a3a;
     display: inline-flex;
-    font-size: 10px;
+    font-size: .8rem;
     gap: 4px;
     padding: 4px 7px;
     line-height: 1;
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .mobileTagIcon {
@@ -374,8 +374,8 @@
   .mobileDescription {
     color: var(--color-white);
     margin: 0;
-    font-size: 12px;
-    line-height: 135%;
+    font-size: 1rem;
+    line-height: 1.65;
     overflow-wrap: anywhere;
   }
 
@@ -401,4 +401,14 @@
       margin-left: 8px;
     }
   }
+}
+
+.projects {
+  .card, .mobileCard { border: 1px solid var(--portfolio-border); border-radius: 18px; transition: border-color .2s ease; }
+  .card:hover, .card:focus-within, .mobileCard:hover, .mobileCard:focus-within { border-color: var(--portfolio-accent); }
+  .cardTitle { overflow-wrap: anywhere; }
+  .cardDesc { color: var(--portfolio-muted); }
+  .buttons { flex-wrap: wrap; justify-content: flex-start; }
+  .projectButton { min-height: 44px; }
+  .projectButton:hover, .projectButton:focus-visible, .seeMore:hover { color: var(--portfolio-accent); }
 }

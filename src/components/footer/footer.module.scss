@@ -8,15 +8,15 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 32px;
     justify-content: center;
-    min-height: 463px;
-    padding: 120px 0;
+    min-height: 0;
+    padding: 40px 0;
     width: 100%;
 
     @include media-breakpoint-down(sm) {
       min-height: auto;
-      padding: 80px 0;
+      padding: 32px 0;
     }
   }
 
@@ -24,7 +24,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    outline: none;
+    
     padding: 0;
     transition: transform 0.3s ease;
 

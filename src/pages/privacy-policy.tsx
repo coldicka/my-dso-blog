@@ -189,12 +189,32 @@ export default function PrivacyPolicy(): ReactNode {
 
           <p>
             <Translate id="privacyPolicy.links.text">
-              Links to GitHub, LinkedIn and other external websites take
-              you to services operated by third parties. When you follow
-              a link, the destination website processes data under its
-              own privacy policy. These links are not embedded social
+              Links to GitHub, LinkedIn, XING and other external websites
+              take you to services operated by third parties. When you
+              follow a link, the destination website processes data under
+              its own privacy policy. These links are not embedded social
               media plugins.
             </Translate>
+          </p>
+
+          <p>
+            <Translate id="privacyPolicy.links.xing">
+              The XING profile link uses a locally embedded icon. No XING
+              plugins, tracking scripts or external XING content are
+              loaded through this link when you visit this website. If
+              you click the link, you leave this website and access XING.
+              XING then processes personal data, such as your IP address,
+              according to its own privacy policy.
+            </Translate>{' '}
+            <a
+              href="https://privacy.xing.com/de/datenschutzerklaerung"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Translate id="privacyPolicy.links.xingPolicy">
+                XING Privacy Policy
+              </Translate>
+            </a>
           </p>
 
           <h2>

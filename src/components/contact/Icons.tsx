@@ -38,3 +38,12 @@ export function LinkedInIcon({ className }: IconProps) {
 
   );
 }
+
+/** Decorative XING mark; the adjacent link text provides its accessible name. */
+export function XingIcon({ className }: IconProps) {
+  return (
+    <svg className={className} width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3.5 4.5h4.2l2.5 4.4-4 7.1H2l4-7.1-2.5-4.4ZM16.3 1h4.4l-8.1 14.3 5.2 8.7h-4.4l-5.2-8.7L16.3 1Z" />
+    </svg>
+  );
+}

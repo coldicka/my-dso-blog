@@ -21,6 +21,11 @@ interface ButtonProps {
 export function Button({ text, style, href, onClick }: ButtonProps) {
   const className = `${styles.btn} ${styles[style]}`;
 
+  // Native anchors preserve same-page navigation and work without JavaScript.
+  if (href?.startsWith('#')) {
+    return <a href={href} className={className}>{text}</a>;
+  }
+
   if (href) {
     return (
       <Link to={href} className={className}>
@@ -30,7 +35,7 @@ export function Button({ text, style, href, onClick }: ButtonProps) {
   }
 
   return (
-    <button className={className} onClick={onClick}>
+    <button type="button" className={className} onClick={onClick}>
       {text}
     </button>
   );

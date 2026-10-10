@@ -1,5 +1,5 @@
 .header {
-  background: var(--ifm-color-primary);
+  background: var(--portfolio-bg);
   height: 64px;
   position: sticky;
   top: 0;
@@ -9,7 +9,7 @@
 
   @include media-breakpoint-up(lg) {
     height: auto;
-    padding: 50px 0 30px;
+    padding: 22px 0;
   }
 
   &.hidden {
@@ -30,13 +30,13 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    height: 31px;
+    height: 32px;
     justify-content: space-between;
-    padding: 0;
+    padding: 6px;
     position: absolute;
-    right: 30px;
-    top: 30px; 
-    width: 28px;
+    right: 24px;
+    top: 16px; 
+    width: 44px;
     z-index: 110; 
 
     @include media-breakpoint-up(lg) {
@@ -58,11 +58,11 @@
       z-index: 110;
 
       span {
-        background: var(--ifm-color-primary) !important;
+        background: var(--portfolio-accent) !important;
         opacity: 1 !important;
 
         &:nth-child(1) {
-          transform: translateY(19px) rotate(45deg);
+          transform: translateY(8.5px) rotate(45deg);
         }
 
         &:nth-child(2) {
@@ -70,7 +70,7 @@
         }
 
         &:nth-child(3) {
-          transform: translateY(-9px) rotate(-45deg);
+          transform: translateY(-8.5px) rotate(-45deg);
         }
       }
     }
@@ -79,8 +79,8 @@
   //Navigation (drawer on mobile / menu bar on desktop)
   .nav {
     align-items: center;
-    background: var(--color-white);
-    color: var(--ifm-color-primary);
+    background: var(--portfolio-bg);
+    color: var(--color-white);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -99,7 +99,7 @@
     @include media-breakpoint-up(lg) {
       background: transparent;
       flex-direction: row;
-      gap: 48px;
+      gap: 32px;
       margin-right: auto;
       opacity: 1;
       padding: 0;
@@ -118,7 +118,7 @@
     }
 
     a {
-      color: var(--ifm-color-primary);
+      color: var(--color-white);
       font-size: var(--font-size-text-20);
       font-weight: 600;
       letter-spacing: normal;
@@ -130,7 +130,7 @@
 
       @include media-breakpoint-up(lg) {
         color: var(--color-white);
-        font-size: var(--font-size-nav-and-sub);
+        font-size: 1rem;
         font-weight: 600;
         line-height: 1.2;  
         padding: 0;
@@ -142,7 +142,7 @@
         &:hover {
           opacity: 1;
           text-decoration: underline;
-          text-decoration-color: var(--color-white);
+          text-decoration-color: var(--portfolio-accent);
         }
       }
     }
@@ -176,7 +176,7 @@
   .dropdownButton {
     background: transparent;
     border: none;
-    color: var(--ifm-color-primary);
+    color: var(--color-white);
     font-size: var(--font-size-text-20);
     font-weight: 600;
     cursor: pointer;
@@ -210,7 +210,7 @@
   }
 
   .dropdownMenu {
-    background-color: var(--color-white);
+    background-color: var(--portfolio-surface);
     border-radius: 6px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     list-style: none;
@@ -229,12 +229,12 @@
     }
 
     li {
-      color: var(--ifm-color-primary);
+      color: var(--color-white);
       width: 100%;
       display: block;
 
       .dropdownLink {
-        color: var(--ifm-color-primary);
+        color: var(--color-white);
         text-decoration: none;
         display: block;
         width: 100%;
@@ -254,3 +254,7 @@
     }
   }
 }
+
+.header { border-bottom: 1px solid rgba(148,163,184,.18); }
+.header .nav { max-height: 100dvh; overflow-y: auto; @include media-breakpoint-up(lg) { overflow: visible; } }
+.langDropdownWrapper .dropdownButton { min-height: 44px; }

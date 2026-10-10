@@ -1,75 +1,62 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import { Button } from '../button';
 import styles from './hero.module.scss';
 import Translate, { translate } from '@docusaurus/Translate';
 
 export default function Hero() {
-  const heroRef = useRef<HTMLElement>(null);
-  const [heroVisible, setHeroVisible] = useState(false);
-
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
-    if (typeof IntersectionObserver === 'undefined') {
-      setHeroVisible(true);
-      return;
-    }
-    const observer = new IntersectionObserver(([entry]) => {
-      setHeroVisible(entry.isIntersecting);
-    }, { threshold: 0 });
-    observer.observe(hero);
-    return () => observer.disconnect();
-  }, []);
-
   const resolvedCdnImage = useBaseUrl('/img/cdn.jpg');
 
   return (
-    <section ref={heroRef} className={styles.hero} id="about">
+    <section className={styles.hero} id="about">
       <div className="container">
         <div className={styles.heroGrid}>
   
           <p className={styles.greeting}>
-            <Translate id="hero.greeting">Hey there 👋 I am</Translate>
+            <Translate id="hero.greeting">Hello, I am</Translate>
           </p>
           <h1 className={styles.name}>Collins Dicka</h1>
           <p className={styles.title}>
-            <Translate id="hero.title">DevSecOps Engineer</Translate>
+            <Translate id="hero.title">Frontend Developer | DevSecOps Foundations</Translate>
           </p>
 
           <div className={styles.photoContainer}>
-            <div className={`${styles.careerSlogan} ${heroVisible ? styles.sloganActive : ''}`}>
+            <div className={styles.careerSlogan}>
               <span><Translate id="hero.careerSlogan.experience">Bringing experience.</Translate></span>
               <span><Translate id="hero.careerSlogan.learning">Learning something new.</Translate></span>
-              <span><Translate id="hero.careerSlogan.together">Creating solutions together.</Translate></span>
+              <a href="#contact" className={styles.availabilityCta}>
+                <strong><Translate id="hero.availability">Open to new opportunities</Translate></strong>
+                <small><Translate id="hero.careerSlogan.together">Creating solutions together.</Translate> <b aria-hidden="true">↗</b></small>
+              </a>
               <img
               src={resolvedCdnImage}
               alt="Collins Dicka"
               className={styles.photo}
-              loading="lazy"
+              loading="eager"
             />
           </div>
           </div>
 
           <div className={styles.bioWrapper}>
             <p className={styles.bio}>
-              <Translate id="hero.bio.slogan">From Code to Cloud. From Development to Security.</Translate>
+              <Translate id="hero.bio.slogan">Frontend experience. A broader perspective on delivery and security.</Translate>
             </p>
            <p className={styles.bio}>
-              <Translate id="hero.bio.p1">With around nine years of professional experience in frontend development, I have built, maintained, and improved production web applications.</Translate>
+              <Translate id="hero.bio.p1">For almost ten years, I have built, maintained, and improved production web applications as a frontend developer.</Translate>
             </p>
             <p className={styles.bio}>
-              <Translate id="hero.bio.p2">Having completed a DevSecOps training program, I have expanded my development background with practical skills in Linux, Docker, GitHub Actions, and IT security. Through hands-on projects, I have containerized applications, automated deployments, and investigated security vulnerabilities in a test environment.</Translate>
+              <Translate id="hero.bio.p2">My completed DevSecOps training adds hands-on project experience with Linux, Docker, GitHub Actions, and IT security.</Translate>
             </p>
             <p className={styles.bio}>
-              <Translate id="hero.bio.p3">I am now looking to contribute my development experience and these new skills to a team, while continuing to grow in software delivery and secure operations.</Translate>
+              <Translate id="hero.bio.p3">I want to bring this combination to a team and continue growing in automation and secure software delivery.</Translate>
             </p>
           </div>
 
           <div className={styles.ctaWrapper}>
+            <Button text={translate({ id: 'hero.cta.projects', message: 'Explore my projects' })} style="btnPrimary" href="#projects" />
             <Button 
             text={translate({ id: 'hero.cta.contact', message: 'Contact me' })}
-            style="btnTertiary"
+            style="btnSecondary"
             href="#contact" />
           </div>
 

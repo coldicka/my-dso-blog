@@ -16,6 +16,12 @@ export default function Contact() {
       isExternal: true,
       iconName: 'linkedin',
     },
+    {
+      href: 'https://www.xing.com/profile/HenriCollins_DickaNed',
+      label: translate({ id: 'contact.links.xing', message: 'XING profile' }),
+      isExternal: true,
+      iconName: 'xing',
+    },
   ];
 
   return (
@@ -37,7 +43,7 @@ export default function Contact() {
             <ul className={styles.list}>
               <li>
                 <Translate id="contact.list.item1">
-                  I bring around nine years of web development experience, complemented by practical training in Linux, Docker, automation, and IT security. I am looking for a role in application development, automation, or IT operations.
+                  I bring almost ten years of web development experience, complemented by practical training in Linux, Docker, automation, and IT security. I am looking for a role in application development, automation, or IT operations.
                 </Translate>
               </li>
               <li>
