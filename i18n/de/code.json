@@ -12,7 +12,7 @@
     "message": "Sie suchen Unterstützung für Ihr IT-Team?"
   },
   "contact.list.item1": {
-    "message": "Ich bringe rund neun Jahre Erfahrung in der Webentwicklung mit, ergänzt durch praktische Weiterbildung in Linux, Docker, Automatisierung und IT-Sicherheit. Ich suche eine Tätigkeit in der Anwendungsentwicklung, Automatisierung oder im IT-Betrieb."
+    "message": "Ich bringe fast zehn Jahre Erfahrung in der Webentwicklung mit, ergänzt durch praktische Weiterbildung in Linux, Docker, Automatisierung und IT-Sicherheit. Ich suche eine Tätigkeit in der Anwendungsentwicklung, Automatisierung oder im IT-Betrieb."
   },
   "contact.list.item2": {
     "message": "Wohnort Meldorf · Offen für Vor-Ort-, Hybrid- und Remote-Tätigkeiten mit gut erreichbarem Arbeitsort · Gelegentliche Kundenbesuche nach Absprache möglich."
@@ -24,25 +24,25 @@
     "message": "Lassen Sie uns über Ihren Bedarf sprechen."
   },
   "hero.greeting": {
-    "message": "Hallo zusammen 👋 Ich bin"
+    "message": "Hallo, ich bin"
   },
   "hero.title": {
-    "message": "DevSecOps Engineer"
+    "message": "Frontend Developer · mit Weiterbildung in DevSecOps"
   },
   "hero.bio.slogan": {
-    "message": "Vom Code zur Cloud. Von der Entwicklung zur Sicherheit."
+    "message": "Frontend-Erfahrung. Ein erweiterter Blick auf Bereitstellung und Sicherheit."
   },
   "hero.bio.p1": {
-    "message": "Mit rund neun Jahren Berufserfahrung in der Frontend-Entwicklung habe ich produktive Webanwendungen entwickelt, gewartet und weiterentwickelt."
+    "message": "Seit fast zehn Jahren entwickle, warte und verbessere ich als Frontend-Entwickler produktive Webanwendungen."
   },
   "hero.bio.p2": {
-    "message": "Durch meine abgeschlossene DevSecOps-Weiterbildung habe ich diesen Hintergrund um praktische Kenntnisse in Linux, Docker, GitHub Actions und IT-Sicherheit ergänzt. In praxisnahen Projekten habe ich Anwendungen containerisiert, Deployments automatisiert und Sicherheitslücken in einer Testumgebung untersucht."
+    "message": "Meine abgeschlossene DevSecOps-Weiterbildung ergänzt diese Erfahrung durch praktische Projekte mit Linux, Docker, GitHub Actions und IT-Sicherheit."
   },
   "hero.bio.p3": {
-    "message": "Jetzt möchte ich meine Entwicklungserfahrung und diese neuen Kenntnisse in einem Team einsetzen und weiter ausbauen – mit dem Ziel, Software zuverlässig bereitzustellen und sicher zu betreiben."
+    "message": "Diese Kombination möchte ich in ein Team einbringen und mich in Automatisierung und sicherer Softwarebereitstellung weiterentwickeln."
   },
   "hero.cta.contact": {
-    "message": "Kontaktiere mich"
+    "message": "Kontakt aufnehmen"
   },
   "projects.baby-tools-shop.description": {
     "message": "Eine einfache, containerisierte Full-Stack-Shop-Anwendung, die mit Python und Django 6 entwickelt wurde. Sie nutzt SQLite als Datenbank und läuft in einem maßgeschneiderten Docker-Setup mit konfiguriertem Volume-Mapping für persistente Datenspeicherung."
@@ -873,7 +873,7 @@
     "message": "6. Links zu externen Websites"
   },
   "privacyPolicy.links.text": {
-    "message": "Links zu GitHub, LinkedIn und anderen externen Websites führen zu Diensten Dritter. Wenn Sie einem Link folgen, verarbeitet die Zielwebsite Daten gemäß ihrer eigenen Datenschutzerklärung. Diese Links sind keine eingebetteten Social-Media-Plugins."
+    "message": "Links zu GitHub, LinkedIn, XING und anderen externen Websites führen zu Diensten Dritter. Wenn Sie einem Link folgen, verarbeitet die Zielwebsite Daten gemäß ihrer eigenen Datenschutzerklärung. Diese Links sind keine eingebetteten Social-Media-Plugins."
   },
   "privacyPolicy.rights.title": {
     "message": "7. Ihre Rechte"
@@ -901,5 +901,134 @@
   },
   "skills.pagination.next": {
     "message": "Nächste Seite mit Fähigkeiten"
+  },
+  "hero.cta.projects": {
+    "message": "Projekte entdecken"
+  },
+  "skills.frontend.heading": {
+    "message": "Frontend & Webentwicklung"
+  },
+  "skills.frontend.intro": {
+    "message": "Mein beruflicher Schwerpunkt, ergänzt durch Technologien aus meinen Webprojekten."
+  },
+  "skills.extended.heading": {
+    "message": "DevSecOps & weitere Kenntnisse"
+  },
+  "skills.extended.intro": {
+    "message": "Ergänzende Kenntnisse aus Weiterbildungen und praktischen Projekten. Meine DevSecOps-Erfahrung stammt aus dieser Lern- und Projektarbeit."
+  },
+  "home.description": {
+    "message": "Collins Dicka — Frontend-Entwickler mit fast zehn Jahren Erfahrung und abgeschlossener DevSecOps-Weiterbildung. Projekte aus Webentwicklung, Automatisierung und Sicherheit."
+  },
+  "contact.links.xing": {
+    "message": "XING-Profil"
+  },
+  "hero.availability": {
+    "message": "Offen für eine neue Position"
+  },
+  "career.proclane.title": {
+    "message": "Frontend Developer"
+  },
+  "career.proclane.organisation": {
+    "message": "426-Deutschland (ehem. Proclane GmbH)"
+  },
+  "career.proclane.description": {
+    "message": "Technische Frontend-Verantwortung für produktive OXID-E-Commerce-Plattformen, Performance-Optimierung und Versionsverwaltung mit Git im Scrum-Team."
+  },
+  "career.digitalmasters.title": {
+    "message": "Frontend Developer"
+  },
+  "career.digitalmasters.organisation": {
+    "message": "Digital-Masters GmbH"
+  },
+  "career.digitalmasters.description": {
+    "message": "Entwicklung und technische Wartung von Online-Shops mit Shopware 5 und 6, mit Fokus auf Plattform-Stabilität und Umsetzung in Scrum-Sprints."
+  },
+  "career.netshops.title": {
+    "message": "Junior Frontend-Entwickler"
+  },
+  "career.netshops.organisation": {
+    "message": "Netshops Commerce GmbH"
+  },
+  "career.netshops.description": {
+    "message": "Entwicklung und Optimierung responsiver Weboberflächen im Agenturumfeld."
+  },
+  "career.wiethe.title": {
+    "message": "Web-Entwickler · Frontend"
+  },
+  "career.wiethe.organisation": {
+    "message": "Wiethe Digital GmbH & Co. KG"
+  },
+  "career.wiethe.description": {
+    "message": "Fehlerbehebung und Weiterentwicklung eines intern entwickelten Content-Management-Systems."
+  },
+  "career.devsecops.title": {
+    "message": "DevSecOps-Weiterbildung"
+  },
+  "career.devsecops.organisation": {
+    "message": "Developer Akademie"
+  },
+  "career.devsecops.description": {
+    "message": "Erfolgreich abgeschlossen. Praktische Projekte mit Linux, Docker, GitHub Actions und Webanwendungssicherheit."
+  },
+  "career.plc.title": {
+    "message": "SPS-Spezialist (IHK)"
+  },
+  "career.plc.organisation": {
+    "message": "Gottfried Institut UG"
+  },
+  "career.plc.description": {
+    "message": "Grundlagen der Automatisierung, SCL-Programmierung, HMI-Oberflächen und Siemens TIA Portal."
+  },
+  "career.gfn.title": {
+    "message": "Web Interface Design & Web Development"
+  },
+  "career.gfn.organisation": {
+    "message": "GFN AG"
+  },
+  "career.gfn.description": {
+    "message": "Weiterbildung in Web Interface Design, JavaScript, PHP und MySQL."
+  },
+  "career.degree.title": {
+    "message": "Management und Technik (B.Sc.)"
+  },
+  "career.degree.organisation": {
+    "message": "Fachhochschule Westküste"
+  },
+  "career.degree.description": {
+    "message": "Studium mit betriebswirtschaftlichen und technischen Inhalten."
+  },
+  "career.eyebrow": {
+    "message": "ERFAHRUNG & ENTWICKLUNG"
+  },
+  "career.heading": {
+    "message": "Beruflicher Werdegang"
+  },
+  "career.intro": {
+    "message": "Ausgewählte berufliche Stationen, Weiterbildungen und Studium – von der Frontend-Entwicklung bis zu ergänzenden Kenntnissen in Automatisierung und Sicherheit."
+  },
+  "career.experience": {
+    "message": "Berufserfahrung"
+  },
+  "career.learning": {
+    "message": "Weiterbildung & Studium"
+  },
+  "career.cv.heading": {
+    "message": "Sie möchten mehr erfahren?"
+  },
+  "career.cv.note": {
+    "message": "Meinen vollständigen Lebenslauf sende ich Ihnen gerne auf Anfrage."
+  },
+  "career.cv.cta": {
+    "message": "Lebenslauf anfragen"
+  },
+  "career.cv.subject": {
+    "message": "Anfrage Lebenslauf — Collins Dicka"
+  },
+  "privacyPolicy.links.xing": {
+    "message": "Der Link zu meinem XING-Profil verwendet ein lokal eingebundenes Symbol. Beim Besuch dieser Website werden über diesen Link keine XING-Plugins, Tracking-Skripte oder externen XING-Inhalte geladen. Wenn Sie den Link anklicken, verlassen Sie diese Website und rufen XING auf. XING verarbeitet dabei personenbezogene Daten, beispielsweise Ihre IP-Adresse, gemäß seiner eigenen Datenschutzerklärung."
+  },
+  "privacyPolicy.links.xingPolicy": {
+    "message": "Datenschutzerklärung von XING"
   }
 }

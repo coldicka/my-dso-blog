@@ -1,134 +1,76 @@
 @use 'base';
 @use 'fonts';
-
-/* ==========================================================================
-   GLOBAL LAYOUT & BACKGROUND GRADIENT
-   ========================================================================== */
-
-html[data-theme] {
-  padding-top: 0 !important;
-}
-
-html, body {
-  font-family: var(--font-quicksand);
-  scroll-behavior: smooth;
-}
- 
-/* ==========================================================================
-   INFIMA CORE OVERRIDES (LIGHT THEME)
-   ========================================================================== */
 :root {
-  // Container & Spacing
-  --ifm-container-width: 1440px;
+  --portfolio-bg: #0f172a;
+  --portfolio-surface: #1e293b;
+  --portfolio-accent: #2dd4bf;
+  --portfolio-muted: #cbd5e1;
+  --portfolio-border: #475569;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-heading: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-quicksand: var(--font-body);
+  --ifm-font-family-base: var(--font-body);
+  --ifm-heading-font-family: var(--font-heading);
+  --ifm-container-width: 1200px;
+  --ifm-container-width-xl: 1200px;
   --ifm-spacing-horizontal: 1.5rem;
-
-  // Global Primary color
-  --ifm-color-primary: #266AD9;     
-  --ifm-color-primary-light: #5696FF;
-
-  // Global Secondary color
-  --ifm-color-secondary: #262E34;
-
-  /* global font */
-  --font-quicksand: 'Quicksand', sans-serif;
-
-  // 1. TYPOGRAPHY SCALING VARIABLES
-  --font-size-hero-title: 48px;
-  --font-size-section-heading: 32px;
-  --font-size-nav-and-sub: 24px;
-  --font-size-card-title: 21px;
-  --font-size-text-16: 14px;
-  --font-size-text-18: 16px;
-  --font-size-text-20: 16px;
-  --font-size-text-22: 18px;
-  --font-size-text-24: 18px;
-  --font-size-text-40: 18px;
-
-  @include media-breakpoint-up(lg) {
-    --font-size-hero-title: 88px;
-    --font-size-section-heading: 64px;
-    --font-size-nav-and-sub: 32px;
-    --font-size-text-16: 16px;
-    --font-size-text-18: 18px;
-    --font-size-text-20: 20px;
-    --font-size-text-22: 22px;
-    --font-size-text-24: 24px;
-    --font-size-text-40: 40px;
-  }
-
-  // Overwriting Some Values
-  --ifm-font-family-base: var(--font-quicksand);
-  --ifm-heading-font-family: var(--font-quicksand);
+  --ifm-color-primary: #0f766e;
+  --ifm-color-primary-dark: #0d6962;
+  --ifm-color-primary-darker: #0c635d;
+  --ifm-color-primary-darkest: #0a514c;
+  --ifm-color-primary-light: #11837a;
+  --ifm-color-primary-lighter: #128980;
+  --ifm-color-primary-lightest: #149b91;
+  --ifm-color-secondary: #1e293b;
+  --color-black: #0f172a;
+  --color-white: #f8fafc;
+  --color-gray: #475569;
+  --color-bg-dark-gray: #0f172a;
+  --color-light-black: #334155;
+  --color-card-gray: #1e293b;
+  --ifm-font-color-base: #0f172a;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.65;
+  --ifm-heading-line-height: 1.2;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  
-  --ifm-h1-font-size: var(--font-size-hero-title);
-  --ifm-heading-h1-font-size: var(--font-size-hero-title);      
-  
-  --ifm-heading-h2-font-size: var(--font-size-section-heading);    
-  --ifm-heading-h3-font-size: var(--font-size-card-title);   
-  --ifm-heading-line-height: 1.2; 
-
-  // Standard text size (16px) and the base line height
-  --ifm-font-size-base: 16px; 
-  --ifm-line-height-base: 1.5;
-
-  // Custom Colors
-  --color-black: #262E34;
-  --color-white: #ffffff;
-  --color-gray: #404040;
-  --color-bg-dark-gray: #1e2229; 
-  --color-light-black: #404040;
-  --color-card-gray: #404040;    
-  --ifm-font-color-base: #1c1e21; 
+  --font-size-hero-title: clamp(2.6rem, 6vw, 5.5rem);
+  --font-size-section-heading: clamp(2rem, 4vw, 3rem);
+  --font-size-nav-and-sub: clamp(1.1rem, 2vw, 1.5rem);
+  --font-size-card-title: 1.3rem;
+  --font-size-text-16: 1rem;
+  --font-size-text-18: 1.05rem;
+  --font-size-text-20: 1.1rem;
+  --font-size-text-22: 1.15rem;
+  --font-size-text-24: 1.25rem;
+  --font-size-text-40: clamp(1.5rem, 2.5vw, 2rem);
 }
-
-/* Global Typography Hierarchy Resets */
-h1 { line-height: 1.1; }
-h2 { line-height: 1.2; }
-h3 { line-height: 1.25; }
-
-/* Global browser resets for form elements */
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-/* ==========================================================================
-   CORE OVERRIDES (DARK THEME)
-   ========================================================================== */
 [data-theme='dark'] {
-  --ifm-color-primary: #266ad9;
-  --ifm-color-primary-light: #5696FF;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-color-content: var(--color-white);
-  --ifm-font-color-base: var(--color-white);
+  --ifm-color-primary: #2dd4bf;
+  --ifm-color-primary-dark: #22c3af;
+  --ifm-color-primary-darker: #20b8a5;
+  --ifm-color-primary-darkest: #1a9788;
+  --ifm-color-primary-light: #43d9c7;
+  --ifm-color-primary-lighter: #4edbcc;
+  --ifm-color-primary-lightest: #6fe2d6;
+  --ifm-background-color: #0f172a;
+  --ifm-background-surface-color: #1e293b;
+  --ifm-font-color-base: #f8fafc;
+  --ifm-color-content: #f8fafc;
 }
-
-// Utility Classes
-.section-padding {
-  padding: 85px 0;
-
-  @include media-breakpoint-up(lg) {
-    padding: 50px 0;
-  }
-}
-
-.section-heading {
-  margin: 0 0 28px;
-  color: var(--color-white);
-  font-size: var(--font-size-section-heading);
-  font-weight: 700;
-  line-height: 120%;
-
-  @include media-breakpoint-up(lg) {
-    margin-bottom: 30px;
-  }
-}
-
-.navbar__items--right .navbar__item[type="localeDropdown"],
-.navbar__item.dropdown {
-  display: none !important;
+html[data-theme] { padding-top: 0 !important; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body { font-family: var(--font-body); }
+h1, h2, h3 { font-family: var(--font-heading); letter-spacing: -.035em; }
+button, input, textarea, select { font-family: inherit; }
+:where(a, button, summary, [tabindex]):focus-visible { outline: 3px solid #0f766e; outline-offset: 5px; }
+#about :focus-visible, #projects :focus-visible, #contact :focus-visible,
+header :focus-visible, footer :focus-visible { outline-color: #2dd4bf; }
+#about, #skills, #projects, #contact { scroll-margin-top: 90px; }
+.section-padding { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+.section-heading { color: var(--color-white); font-size: var(--font-size-section-heading); font-weight: 700; line-height: 1.2; margin: 0 0 2rem; }
+.navbar__items--right .navbar__item[type='localeDropdown'], .navbar__item.dropdown { display: none !important; }
+@media (max-width: 575.98px) { :root { --ifm-spacing-horizontal: 1.25rem; } }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

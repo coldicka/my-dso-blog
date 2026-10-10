@@ -28,7 +28,7 @@
   .list {
     font-size: var(--font-size-text-18);
     gap: 8px;
-    line-height: 120%;
+    line-height: 1.65;
     margin: 0;
     
     li {
@@ -81,7 +81,7 @@
         width: 100%; 
 
         rect, circle, path {
-          fill: var(--ifm-color-primary);
+          fill: var(--portfolio-accent);
           stroke-width: 1px;
           transition: fill 0.3s ease, opacity 0.3s ease;
         }
@@ -92,7 +92,7 @@
       .linkIcon {
         svg {
           rect, circle, path {
-            fill: var(--ifm-color-primary-light);
+            fill: #5eead4;
             stroke-width: 2px;
           }
         }
@@ -100,3 +100,6 @@
     }
   }
 }
+.contact .link { overflow-wrap: anywhere; }
+.contact .link:hover, .contact .link:focus-visible { color: var(--portfolio-accent); }
+.contact .inner > * { min-width: 0; }

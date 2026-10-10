@@ -1,10 +1,8 @@
-import { useState } from 'react';
 import { translate } from '@docusaurus/Translate';
 import Translate from '@docusaurus/Translate';
 import { SkillCard } from './SkillCard';
 import styles from './skills.module.scss';
 
-const SKILLS_PER_PAGE = 3;
 
 const activeSkills = [
   {
@@ -184,76 +182,20 @@ const activeSkills = [
     ],
   },
 ];
+
+const frontendOrder = ['javascript', 'typescript', 'react', 'html', 'css', 'scss', 'less', 'shopware', 'oxid', 'angular', 'git'];
+const extendedOrder = ['container', 'githubActions', 'itSecurity', 'shellScripting', 'yaml', 'python', 'tia_portal'];
+const ordered = (ids: string[]) => ids.map(id => activeSkills.find(skill => skill.id === id)!);
 export default function Skills() {
-  const [activePage, setActivePage] = useState(0);
-
-  const skillPages = Array.from(
-    { length: Math.ceil(activeSkills.length / SKILLS_PER_PAGE) },
-    (_, index) => activeSkills.slice(index * SKILLS_PER_PAGE, index * SKILLS_PER_PAGE + SKILLS_PER_PAGE)
-  );
-
-  const currentMobileSkills = skillPages[activePage] || [];
-
-  const showPreviousPage = () => {
-    setActivePage((curr) => (curr === 0 ? skillPages.length - 1 : curr - 1));
-  };
-
-  const showNextPage = () => {
-    setActivePage((curr) => (curr === skillPages.length - 1 ? 0 : curr + 1));
-  };
-
-  return (
-    <section className={[styles.skillsSection, 'section-padding'].join(' ')} id="skills">
-      <div className="container">
-        <div className={styles.inner}>
-          <h2 className="section-heading">
-            <Translate id="skills.heading">My skills</Translate>
-          </h2>
-
-          <div className={styles.grid}>
-            {activeSkills.map((skill, index) => (
-              <SkillCard 
-                key={`desktop-${skill.id}-${index}`} 
-                name={skill.label}
-                icon={skill.icon}
-                description={skill.usage}
-                variant="desktop" 
-              />
-            ))}
-          </div>
-
-          <div className={styles.mobileSlider}>
-            <div className={styles.mobileCard}>
-              {currentMobileSkills.map((skill, index) => (
-                <SkillCard 
-                  key={`mobile-${skill.id}-${index}`} 
-                  name={skill.label}
-                  icon={skill.icon}
-                  description={skill.usage}
-                  variant="mobile" 
-                />
-              ))}
-            </div>
-
-            <div className={styles.sliderControls}>
-              <button type="button" className={styles.sliderArrow} onClick={showPreviousPage} aria-label={translate({ id: "skills.pagination.previous", message: "Previous skills page" })}>‹</button>
-              <div className={styles.dots}>
-                {skillPages.map((_, index) => (
-                  <button
-                    key={index}
-                    type="button"
-                    className={`${styles.dot} ${index === activePage ? styles.activeDot : ''}`}
-                    onClick={() => setActivePage(index)}
-                    aria-label={translate({ id: "skills.pagination.page", message: "Go to page {page}" }, { page: index + 1 })}
-                  />
-                ))}
-              </div>
-              <button type="button" className={styles.sliderArrow} onClick={showNextPage} aria-label={translate({ id: "skills.pagination.next", message: "Next skills page" })}>›</button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-  );
+  const groups = [
+    { title: translate({ id: 'skills.frontend.heading', message: 'Frontend & web development' }), intro: translate({ id: 'skills.frontend.intro', message: 'My professional focus, complemented by technologies from my web projects.' }), skills: ordered(frontendOrder) },
+    { title: translate({ id: 'skills.extended.heading', message: 'DevSecOps & additional skills' }), intro: translate({ id: 'skills.extended.intro', message: 'Additional knowledge from training and practical projects. My DevSecOps experience comes from this learning and project work.' }), skills: ordered(extendedOrder) },
+  ];
+  return <section className={`${styles.skillsSection} section-padding`} id="skills"><div className="container">
+    <h2 className="section-heading"><Translate id="skills.heading">My skills</Translate></h2>
+    {groups.map(group => <div className={styles.group} key={group.title}>
+      <h3 className={styles.groupHeading}>{group.title}</h3><p className={styles.groupIntro}>{group.intro}</p>
+      <div className={styles.grid}>{group.skills.map(skill => <SkillCard key={skill.id} name={skill.label} icon={skill.icon} description={skill.usage} />)}</div>
+    </div>)}
+  </div></section>;
 }

@@ -16,7 +16,7 @@ function NavLink({ to, label, onItemClick }: NavLinkProps) {
   const isGerman = currentLocale === 'de';
 
   // 1. Clean up the paths for a reliable comparison
-  const clean = (p: string) => p.replace(/^\/|\/\$/g, '');
+  const clean = (p: string) => p.replace(/^\/+|\/+$/g, '');
   
   const currentPath = clean(location.pathname);
   const basePath = clean(baseUrl);
@@ -36,7 +36,7 @@ function NavLink({ to, label, onItemClick }: NavLinkProps) {
       const targetId = to.replace('#', '');
       const element = document.getElementById(targetId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        element.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
         window.history.pushState(null, '', to);
       }
     }
@@ -99,11 +99,13 @@ export default function Header() {
     { to: '#about', label: 'Über mich' },
     { to: '#skills', label: 'Fähigkeiten' },
     { to: '#projects', label: 'Projekte' },
+    { to: '#career', label: 'Werdegang' },
     { to: '#contact', label: 'Kontakt' },
   ] : [
     { to: '#about', label: 'About me' },
     { to: '#skills', label: 'My skills' },
     { to: '#projects', label: 'My projects' },
+    { to: '#career', label: 'Experience' },
     { to: '#contact', label: 'Contact' },
   ];
 
@@ -136,6 +138,8 @@ export default function Header() {
       <button 
         type="button" 
         className={styles.dropdownButton}
+        aria-expanded={dropdownOpen}
+        aria-label={isGerman ? 'Sprache wählen' : 'Choose language'}
         onClick={() => setDropdownOpen(!dropdownOpen)}
       >
         {isGerman ? '🌐 DE' : '🌐 EN'} <span className={styles.arrow}>▼</span>
@@ -167,7 +171,7 @@ export default function Header() {
   );
 
   return (
-    <header className={`${styles.header} ${hidden ? styles.hidden : ''}`}>
+    <header onKeyDown={(event) => { if (event.key === 'Escape') closeMenu(); }} className={`${styles.header} ${(hidden && !menuOpen && !dropdownOpen) ? styles.hidden : ''}`}>
       <div className="container">
         <div className={styles.inner}>
           
@@ -194,7 +198,7 @@ export default function Header() {
             type="button"
             className={`${styles.menuButton} ${menuOpen ? styles.menuButtonOpen : ''}`}
             onClick={() => setMenuOpen((open) => !open)}
-            aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-label={isGerman ? (menuOpen ? 'Menü schließen' : 'Menü öffnen') : (menuOpen ? 'Close navigation menu' : 'Open navigation menu')}
             aria-expanded={menuOpen}
           >
             <span />
