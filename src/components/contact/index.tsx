@@ -35,35 +35,25 @@ export default function Contact() {
             </h2>
             <p className={styles.introText}>
               <strong>
-                <Translate id="contact.intro">
-                  Looking for support for your IT team?
-                </Translate>
+                <Translate id="contact.intro">Which challenges could I help your team solve?</Translate>
               </strong>
             </p>
             <ul className={styles.list}>
               <li>
-                <Translate id="contact.list.item1">
-                  I bring almost ten years of web development experience, complemented by practical training in Linux, Docker, automation, and IT security. I am looking for a role in application development, automation, or IT operations.
-                </Translate>
+                <Translate id="contact.list.item1">I welcome conversations about software and web development, application support, and roles involving automation, CI/CD or deployment.</Translate>
               </li>
               <li>
-                <Translate id="contact.list.item2">
-                  Based in Meldorf · Open to on-site, hybrid, and remote roles with a manageable commute · Available for occasional client visits by arrangement.
-                </Translate>
+                <Translate id="contact.list.item2">Based in Meldorf. I am open to remote and hybrid teams, as well as on-site roles within a manageable commute.</Translate>
               </li>
             </ul>
             <p>
-              <Translate id="contact.connect">
-                I welcome the opportunity to discuss how I could contribute to your team.
-              </Translate>
+              <Translate id="contact.connect">Send me a brief description of the role or your project. I would be happy to discuss where my experience fits and where I can develop further.</Translate>
             </p>
           </div>
 
           <div className={styles.right}>
             <p className={styles.tagline}>
-              <Translate id="contact.tagline">
-                Let’s talk about your team’s needs.
-              </Translate>
+              <Translate id="contact.tagline">A role, a project or an initial conversation?</Translate>
             </p>
             <div className={styles.links}>
               {contactLinks.map((link) => (

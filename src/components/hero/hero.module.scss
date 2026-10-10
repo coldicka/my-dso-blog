@@ -1,52 +1,152 @@
-.hero { background: radial-gradient(ellipse at 90% 10%, rgba(45,212,191,.08), transparent 50%), var(--portfolio-bg); color: var(--color-white); padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3.5rem, 7vw, 6rem); }
-.heroGrid { display: grid; grid-template-columns: minmax(0,1fr); grid-template-areas: 'greeting' 'name' 'title' 'bio' 'cta' 'photo'; gap: 1.2rem;
-  @include media-breakpoint-up(lg) { grid-template-columns: minmax(0,1.65fr) minmax(0,1fr); grid-template-areas: 'greeting photo' 'name photo' 'title photo' 'bio photo' 'cta photo'; column-gap: 4rem; align-items: start; }
-}
-.greeting { grid-area: greeting; margin: 0; color: var(--portfolio-muted); font-size: 1rem; }
-.name { grid-area: name; margin: 0; font-size: var(--font-size-hero-title); font-weight: 700; line-height: 1.05; }
-.title { grid-area: title; margin: 0; color: var(--portfolio-accent); font-size: clamp(1.1rem, 2vw, 1.5rem); font-weight: 500; line-height: 1.5; }
-.bioWrapper { grid-area: bio; display: grid; gap: 1rem; max-width: 62ch; margin: .5rem 0; }
-.bio { margin: 0; font-size: 1rem; line-height: 1.75; color: var(--portfolio-muted); }
-.bio:first-child { font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-white); font-weight: 600; line-height: 1.5; }
-.ctaWrapper { grid-area: cta; display: flex; flex-wrap: wrap; gap: .8rem; }
-.photoContainer { grid-area: photo; align-self: center; width: 100%; max-width: 390px; justify-self: center; margin-top: 1rem; min-width: 0; }
-.careerSlogan { padding: 1rem; border: 1px solid var(--portfolio-border); border-radius: 20px; background: var(--portfolio-surface); box-shadow: 0 24px 60px rgba(0,0,0,.2); text-align: center; }
-.careerSlogan span { display: block; font-size: .875rem; line-height: 1.7; color: var(--portfolio-muted); }
-.careerSlogan span:first-child { color: var(--portfolio-accent); font-weight: 600; }
-.photo { display: block; width: 100%; height: auto; border-radius: 12px; margin-top: 1rem; }
+.hero {
+  background: radial-gradient(ellipse at 90% 10%, rgba(45,212,191,.08), transparent 50%), var(--portfolio-bg);
+  color: var(--color-white);
+  padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3.5rem, 7vw, 6rem);
 
-// A clear job-search message at the point where visitors see the portrait.
-.availabilityCta {
-  display: block;
-  margin-top: .9rem;
-  padding: 1rem .85rem;
-  border: 1px solid var(--portfolio-accent);
-  border-radius: 12px;
-  background: var(--portfolio-accent);
-  color: #0f172a;
-  text-decoration: none;
-  transition: background-color .2s ease, transform .2s ease;
+  .heroGrid { display: grid;
+    grid-template-columns: minmax(0,1fr);
+    grid-template-areas: 'greeting' 'name' 'title' 'bio' 'cta' 'photo';
+    gap: 1.2rem;
 
-  strong {
-    display: block;
-    font-family: var(--font-heading);
-    font-size: clamp(1.125rem, 1.6vw, 1.35rem);
-    font-weight: 700;
-    line-height: 1.3;
-    text-wrap: balance;
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: minmax(0,1.65fr) minmax(0,1fr);
+      grid-template-areas: 'greeting photo''name photo' 'title photo' 'bio photo' 'cta photo';
+      column-gap: 4rem; align-items: start; }
   }
 
-  small {
-    display: block;
-    margin-top: .45rem;
-    font-size: .875rem;
+  .greeting {
+    grid-area: greeting;
+    margin: 0;
+    color: var(--portfolio-muted);
+    font-size: 1rem;
+  }
+
+  .name {
+    grid-area: name;
+    margin: 0;
+    font-size: var(--font-size-hero-title);
+    font-weight: 700;
+    line-height: 1.05;
+  }
+
+  .title {
+    grid-area: title; 
+    margin: 0;
+    color: var(--portfolio-accent);
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 500; 
     line-height: 1.5;
   }
 
-  &:hover, &:focus-visible {
-    background: #5eead4;
+  .bioWrapper {
+    grid-area: bio;
+    display: grid;
+    gap: 1rem;
+    max-width: 62ch;
+    margin: .5rem 0;
+  }
+
+  .bio {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--portfolio-muted);
+
+    &:first-child {
+      padding: 1rem 1.15rem;
+      margin-bottom: .35rem;
+      border-left: 3px solid var(--portfolio-accent);
+      border-radius: 0 10px 10px 0;
+      background: rgba(45, 212, 191, .09);
+      font-family: var(--font-heading);
+      font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+      color: var(--color-white);
+      font-weight: 700;
+      line-height: 1.6;
+    }
+  }
+
+  .ctaWrapper {
+    grid-area: cta;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+  }
+
+  .photoContainer {
+    grid-area: photo;
+    align-self: center;
+    width: 100%;
+    max-width: 390px;
+    justify-self: center;
+    margin-top: 1rem;
+    min-width: 0;
+  }
+
+  .careerSlogan {
+    padding: 1rem;
+    border: 1px solid var(--portfolio-border);
+    border-radius: 20px;
+    background: var(--portfolio-surface);
+    box-shadow: 0 24px 60px rgba(0,0,0,.2);
+    text-align: center;
+
+    span { 
+      display: block;
+      font-size: .875rem;
+      line-height: 1.7;
+      color: var(--portfolio-muted);
+
+      &:first-child {
+        color: var(--portfolio-accent);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 1rem;
+  }
+
+  // A clear job-search message at the point where visitors see the portrait.
+  .availabilityCta {
+    display: block;
+    margin-top: .9rem;
+    padding: 1rem .85rem;
+    border: 1px solid var(--portfolio-accent);
+    border-radius: 12px;
+    background: var(--portfolio-accent);
     color: #0f172a;
     text-decoration: none;
-    transform: translateY(-2px);
+    transition: background-color .2s ease, transform .2s ease;
+
+    strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: clamp(1.125rem, 1.6vw, 1.35rem);
+      font-weight: 700;
+      line-height: 1.3;
+      text-wrap: balance;
+    }
+
+    small {
+      display: block;
+      margin-top: .45rem;
+      font-size: .875rem;
+      line-height: 1.5;
+    }
+
+    &:hover, &:focus-visible {
+      background: #5eead4;
+      color: #0f172a;
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
   }
 }
+
+

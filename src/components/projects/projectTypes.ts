@@ -6,7 +6,10 @@ export interface Tag {
 
 export interface Project {
   title: string;
-  description: string;
+  context: string;
+  task: string;
+  contribution: string;
+  result: string;
   tags: Tag[];
   docPath: string;
   githubLink: string;

@@ -12,7 +12,7 @@ const deploymentBranch = process.env.DEPLOYMENT_BRANCH || "main";
 
 const config: Config = {
   title: 'CD Portfolio',
-  tagline: 'Frontend Development · DevSecOps Foundations',
+  tagline: 'Software Development · Web & Automation',
   favicon: 'img/cd-favicon.png',
 
   url:

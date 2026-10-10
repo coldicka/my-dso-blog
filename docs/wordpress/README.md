@@ -12,6 +12,24 @@ This repository provides a Dockerized WordPress development environment featurin
 * Automatic container restarts via restart: unless-stopped
 * Internal Docker networking, allowing containers to communicate using service names.
 
+
+## Project contribution
+
+*Software setup · Training project*
+
+**Task:** Configure WordPress with a database and persistent storage.
+
+**My contribution:** I assembled a Compose setup for WordPress, MySQL and phpMyAdmin with networks, volumes and file-based secrets.
+
+**Result:** The service configuration is consolidated; database and WordPress content use separate volumes.
+
+### Technical choices and scope
+
+WordPress, MySQL and phpMyAdmin are existing software. My project assembles their configuration. File-based Compose secrets are mounted files, not an encrypted secret vault. The WordPress volume stores wp-content.
+
+[Project source code](https://github.com/coldicka/wordpress/tree/feature/setup_wordpress)
+
+
 ## Table of contents
 
 * [Prerequisites](#prerequisites)
@@ -36,7 +54,7 @@ cd /path/to/your/projects
 * Clone the repository
 
 ```bash
-git clone https://github.com/coldicka/wordpress.git
+git clone --branch feature/setup_wordpress https://github.com/coldicka/wordpress.git
 ```
 
 * Navigate to the project directory
@@ -90,7 +108,7 @@ The following Docker images are used:
 ### Data Persistence
 
 * The MySQL database stores its data in a Docker volume mounted at: `/var/lib/mysql`
-* WordPress files are stored in a Docker volume mounted at: `/var/www/html`
+* WordPress files are stored in a Docker volume mounted at: `/var/www/html/wp-content`
 
 ### Container Restart Policy
 

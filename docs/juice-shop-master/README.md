@@ -12,6 +12,22 @@ This project documents the analysis and exploitation of selected security vulner
 
 ---
 
+
+## Project contribution
+
+*Intentionally vulnerable application · Training exercises*
+
+**Task:** Understand common web application vulnerabilities in a practice environment.
+
+**My contribution:** I documented selected Juice Shop challenges, including authentication issues and XSS.
+
+**Result:** The writeups record the approach and observations for each exercise.
+
+### Technical choices and scope
+
+OWASP Juice Shop is an intentionally vulnerable training application. These exercises document learning and do not represent a penetration test of a customer system.
+
+
 ## Table of Contents
 
 1. [Project Overview](#project-overview)

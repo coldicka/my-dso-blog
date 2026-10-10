@@ -2,6 +2,24 @@
 
 This repository contains a legacy full-stack application consisting of a PostgreSQL database, a Django backend, and an Angular frontend. The project is fully containerized using Docker and can be started with Docker Compose.
 
+
+## Project contribution
+
+*Existing application · Training project*
+
+**Task:** Connect the existing frontend, backend and database in containers.
+
+**My contribution:** I added Dockerfiles, an Nginx API proxy and PostgreSQL integration, then configured Compose, networks and volumes.
+
+**Result:** The three services are described in one setup with a database healthcheck and persistent storage.
+
+### Technical choices and scope
+
+The Angular and Django applications were provided. I added the container integration. The frontend image uses a multi-stage build; Nginx serves the frontend and proxies API requests. PostgreSQL uses a volume and healthcheck. This is a training setup, not a claim of production hardening.
+
+[Project source code](https://github.com/coldicka/Conduit-Container)
+
+
 ## Table of Contents
 
 1. [Prerequisites](#prerequisites) 
@@ -57,7 +75,7 @@ At a minimum, you should set:
 
 ```bash
 cd Conduit-Container/
-docker compose build
+docker compose pull
 ```  
 
 ### Start the application
@@ -140,7 +158,7 @@ The application consists of three Docker services:
 * Django Backend – Exposes the REST API and contains the application logic.
 * PostgreSQL Database – Stores all persistent application data.
 
-The project uses multi-stage Docker builds, which exclude the build environment from the final images. This reduces image size and improves deployment efficiency.
+The frontend uses a multi-stage Docker build to separate the Angular build environment from the Nginx runtime image.
 
 A persistent Docker volume is used for the PostgreSQL database to prevent data loss. All services communicate through an isolated Docker network.
 
